@@ -1,10 +1,37 @@
 # Identity management
 
-Identity [in traditional blockchains](./hyli-vs-vintage-blockchains.md) is typically tied to a single wallet address. This approach limits flexibility and compromises privacy.
+Identity [in traditional blockchains](./hyli-vs-vintage-blockchains.md) is typically tied to a single wallet address. This approach limits flexibility and can compromise privacy.
 
-On Hyli, **any smart contract can be a proof of identity**. This enables you to register your preferred identity source as a smart contract for authentication.
+On Hyli, **any smart contract can be a proof of identity**. This allows you to register the identity source that makes sense for your use case and generate session keys through the **Hyli wallet**.
 
-## How Hyli processes identity proofs
+## The Hyli wallet
+
+The Hyli Wallet enables users to register multiple authentication methods under one identity layer.
+
+Once registered, users can generate **session keys** (temporary credentials scoped to specific applications) that allow apps to verify identity seamlessly.
+
+This simplifies interactions without requiring sensitive private inputs at runtime.
+
+### Identity aggregation
+
+You can register one or more identity methods for a single wallet.
+
+<!--Add table of supported & roadmap items? pass+login supported, OIDC / Metamask / etc. coming soon, zkTLS coming later… -->
+
+### Session keys
+
+Session keys are generated in the user's browser.
+
+They are signed by the Hyli wallet and have limited validity: a specific app, for a specific time.
+
+They are registered onchain using their public key. Users can then sign requests using these session keys without needing to reveal private inputs.
+
+
+
+
+
+
+## How Hyli processes identity
 
 A blob transaction on Hyli includes multiple blobs. One of these blobs must contain an identity claim. (If this isn't clear, read more on [our transactions concept page](./transaction.md).)
 
