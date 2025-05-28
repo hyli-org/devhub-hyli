@@ -1720,9 +1720,9 @@
 <p>In this guide, we’ll build a Ticket App that demonstrates proof composition. Users can buy a ticket using <a href="../first-token-contract/">simple-token</a>, and Hyli will verify multiple proofs in a single transaction.</p>
 <p>Find the source code for all contracts here:</p>
 <ul>
-<li><a href="https://github.com/Hyle-org/examples/tree/feat/ticket-app/ticket-app">ticket-app</a></li>
-<li><a href="https://github.com/Hyle-org/examples/tree/main/simple-identity">simple-identity</a></li>
-<li><a href="https://github.com/Hyle-org/examples/tree/feat/ticket-app/simple-token">simple-token</a></li>
+<li><a href="https://github.com/hyli-org/examples/tree/feat/ticket-app/ticket-app">ticket-app</a></li>
+<li><a href="https://github.com/hyli-org/examples/tree/main/simple-identity">simple-identity</a></li>
+<li><a href="https://github.com/hyli-org/examples/tree/feat/ticket-app/simple-token">simple-token</a></li>
 </ul>
 <p>Traditional verification systems often require all proofs to be generated using the same proving system. Hyli removes this limitation, allowing:</p>
 <ul>
@@ -1748,7 +1748,7 @@
 <li>The blob attempts to transfer 15 simple-tokens from <code>bob.id</code> to <code>ticket-app</code>.</li>
 </ul>
 <p>At this step, the contract does not verify whether Bob actually has enough tokens: if the token transfer fails in Step 3, the entire transaction fails.</p>
-<p>Check out the <a href="https://github.com/Hyle-org/examples/blob/492501ebe6caad8a0fbe3f286f0f51f0ddca537c/ticket-app/contract/src/lib.rs#L44-L66">source code</a>.</p>
+<p>Check out the <a href="https://github.com/hyli-org/examples/blob/492501ebe6caad8a0fbe3f286f0f51f0ddca537c/ticket-app/contract/src/lib.rs#L44-L66">source code</a>.</p>
 <h3 id="step-3-settlement">Step 3: Settlement</h3>
 <p>Once TicketApp has sent the proofs for the previously sequenced blobs, Hyli verifies:</p>
 <ul>
@@ -1942,7 +1942,7 @@ INFO hyle::data_availability::node_state::verifiers: 🔎 Program outputs: Trans
       
       
     
-    <a href="https://warpcast.com/hyle-org" target="_blank" rel="noopener" title="warpcast.com" class="md-social__link">
+    <a href="https://farcaster.xyz/hyli-org" target="_blank" rel="noopener" title="farcaster.xyz" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M32 32C14.3 32 0 46.3 0 64s14.3 32 32 32h448c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 384c-17.7 0-32 14.3-32 32s14.3 32 32 32h128V352c0-53 43-96 96-96s96 43 96 96v128h128c17.7 0 32-14.3 32-32s-14.3-32-32-32V128H32z"/></svg>
     </a>
   

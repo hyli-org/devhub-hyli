@@ -2,130 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.hyli.org/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/introduction/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/apps/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/hyli-vs-vintage-blockchains/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/identity/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/pipelined-proving/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/proof-composition/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/proof-generation/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/concepts/transaction/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/devnet/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/scaffold/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/your-first-app/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/example/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/example/custom-identity-contract/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/example/first-token-contract/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/quickstart/example/proof-composition/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/reference/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/reference/devnet/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/reference/node/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/reference/supported-proving-schemes/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/resources/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/resources/find-us/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/resources/glossary/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/resources/grants/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/resources/release-notes/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/resources/roadmap/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/tooling/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/tooling/api/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/tooling/explorer/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
     <url>
          <loc>https://docs.hyli.org/tooling/sdk/</loc>
-         <lastmod>2025-05-23</lastmod>
+         <lastmod>2025-05-28</lastmod>
     </url>
 </urlset>

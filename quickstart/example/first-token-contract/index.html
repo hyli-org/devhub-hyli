@@ -1674,8 +1674,8 @@
 
 
 <div><h1 id="your-first-token-contract">Your first token contract</h1>
-<p>This guide will walk you through creating and deploying your first token transfer contract using Hyli's tools and infrastructure. We'll use <a href="https://github.com/Hyle-org/examples/tree/main/simple-token">our simple-token transfer example</a> as the basis for this tutorial.</p>
-<p>For an alternative implementation, check out <a href="https://github.com/Hyle-org/examples/tree/main/simple-token-sp1">the same example built with SP1</a>.</p>
+<p>This guide will walk you through creating and deploying your first token transfer contract using Hyli's tools and infrastructure. We'll use <a href="https://github.com/hyli-org/examples/tree/main/simple-token">our simple-token transfer example</a> as the basis for this tutorial.</p>
+<p>For an alternative implementation, check out <a href="https://github.com/hyli-org/examples/tree/main/simple-token-sp1">the same example built with SP1</a>.</p>
 <p>If you’re new to apps on Hyli, read the <a href="../../concepts/apps.md.md">anatomy of an app</a>.</p>
 <h2 id="example">Example</h2>
 <div class="admonition warning">
@@ -1691,7 +1691,7 @@
 </ul>
 <h2 id="quickstart">Quickstart</h2>
 <h3 id="build-and-register-the-contract">Build and register the contract</h3>
-<p>To build all methods and register the app <a href="https://github.com/Hyle-org/examples/blob/main/simple-token/host/src/main.rs">from the source</a>, navigate to your cloned Examples folder and run:</p>
+<p>To build all methods and register the app <a href="https://github.com/hyli-org/examples/blob/main/simple-token/host/src/main.rs">from the source</a>, navigate to your cloned Examples folder and run:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>register<span class="w"> </span><span class="m">1000</span>
 </span></code></pre></div>
 <p>The expected output is <code>📝 Registering new contract simple_token</code>.</p>
@@ -1737,7 +1737,7 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">RUST_LOG</span><span class="o">=</span><span class="s2">"[executor]=info"</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>cargo<span class="w"> </span>run
 </span></code></pre></div>
 <h2 id="annotated-code-snippets">Annotated code snippets</h2>
-<p>Find the full annotated code in <a href="https://github.com/Hyle-org/examples/blob/main/simple-token/host/src/main.rs">our examples repository</a>.</p>
+<p>Find the full annotated code in <a href="https://github.com/hyli-org/examples/blob/main/simple-token/host/src/main.rs">our examples repository</a>.</p>
 <p>Below are key snippets explaining contract registration, blob transactions, and proofs.</p>
 <h3 id="registering-the-contract">Registering the contract</h3>
 <p>Set up information about your contract. To register the contract, you'll need:</p>
@@ -1844,7 +1844,7 @@
 </span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">    </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
 </span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="fm">println!</span><span class="p">(</span><span class="s">"✅ Proof tx sent. Tx hash: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">proof_tx_hash</span><span class="p">);</span>
 </span></code></pre></div>
-<p>Check the full annotated code in <a href="https://github.com/Hyle-org/examples/blob/main/simple-token/host/src/main.rs">our GitHub example</a>.</p></div>
+<p>Check the full annotated code in <a href="https://github.com/hyli-org/examples/blob/main/simple-token/host/src/main.rs">our GitHub example</a>.</p></div>
 
 
 
@@ -1943,7 +1943,7 @@
       
       
     
-    <a href="https://warpcast.com/hyle-org" target="_blank" rel="noopener" title="warpcast.com" class="md-social__link">
+    <a href="https://farcaster.xyz/hyli-org" target="_blank" rel="noopener" title="farcaster.xyz" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M32 32C14.3 32 0 46.3 0 64s14.3 32 32 32h448c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 384c-17.7 0-32 14.3-32 32s14.3 32 32 32h128V352c0-53 43-96 96-96s96 43 96 96v128h128c17.7 0 32-14.3 32-32s-14.3-32-32-32V128H32z"/></svg>
     </a>
   

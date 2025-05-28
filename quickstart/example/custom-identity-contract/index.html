@@ -1718,7 +1718,7 @@
 <div><h1 id="using-a-custom-identity-contract">Using a custom identity contract</h1>
 <h2 id="when-to-use-identity-contracts-on-hyli">When to use identity contracts on Hyli</h2>
 <p>On Hyli, <strong>any app can be a proof of identity</strong>. This flexibility enables you to register your preferred identity source as an app for account identification. If you don't want to use a custom identity source, Hyli ships <a href="https://github.com/hyli-org/hyli/tree/main/crates/contracts/hydentity">a native <code>hydentity</code> contract</a>.</p>
-<p>This guide walks you through creating and deploying your first simple identity contract using Hyli and RISC Zero. We'll use <a href="https://github.com/Hyle-org/examples/tree/main/simple-identity">our simple identity example</a>, which mirrors our <a href="../first-token-contract/">simple token transfer example</a>.</p>
+<p>This guide walks you through creating and deploying your first simple identity contract using Hyli and RISC Zero. We'll use <a href="https://github.com/hyli-org/examples/tree/main/simple-identity">our simple identity example</a>, which mirrors our <a href="../first-token-contract/">simple token transfer example</a>.</p>
 <p>If you’re new to identity management on Hyli, read the <a href="../../../concepts/identity/">identity management concept page</a>.</p>
 <h2 id="run-the-example">Run the example</h2>
 <div class="admonition warning">
@@ -1737,7 +1737,7 @@
 <li><a href="../../devnet/">Start a single-node devnet</a>. We recommend using <a href="https://dev.risczero.com/api/generating-proofs/dev-mode">dev-mode</a> with <code>-e RISC0_DEV_MODE=1</code> for faster iterations during development.</li>
 </ul>
 <h3 id="build-and-register-the-identity-contract">Build and register the identity contract</h3>
-<p>To build all methods and register the app on the local node <a href="https://github.com/Hyle-org/examples/blob/main/simple-identity/host/src/main.rs">from the source</a>, navigate to your cloned Examples folder and run:</p>
+<p>To build all methods and register the app on the local node <a href="https://github.com/hyli-org/examples/blob/main/simple-identity/host/src/main.rs">from the source</a>, navigate to your cloned Examples folder and run:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>register-contract
 </span></code></pre></div>
 <p>The expected output is <code>📝 Registering new contract simple_identity</code>.</p>
@@ -1776,7 +1776,7 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">RUST_LOG</span><span class="o">=</span><span class="s2">"[executor]=info"</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>cargo<span class="w"> </span>run
 </span></code></pre></div>
 <h2 id="code-snippets">Code snippets</h2>
-<p>Find the full annotated code in <a href="https://github.com/Hyle-org/examples/blob/main/simple-identity/host/src/main.rs">our examples repository</a>.</p>
+<p>Find the full annotated code in <a href="https://github.com/hyli-org/examples/blob/main/simple-identity/host/src/main.rs">our examples repository</a>.</p>
 <h3 id="registering-the-contract">Registering the contract</h3>
 <p>This part is the same as for <a href="../first-token-contract/">Your first app</a>.</p>
 <h3 id="register-an-identity">Register an identity</h3>
@@ -1823,7 +1823,7 @@
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">};</span>
 </span></code></pre></div>
 <h5 id="on-the-contract-guest-side">On the contract (guest) side</h5>
-<p>These inputs are then processed by the <a href="../../../tooling/sdk/">SDK</a> to <a href="https://github.com/Hyle-org/examples/blob/main/simple-identity/methods/guest/src/main.rs#L8">initialize the contract</a> :</p>
+<p>These inputs are then processed by the <a href="../../../tooling/sdk/">SDK</a> to <a href="https://github.com/hyli-org/examples/blob/main/simple-identity/methods/guest/src/main.rs#L8">initialize the contract</a> :</p>
 <div class="language-rust highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span><span class="c1">// Parse contract inputs</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdk</span><span class="p">::</span><span class="n">guest</span><span class="p">::</span><span class="n">init_raw</span><span class="p">::</span><span class="o">&lt;</span><span class="n">IdentityAction</span><span class="o">&gt;</span><span class="p">();</span>
 </span></code></pre></div>
@@ -1853,7 +1853,7 @@
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="n">nonce</span><span class="p">,</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">};</span>
 </span></code></pre></div>
-<p>Check the full annotated code in <a href="https://github.com/Hyle-org/examples/blob/main/simple-identity/host/src/main.rs">our GitHub example</a>.</p></div>
+<p>Check the full annotated code in <a href="https://github.com/hyli-org/examples/blob/main/simple-identity/host/src/main.rs">our GitHub example</a>.</p></div>
 
 
 
@@ -1952,7 +1952,7 @@
       
       
     
-    <a href="https://warpcast.com/hyle-org" target="_blank" rel="noopener" title="warpcast.com" class="md-social__link">
+    <a href="https://farcaster.xyz/hyli-org" target="_blank" rel="noopener" title="farcaster.xyz" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M32 32C14.3 32 0 46.3 0 64s14.3 32 32 32h448c17.7 0 32-14.3 32-32s-14.3-32-32-32zm0 384c-17.7 0-32 14.3-32 32s14.3 32 32 32h128V352c0-53 43-96 96-96s96 43 96 96v128h128c17.7 0 32-14.3 32-32s-14.3-32-32-32V128H32z"/></svg>
     </a>
   
