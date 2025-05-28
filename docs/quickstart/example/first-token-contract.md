@@ -1,8 +1,8 @@
 # Your first token contract
 
-This guide will walk you through creating and deploying your first token transfer contract using Hyli's tools and infrastructure. We'll use [our simple-token transfer example](https://github.com/Hyle-org/examples/tree/main/simple-token) as the basis for this tutorial.
+This guide will walk you through creating and deploying your first token transfer contract using Hyli's tools and infrastructure. We'll use [our simple-token transfer example](https://github.com/hyli-org/examples/tree/main/simple-token) as the basis for this tutorial.
 
-For an alternative implementation, check out [the same example built with SP1](https://github.com/Hyle-org/examples/tree/main/simple-token-sp1).
+For an alternative implementation, check out [the same example built with SP1](https://github.com/hyli-org/examples/tree/main/simple-token-sp1).
 
 If you’re new to apps on Hyli, read the [anatomy of an app](../../concepts/apps.md.md).
 
@@ -22,7 +22,7 @@ If you’re new to apps on Hyli, read the [anatomy of an app](../../concepts/app
 
 ### Build and register the contract
 
-To build all methods and register the app [from the source](https://github.com/Hyle-org/examples/blob/main/simple-token/host/src/main.rs), navigate to your cloned Examples folder and run:
+To build all methods and register the app [from the source](https://github.com/hyli-org/examples/blob/main/simple-token/host/src/main.rs), navigate to your cloned Examples folder and run:
 
 ```bash
 cargo run -- register 1000
@@ -95,7 +95,7 @@ RUST_LOG="[executor]=info" RISC0_DEV_MODE=1 cargo run
 
 ## Annotated code snippets
 
-Find the full annotated code in [our examples repository](https://github.com/Hyle-org/examples/blob/main/simple-token/host/src/main.rs).
+Find the full annotated code in [our examples repository](https://github.com/hyli-org/examples/blob/main/simple-token/host/src/main.rs).
 
 Below are key snippets explaining contract registration, blob transactions, and proofs.
 
@@ -217,4 +217,4 @@ let proof_tx_hash = client
 println!("✅ Proof tx sent. Tx hash: {}", proof_tx_hash);
 ```
 
-Check the full annotated code in [our GitHub example](https://github.com/Hyle-org/examples/blob/main/simple-token/host/src/main.rs).
+Check the full annotated code in [our GitHub example](https://github.com/hyli-org/examples/blob/main/simple-token/host/src/main.rs).

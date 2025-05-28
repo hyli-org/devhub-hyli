@@ -6,9 +6,9 @@ In this guide, we’ll build a Ticket App that demonstrates proof composition. U
 
 Find the source code for all contracts here:
 
-- [ticket-app](https://github.com/Hyle-org/examples/tree/feat/ticket-app/ticket-app)
-- [simple-identity](https://github.com/Hyle-org/examples/tree/main/simple-identity)
-- [simple-token](https://github.com/Hyle-org/examples/tree/feat/ticket-app/simple-token)
+- [ticket-app](https://github.com/hyli-org/examples/tree/feat/ticket-app/ticket-app)
+- [simple-identity](https://github.com/hyli-org/examples/tree/main/simple-identity)
+- [simple-token](https://github.com/hyli-org/examples/tree/feat/ticket-app/simple-token)
 
 Traditional verification systems often require all proofs to be generated using the same proving system. Hyli removes this limitation, allowing:
 
@@ -41,7 +41,7 @@ The `ticket-app` contract is executed, checking whether:
 
 At this step, the contract does not verify whether Bob actually has enough tokens: if the token transfer fails in Step 3, the entire transaction fails.
 
-Check out the [source code](https://github.com/Hyle-org/examples/blob/492501ebe6caad8a0fbe3f286f0f51f0ddca537c/ticket-app/contract/src/lib.rs#L44-L66).
+Check out the [source code](https://github.com/hyli-org/examples/blob/492501ebe6caad8a0fbe3f286f0f51f0ddca537c/ticket-app/contract/src/lib.rs#L44-L66).
 
 ### Step 3: Settlement
 

@@ -19,4 +19,4 @@ Reach out to the team for more information:
 
 | :fontawesome-brands-github: Github | :fontawesome-brands-twitter: Twitter | :fontawesome-solid-archway: Farcaster | :fontawesome-brands-linkedin: LinkedIn | :fontawesome-brands-youtube: Youtube |:fontawesome-brands-telegram: Telegram|
 |-------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
-| [Hyli](https://github.com/Hyle-org) | [@hyle_org](https://x.com/hyle_org)  | [@hyle-org](https://warpcast.com/hyle-org) | [Hyli](https://www.linkedin.com/company/hyl-/) | [@Hyli](https://www.youtube.com/@Hyl%C3%A9-org) | [@hyle_org](https://t.me/hyle_org)|
+| [Hyli](https://github.com/hyli-org) | [@hyle_org](https://x.com/hyle_org)  | [@hyle-org](https://farcaster.xyz/hyli-org) | [Hyli](https://www.linkedin.com/company/hyl-/) | [@Hyli](https://www.youtube.com/@Hyl%C3%A9-org) | [@hyle_org](https://t.me/hyle_org)|
