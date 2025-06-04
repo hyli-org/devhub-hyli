@@ -57,6 +57,8 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
 </div>
 
+Vibe coders, use our [LLMs.txt file](./llms.txt)!
+
 ## Let's talk!
 
 Reach out to the team for more information:
