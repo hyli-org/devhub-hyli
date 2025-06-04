@@ -1,0 +1,47 @@
+# Hyli Developer Hub LLMS.txt
+
+> Hyli is the new proof-powered L1 to build the next generation of apps.
+
+## Quickstart
+
+- [Run your local devnet](https://docs.hyli.org/quickstart/run-your-local-devnet): Set up a local development network.
+- [Your first app](https://docs.hyli.org/quickstart/your-first-app): Build and deploy your first application on Hyli.
+- [Set up your backend](https://docs.hyli.org/quickstart/set-up-your-backend): Configure backend services for Hyli integration.
+- [Example](https://docs.hyli.org/quickstart/example): Explore a complete example application.
+
+## Concepts
+
+- [Apps on Hyli](https://docs.hyli.org/concepts/apps-on-hyli): Understand how applications are structured on Hyli.
+- [Transactions on Hyli](https://docs.hyli.org/concepts/transactions-on-hyli): Learn about transaction mechanisms.
+- [Proof generation and submission](https://docs.hyli.org/concepts/proof-generation-and-submission): Dive into proof systems.
+- [Identity management](https://docs.hyli.org/concepts/identity-management): Manage user identities securely.
+- [Pipelined proving](https://docs.hyli.org/concepts/pipelined-proving): Optimize proof generation processes.
+- [Proof composition](https://docs.hyli.org/concepts/proof-composition): Combine proofs effectively.
+- [Hyli vs. vintage blockchains](https://docs.hyli.org/concepts/hyli-vs-vintage-blockchains): Compare Hyli with traditional blockchains.
+
+## Tooling
+
+- [Explorer](https://docs.hyli.org/tooling/explorer): Visualize blockchain data.
+- [SDK](https://docs.hyli.org/tooling/sdk): Utilize the Hyli Software Development Kit.
+- [API](https://docs.hyli.org/tooling/api): Access Hyli's API endpoints.
+
+## Reference
+
+- [Supported proving schemes](https://docs.hyli.org/reference/supported-proving-schemes): Review supported cryptographic schemes.
+- [Devnet configuration](https://docs.hyli.org/reference/devnet-configuration): Configure your development network.
+- [Community validators](https://docs.hyli.org/reference/community-validators): Engage with community validators.
+
+## Resources
+
+- [Roadmap](https://docs.hyli.org/resources/roadmap): Explore Hyli's development plans.
+- [Release notes](https://docs.hyli.org/resources/release-notes): Stay updated with the latest changes.
+- [Glossary](https://docs.hyli.org/resources/glossary): Understand key terms.
+- [Contribute to Hyli](https://docs.hyli.org/resources/contribute-to-hyli): Learn how to contribute.
+- [Find us](https://docs.hyli.org/resources/find-us): Connect with the Hyli team.
+
+## Optional
+
+- [Hyli blog](https://blog.hyli.org): Read articles and updates.
+- [Hyli website](https://hyli.org): Visit the main website.
+- [Rust node](https://github.com/hyli-org/rust-node): Access the Rust implementation.
+- [Example contracts](https://github.com/hyli-org/example-contracts): Explore sample smart contracts.
