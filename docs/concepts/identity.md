@@ -1,8 +1,8 @@
-# Hyli wallet
+# Identity management
 
 On most blockchains, your identity is your wallet address. On Hyli, identity is a flexible set of credentials verified by a smart contract.
 
-On Hyli, any smart contract can function as a verifiable proof of identity. This enables fine-grained access control and varied authentication mechanism where each app can rely on the most appropriate form of identity verification: OIDC, password-based, zkPassport are all valid sources of ID that are relevant in different contexts.
+On Hyli, any smart contract can function as a verifiable proof of identity. This enables fine-grained access control and varied authentication mechanisms where each app can rely on the most appropriate form of identity verification: OIDC, password-based, and zkPassport are all valid sources of ID that are relevant in different contexts.
 
 While extremely flexible, identity management on Hyli can create some complexity for users and developers. So we created the **Hyli wallet** as an identity hub to offer a unified experience with all Hyli apps.
 
@@ -16,45 +16,53 @@ This creates a unified identity layer for seamless interaction across apps on Hy
 
 ## Using the Hyli wallet as an user
 
-In this example, user Max registers a wallet, then uses a session key to interact with an USDC contract. <!-- TODO When the blog post is published, add link to blog post.-->
+<!-- TODO When the blog post is published, add link to blog post.-->
 
 ### Create a wallet
 
-![image.png](attachment:e070dfc4-99be-42e9-9dea-edf05b34d15e:image.png)
+![ A flow diagram showing how a user named Max creates an account. The first blob (Blob0) runs CheckSecret to verify a hashed password (hash("password123")). The second blob (Blob1) uses the wallet contract to run registerAccount, which registers Max’s identity using the password hash. The right-hand annotation explains that this confirms the password and creates Max’s account using the hash.](../assets/img/Wallet0.jpg)
 
 Creating the Hyli wallet is done, as with everything else on Hyli, by **sending a transaction**. The transaction includes two blobs:
 
-1. A `CheckSecret` blob takes Max’s password as private input and asserts that the hash is correct;
-2. A `registerAccount` blob verifies and stores Max’s Hyli identity, `max@wallet`, in its state.
+1. A `CheckSecret` blob takes the user’s password as private input and asserts that the hash is correct;
+2. A `registerAccount` blob verifies and stores the user’s Hyli identity, `max@wallet`, in its state.
+
+The CheckSecret contract is written in Noir; see the [source code on GitHub](https://github.com/hyli-org/examples/tree/main/check-secret-noir/contract).
 
 ### Create a session key
 
 The user can create a session key on any app. A session key includes a public key and a private key.
 
-In our example flow, Max wants to use a USDC contract, so his session key comes from that contract. Session keys never leave the browser unencrypted.
-
 ### Register the session key
 
-![image.png](attachment:d2eae297-2811-422b-bb5c-52b21ebcaa8a:image.png)
+![A flow diagram showing how Max registers a session key. Blob0 runs CheckSecret again to verify the password hash. Blob1 uses the wallet contract to run registerSessionKey, providing Max’s account name, a public key, expiration date, and a whitelist (USDC contract). The right-hand annotation explains that this proves Max’s identity and links the provided key to Max’s account for limited use.](../assets/img/Wallet1.jpg)
 
-Max registers his session key in a new transaction, which, again, includes two blobs:
+The user registers their session key in a new transaction, which, again, includes two blobs:
 
-1. A `CheckSecret` blob makes sure that the password is correct, meaning that Max is correctly authenticated;
-2. A `registerSessionKey` blob registers the public key as a session key associated with Max’s account and adds the USDC contract to the allowlist.
+1. A `CheckSecret` blob makes sure that the password is correct, meaning that the user is correctly authenticated;
+2. A `registerSessionKey` blob registers the public key as a session key associated with the user’s account and adds the new contract to the allowlist.
 
-Now, the session key is linked to Max’s wallet. This means that Max can use his wallet to interact with the USDC contract.
+Now, the session key is linked to the user’s wallet. This means that the user can use their wallet to interact with the allowlisted contract.
 
 ### Use the session key for a future action
 
-![image.png](attachment:ace40569-fb64-42a2-b0d9-b646f524707b:image.png)
+![A flow diagram showing how the registered session key is used. Blob0 verifies a signature using secp256k1 with a nonce signed by Max’s private key. Blob1 uses the wallet contract to verify the session key. Blob2 performs a USDC transfer to someone, amount 2. The annotations explain that the signature updates the session key nonce, proves it’s linked to Max, and allows session-based usage without Max signing each transaction directly.](../assets/img/Wallet2.jpg)
 
-Max wants to transfer money using the USDC contract. His new transaction will include three blobs:
+When interacting with the allowlisted contract, the transaction will include three blobs:
 
-1. A blob to *verify his signature* using his private key. The blob signs a timestamp and is used to update the session key’s nonce.
-2. A blob to *verify the session key*, asserting that the key used for the signature in the first blob is associated with Max’s account.
+1. A blob to *verify the user’s signature* using the private key. The blob signs a timestamp and is used to update the session key’s nonce.
+2. A blob to *verify the session key*, asserting that the key used for the signature in the first blob is associated with the user’s account.
 3. A blob for the *transfer* itself.
 
-## Developer reference for building with the Hyli wallet
+## Why use the Hyli wallet?
+
+With this architecture, interacting with a smart contract **does not require any private input** in the zkVM. The signature is verified natively without requiring the generation of a zero-knowledge proof for this blob.
+
+The two other blobs don’t require authentication, as the authentication blob works for the entire transaction thanks to Hyli’s [native proof composition](https://www.notion.so/Proof-composition-concept-page-19f9e5decaad807fadeeea1239893b2b?pvs=21).
+
+This has the added benefit of avoiding timeouts. Since there are no private inputs, anyone can verify every blob in the transaction without worrying too much about privacy, and there is no bottleneck in verification times, as there could be if there were invalid data in a private input. Apps can externalize proving without worrying about security.
+
+## Building with the Hyli wallet
 
 ### Clone the repository
 
@@ -66,6 +74,7 @@ Clone [the Hyli wallet repository](https://github.com/hyli-org/wallet/tree/main/
 npm install hyli-wallet
 # or
 yarn add hyli-wallet
+
 ```
 
 Note the following peer dependencies:
@@ -77,11 +86,12 @@ Note the following peer dependencies:
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0"
 }
+
 ```
 
 ### Basic Usage
 
-#### Wrap your application
+### Wrap your application
 
 First, wrap your application with the `WalletProvider`:
 
@@ -114,9 +124,10 @@ function App() {
         </WalletProvider>
     );
 }
+
 ```
 
-#### Use the wallet component
+### Use the wallet component
 
 ```tsx
 import { HyliWallet } from "hyli-wallet";
@@ -128,6 +139,7 @@ function YourComponent() {
         />
     );
 }
+
 ```
 
 ### Use the Wallet Hook
@@ -164,17 +176,18 @@ function WalletFeatures() {
         </div>
     );
 }
+
 ```
 
 ### Session key management
 
-Find a full implementation of session keys in [SessionKeys.tsx](../front/src/components/wallet/SessionKeys.tsx).
+Find a full implementation of session keys in [SessionKeys.tsx](https://www.notion.so/front/src/components/wallet/SessionKeys.tsx).
 
-#### Creating a session key
+### Creating a session key
 
 Session keys allow for delegated transaction signing. Here's how to create one:
 
-```typescript
+```tsx
 import { useWallet } from 'hyli-wallet';
 
 const { wallet, registerSessionKey } = useWallet();
@@ -201,13 +214,14 @@ const { sessionKey } = await registerSessionKey(
 console.log(sessionKey.publicKey);  // The public key to identify the session
 console.log(sessionKey.privateKey); // The private key to sign transactions
 // Note that this session key will also be stored in the wallet object
+
 ```
 
-#### Signing a transaction with a session key
+### Signing a transaction with a session key
 
 Once you have a session key, you can use it to send transactions.
 
-```typescript
+```tsx
 import { useWallet } from "hyli-wallet";
 import { nodeService } from "your-services";
 
@@ -226,26 +240,28 @@ const blobTx = {
 
 const txHash = await nodeService.client.sendBlobTx(blobTx);
 console.log("Transaction sent:", txHash);
+
 ```
 
-#### Removing a session key
+### Removing a session key
 
 When a session key is no longer needed, you can remove it:
 
-```typescript
+```tsx
 import { useWallet } from "hyli-wallet";
 
 const { removeSessionKey } = useWallet();
 
 // Remove the session key using the wallet password
 await removeSessionKey("your_password", "session_key_public_key");
+
 ```
 
-#### Signing arbitrary messages with a session key
+### Signing arbitrary messages with a session key
 
 You can sign any message using the current session key.
 
-```typescript
+```tsx
 import { useWallet } from "hyli-wallet";
 
 const { signMessageWithSessionKey } = useWallet();
@@ -255,6 +271,7 @@ const { hash, signature } = signMessageWithSessionKey(message);
 
 console.log("Message hash (Uint8Array):", hash);
 console.log("Signature (Uint8Array):", signature);
+
 ```
 
 - `signMessageWithSessionKey(message: string)` will throw if there is no session key in the wallet.
@@ -273,6 +290,7 @@ function TransactionMonitor() {
         }
     });
 }
+
 ```
 
 ### Customizing the user interface
@@ -287,6 +305,7 @@ You can customize the connect button by providing a render prop:
         </button>
     )}
 />
+
 ```
 
 ### Web component
@@ -296,4 +315,5 @@ The library also provides a web component for non-React applications:
 ```html
 <script type="module" src="path/to/hyli-wallet/dist/hyli-wallet.es.js"></script>
 <hyli-wallet providers="password,google"></hyli-wallet>
+
 ```
