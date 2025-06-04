@@ -68,5 +68,8 @@ extra:
       link: https://www.youtube.com/@hyli-org
     - icon: fontawesome/brands/telegram
       link: https://t.me/hyli_org
+    - icon: material/robot
+      link: /llms.txt
+      name: LLMs.txt
 
 repo_url: https://github.com/hyli-org/hyli
