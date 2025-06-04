@@ -15,7 +15,7 @@ We heard your feedback on our **frequent breaking changes**. Going forward, we�
 
 - Contract input now uses state instead of state digest, which simplifies the API.
 - SP1 verifier is now a separate feature: this drastically shortens build time if you’re not using it.
-- We’ve improved the general structure of smart contracts.
+- We’ve improved the general structure of apps.
 
 ✨ New features:
 
@@ -100,7 +100,7 @@ We heard your feedback on our **frequent breaking changes**. Going forward, we�
 
 📚 Documentation:
 
-- Updated [our examples](https://github.com/Hyle-org/examples) so they work with 0.9.0!
+- Updated [our examples](https://github.com/hyli-org/examples) so they work with 0.9.0!
 - Added OpenAPI documentation on contract state indexers
 - Added a swagger for the node and its indexer
 

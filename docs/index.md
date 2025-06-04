@@ -44,7 +44,7 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
 </div>
 
-[Reach out on Telegram](https://t.me/hyle_org) or [open an issue](https://github.com/Hyle-org/devhub-hyle) if you need assistance or wish to provide feedback on the documentation: we're always looking to improve.
+[Reach out on Telegram](https://t.me/hyle_org) or [open an issue](https://github.com/hyli-org/devhub-hyle) if you need assistance or wish to provide feedback on the documentation: we're always looking to improve.
 
 ## Useful links
 
@@ -63,4 +63,4 @@ Reach out to the team for more information:
 
 | :fontawesome-brands-github: Github | :fontawesome-brands-twitter: Twitter | :fontawesome-solid-archway: Farcaster | :fontawesome-brands-linkedin: LinkedIn | :fontawesome-brands-youtube: Youtube |:fontawesome-brands-telegram: Telegram|
 |-------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
-| [Hyli](https://github.com/hyli-org) | [@hyli_org](https://x.com/hyli_org)  | [@Hyli](https://warpcast.com/hyle-org) | [Hyli](https://www.linkedin.com/company/hyli-org/) | [@Hyli](https://www.youtube.com/@hyli-org) | [Hyli](https://t.me/hyli_org)|
+| [Hyli](https://github.com/hyli-org) | [@hyli_org](https://x.com/hyli_org)  | [@Hyli](https://farcaster.xyz/hyli-org) | [Hyli](https://www.linkedin.com/company/hyli-org/) | [@Hyli](https://www.youtube.com/@hyli-org) | [Hyli](https://t.me/hyli_org)|

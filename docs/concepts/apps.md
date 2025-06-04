@@ -1,12 +1,12 @@
-# Smart contracts
+# Apps on Hyli
 
-Hyli is a fully programmable blockchain designed for efficient data storage. Hyli only keeps the essential information needed to validate smart contract proofs, ensuring that smart contracts are lightweight and performant.
+Hyli is a fully programmable blockchain designed for efficient data storage. Hyli only keeps the essential information needed to validate app proofs, ensuring that apps are lightweight and performant.
 
-[Unlike traditional blockchains](./hyli-vs-vintage-blockchains.md), which store all smart contract data onchain, Hyli separates execution data (managed offchain by each application) from onchain data, which can be retrieved via our ABI.
+[Unlike traditional blockchains](./hyli-vs-vintage-blockchains.md), which store all app data onchain, Hyli separates execution data (managed offchain by each application) from onchain data, which can be retrieved via our ABI.
 
-## Onchain smart contract data
+## Onchain app data
 
-Hyli smart contracts store the following data onchain:
+Hyli apps store the following data onchain:
 
 - **Name**: the unique identifier for the contract
 - **Verifier**: the proof system used (e.g., "risc0" or "gnark-groth16-te-BN254")
@@ -21,15 +21,15 @@ The contract name must be unique.
 
 #### Verifier and program ID
 
-Smart contracts on Hyli rely on a pairing of a zero-knowledge proof scheme (verifier) and a program identifier. Together, these components validate contract proofs.
+Apps on Hyli rely on a pairing of a zero-knowledge proof scheme (verifier) and a program identifier. Together, these components validate contract proofs.
 
-Clone a template or write your own program to [get started with smart contract writing](../quickstart/your-first-smart-contract.md).
+Clone a template or write your own program to [get started with app writing](../quickstart/your-first-app.md).
 
 | Proving scheme | Verifier | Program ID | Template |
 |----------------|----------|---------------------------------------------------|---|
 | [Noir](https://noir-lang.org/docs/)     | noir     | Verification key. | |
-| [Risc0](https://risc0.com/docs/)    | risc0    | Image ID without a prefix. ex. 0x123 becomes 123. | [Template](https://github.com/Hyle-org/template-risc0)|
-| [SP1](https://docs.succinct.xyz/docs/introduction)        | sp1   | Verification key.       | [Template](https://github.com/Hyle-org/template-sp1)|
+| [Risc0](https://risc0.com/docs/)    | risc0    | Image ID without a prefix. ex. 0x123 becomes 123. | [Template](https://github.com/hyli-org/template-risc0)|
+| [SP1](https://docs.succinct.xyz/docs/introduction)        | sp1   | Verification key.       | [Template](https://github.com/hyli-org/template-sp1)|
 
 #### State digest
 
@@ -39,9 +39,9 @@ The state digest can be expressed as a hash or even a serialization of the state
 
 ## Smart contract ABI
 
-All inputs in Hyli smart contracts must be known at proof generation time. This includes elements like the `tx_hash` which are typically available only at execution time on other blockchains.
+All inputs in Hyli apps must be known at proof generation time. This includes elements like the `tx_hash` which are typically available only at execution time on other blockchains.
 
-Here is the Rust structure specifying the output of a Hyli smart contract:
+Here is the Rust structure specifying the output of a Hyli app:
 
 ```rust
 pub struct HyleOutput {
@@ -116,7 +116,7 @@ A list of new contracts to register, which can be used to self-upgrade a contrac
 
 ### Other program-specific outputs
 
-Smart contracts can generate additional outputs as proof data. These outputs ensure data availability.
+Apps can generate additional outputs as proof data. These outputs ensure data availability.
 
 ## Events
 

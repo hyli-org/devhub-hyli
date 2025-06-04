@@ -70,7 +70,7 @@ Each claim consists of:
 - Parameters
 - A result assertion (== true, == ticket)
 
-See [the source code from our example](https://github.com/Hyle-org/examples/blob/492501ebe6caad8a0fbe3f286f0f51f0ddca537c/ticket-app/contract/src/lib.rs#L44-L66).
+See [the source code from our example](https://github.com/hyli-org/examples/blob/492501ebe6caad8a0fbe3f286f0f51f0ddca537c/ticket-app/contract/src/lib.rs#L44-L66).
 
 ## Delegating identity
 

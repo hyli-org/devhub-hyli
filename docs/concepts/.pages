@@ -1,6 +1,6 @@
 nav:
     - index.md
-    - smart-contracts.md
+    - apps.md
     - transaction.md
     - proof-generation.md
     - identity.md

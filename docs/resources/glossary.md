@@ -2,8 +2,8 @@
 
 |              Term              |                                                            Definition                                                           | Related concept page |
 |:------------------------------:|:-------------------------------------------------------------------------------:|:--------------:
-|**base state** | The state of a smart contract before an operation occurs. | [Transactions](../concepts/transaction.md) |
-| **blob**                       | A piece of provable information that is sent to Hyli.                                                                           | [Smart contracts](../concepts/smart-contracts.md) |
+|**base state** | The state of an app before an operation occurs. | [Transactions](../concepts/transaction.md) |
+| **blob**                       | A piece of provable information that is sent to Hyli.                                                                           | [Apps](../concepts/apps.md.md) |
 | **blob transaction**           | A transaction including a provable *blob*, used for sequencing.       | [Pipelined proving](../concepts/proof-composition.md) |
 | **cross-contract composition** | The ability to use and verify a contract's proofs in other contracts.  | [Proof composition](../concepts/proof-composition.md) |
 | **operation**                  | Something that happens on an *unchained app*. An operation includes two *transactions*: a *blob transaction* and a *proof transaction*. | [Transactions](../concepts/transaction.md) |

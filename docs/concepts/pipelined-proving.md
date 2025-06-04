@@ -2,7 +2,7 @@
 
 ## The problem: base state conflicts
 
-The Hyli Layer 1 ensures both privacy and scalability by verifying only the state transitions of smart contracts, rather than re-executing them. This approach reduces computational overhead but introduces a critical issue for provable applications: base state conflicts.
+The Hyli Layer 1 ensures both privacy and scalability by verifying only the state transitions of apps, rather than re-executing them. This approach reduces computational overhead but introduces a critical issue for provable applications: base state conflicts.
 
 An app with a lot of usage will see conflicting operations, where multiple transactions reference the same base state, waiting for the previous state change to be settled.
 

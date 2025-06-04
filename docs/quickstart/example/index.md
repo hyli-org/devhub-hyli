@@ -11,8 +11,8 @@ Here's a step-by-step walkthrough of an example.
         "icon": ":material-home:",
     },
     {
-        "title": "[Create your first smart contract](./first-token-contract.md)",
-        "content": "Understand how smart contracts work on Hyli with our simple-token example.",
+        "title": "[Create your first app](./first-token-contract.md)",
+        "content": "Understand how apps work on Hyli with our simple-token example.",
         "icon": ":fontawesome-solid-coins:",
     },
     {
