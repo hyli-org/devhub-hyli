@@ -20,7 +20,7 @@ This architecture reduces storage overhead and promotes scalability while mainta
 
 ## No wallets
 
-Stop asking yourself, "Which wallet do I use? How do I bridge?". You don’t need to worry about wallets or bridges with Hyli: any identity that can produce a valid proof works as your account.
+Stop asking yourself, "Which wallet do I use? How do I bridge?". You don’t need to worry about that with Hyli: any identity that can produce a valid proof can be integrated in your [Hyli wallet](./identity.md).
 
 ## Every app is a rollup
 
