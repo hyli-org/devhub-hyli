@@ -172,7 +172,7 @@ Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/ta
 
 ✨ New features:
 
-- Added [the SP1 prover](https://docs.succinct.xyz/docs/introduction) to the client SDK.
+- Added [the SP1 prover](https://docs.succinct.xyz/docs/network/introduction) to the client SDK.
 
 🚅 Improvements:
 
