@@ -1782,7 +1782,7 @@
 </ol>
 <h2 id="why-use-the-hyli-wallet">Why use the Hyli wallet?</h2>
 <p>With this architecture, interacting with a smart contract <strong>does not require any private input</strong> in the zkVM. The signature is verified natively without requiring the generation of a zero-knowledge proof for this blob.</p>
-<p>The two other blobs don’t require authentication, as the authentication blob works for the entire transaction thanks to Hyli’s <a href="https://www.notion.so/Proof-composition-concept-page-19f9e5decaad807fadeeea1239893b2b?pvs=21">native proof composition</a>.</p>
+<p>The two other blobs don’t require authentication, as the authentication blob works for the entire transaction thanks to Hyli’s <a href="../proof-composition/">native proof composition</a>.</p>
 <p>This has the added benefit of avoiding timeouts. Since there are no private inputs, anyone can verify every blob in the transaction without worrying too much about privacy, and there is no bottleneck in verification times, as there could be if there were invalid data in a private input. Apps can externalize proving without worrying about security.</p>
 <h2 id="building-with-the-hyli-wallet">Building with the Hyli wallet</h2>
 <h3 id="clone-the-repository">Clone the repository</h3>
@@ -1876,7 +1876,7 @@
 </span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="session-key-management">Session key management</h3>
-<p>Find a full implementation of session keys in <a href="https://www.notion.so/front/src/components/wallet/SessionKeys.tsx">SessionKeys.tsx</a>.</p>
+<p>Find a full implementation of session keys in <a href="https://github.com/hyli-org/wallet/blob/main/front/src/components/wallet/SessionKeys.tsx">SessionKeys.tsx</a>.</p>
 <h3 id="creating-a-session-key">Creating a session key</h3>
 <p>Session keys allow for delegated transaction signing. Here's how to create one:</p>
 <div class="language-tsx highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useWallet</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'hyli-wallet'</span><span class="p">;</span>

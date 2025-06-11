@@ -1701,7 +1701,7 @@
 <div><h1 id="your-first-token-contract">Your first token contract</h1>
 <p>This guide will walk you through creating and deploying your first token transfer contract using Hyli's tools and infrastructure. We'll use <a href="https://github.com/hyli-org/examples/tree/main/simple-token">our simple-token transfer example</a> as the basis for this tutorial.</p>
 <p>For an alternative implementation, check out <a href="https://github.com/hyli-org/examples/tree/main/simple-token-sp1">the same example built with SP1</a>.</p>
-<p>If you’re new to apps on Hyli, read the <a href="../../concepts/apps.md.md">anatomy of an app</a>.</p>
+<p>If you’re new to apps on Hyli, read the <a href="../../concepts/apps">anatomy of an app</a>.</p>
 <h2 id="example">Example</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1753,8 +1753,8 @@
 <p class="admonition-title">Note</p>
 <p>In this example, we do not verify the identity of the person who initiates the transaction. We use <code>.simple_token</code> as a suffix for the "from" and "to" transfer fields, but the correct identity scheme should be used in production.</p>
 </div>
-<p>See your contract's state digest at: <code>https://hyleou.hyli.org/contract/$CONTRACT_NAME</code>.</p>
-<p>See your transaction on Hyli's explorer: <code>https://hyleou.hyli.org/tx/$TX_HASH</code>.</p>
+<p>See your contract's state digest at: <code>https://explorer.hyli.org/contract/$CONTRACT_NAME</code>.</p>
+<p>See your transaction on Hyli's explorer: <code>https://explorer.hyli.org/tx/$TX_HASH</code>.</p>
 <h2 id="development-mode">Development mode</h2>
 <p>For faster iteration during development, enable <a href="https://dev.risczero.com/api/generating-proofs/dev-mode">dev-mode</a>: <code>-e RISC0_DEV_MODE=1</code>.</p>
 <p>To get execution statistics, set: <code>RUST_LOG="[executor]=info"</code> as an environment variable.</p>
@@ -1795,7 +1795,7 @@
 </span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
 </span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="fm">println!</span><span class="p">(</span><span class="s">"✅ Register contract tx sent. Tx hash: {}"</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">);</span>
 </span></code></pre></div>
-<p>In <a href="https://hyleou.hyli.org/">the explorer</a>, this will look like this:</p>
+<p>In <a href="https://explorer.hyli.org/">the explorer</a>, this will look like this:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="nt">"tx_hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"321b7a4b2228904fc92979117e7c2aa6740648e339c97986141e53d967e08097"</span><span class="p">,</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"examples"</span><span class="p">,</span>
