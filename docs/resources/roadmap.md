@@ -2,19 +2,13 @@
 title: Roadmap
 ---
 
-![Our roadmap, which includes two private testnets and a public testnet.](../assets/img/roadmap.png)
-
 ## Testnet
 
-We are on our way to launch a **private testnet in Q2 2025**, which will be followed by a public testnet.
+Our private testnet is live and can be accessed with invite codes. Invite codes will be shared on social media channels.
 
-Stay tuned for updates or ask specific questions [in our Telegram group](https://t.me/hyle_org).
+Stay tuned for updates or ask specific questions [in our Telegram group](https://t.me/hyli_org).
 
-While we’re working, you can get hands-on right now:
-
-- [Explore our public devnet or spin up your own instance](../quickstart/devnet.md) to start building today!
-- [Read our release notes for the devnet](./release-notes.md).
-- If you are an individual, join us [for ODBoost weeks](https://app.onlydust.com/p/hyl).
+While we’re working, you can get hands-on right now: [create your first app on Hyli](../quickstart/index.md)!
 
 ## Proving schemes
 

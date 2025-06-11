@@ -29,7 +29,7 @@ A **proof transaction** includes:
   - A zero-knowledge proof.
   - The app output.
 
-For Risc0 and SP1, the proof data's app output follows `HyleOutput` as defined in the [smart contract ABI](./apps.md.md).
+For Risc0 and SP1, the proof data's app output follows `HyleOutput` as defined in the [smart contract ABI](./apps.md#smart-contract-abi).
 
 ## Example: token transfer
 

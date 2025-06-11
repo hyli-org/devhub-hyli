@@ -4,7 +4,7 @@ This guide will walk you through creating and deploying your first token transfe
 
 For an alternative implementation, check out [the same example built with SP1](https://github.com/hyli-org/examples/tree/main/simple-token-sp1).
 
-If you’re new to apps on Hyli, read the [anatomy of an app](../../concepts/apps.md.md).
+If you’re new to apps on Hyli, read the [anatomy of an app](../../concepts/apps).
 
 ## Example
 
@@ -77,9 +77,9 @@ cargo run -- balance bob.simple_token
 !!! note
     In this example, we do not verify the identity of the person who initiates the transaction. We use `.simple_token` as a suffix for the "from" and "to" transfer fields, but the correct identity scheme should be used in production.
 
-See your contract's state digest at: `https://hyleou.hyli.org/contract/$CONTRACT_NAME`.
+See your contract's state digest at: `https://explorer.hyli.org/contract/$CONTRACT_NAME`.
 
-See your transaction on Hyli's explorer: `https://hyleou.hyli.org/tx/$TX_HASH`.
+See your transaction on Hyli's explorer: `https://explorer.hyli.org/tx/$TX_HASH`.
 
 ## Development mode
 
@@ -133,7 +133,7 @@ let res = client
 println!("✅ Register contract tx sent. Tx hash: {}", res);
 ```
 
-In [the explorer](https://hyleou.hyli.org/), this will look like this:
+In [the explorer](https://explorer.hyli.org/), this will look like this:
 
 ```json
 {

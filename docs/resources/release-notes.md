@@ -1,6 +1,6 @@
 # Release notes
 
-Read our [full changelogs on GitHub](https://github.com/hyli-org/hyli/releases/) or the short versions [in our Telegram group](https://t.me/hyle_org).
+Read our [full changelogs on GitHub](https://github.com/hyli-org/hyli/releases/) or the short versions [in our Telegram group](https://t.me/hyli_org).
 
 ## 2025-02-24 − v0.12.0
 
@@ -166,7 +166,7 @@ Read release notes [for v0.7.1](https://github.com/hyli-org/hyli/releases/tag/v0
 - [Transactions on Hyli](https://docs.hyli.org//concepts/transaction/)
 - [Identity management](https://docs.hyli.org//concepts/identity/)
 
-Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/tag/v0.7.0) and receive future release notes [in our Telegram group](https://t.me/hyle_org).
+Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/tag/v0.7.0) and receive future release notes [in our Telegram group](https://t.me/hyli_org).
 
 ## 2025-01-13 − v0.6.0
 
@@ -187,4 +187,4 @@ Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/ta
 
 - Rewrote [our Quickstart guide](https://docs.hyli.org//quickstart/).
 
-Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/tag/v0.6.0) and receive future release notes [in our Telegram group](https://t.me/hyle_org).
+Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/tag/v0.6.0) and receive future release notes [in our Telegram group](https://t.me/hyli_org).

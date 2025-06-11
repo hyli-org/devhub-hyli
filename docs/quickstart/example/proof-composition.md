@@ -6,9 +6,9 @@ In this guide, we’ll build a Ticket App that demonstrates proof composition. U
 
 Find the source code for all contracts here:
 
-- [ticket-app](https://github.com/hyli-org/examples/tree/feat/ticket-app/ticket-app)
+- [ticket-app](https://github.com/hyli-org/examples/tree/main/ticket-app)
 - [simple-identity](https://github.com/hyli-org/examples/tree/main/simple-identity)
-- [simple-token](https://github.com/hyli-org/examples/tree/feat/ticket-app/simple-token)
+- [simple-token](https://github.com/hyli-org/examples/tree/main/simple-token)
 
 Traditional verification systems often require all proofs to be generated using the same proving system. Hyli removes this limitation, allowing:
 

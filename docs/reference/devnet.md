@@ -2,7 +2,7 @@
 
 ## Recommended: Run from source
 
-For a single-node devnet (consensus disabled) with an indexer, clone the [hyle repository](https://github.com/hyli-org/hyli) and run:
+For a single-node devnet (consensus disabled) with an indexer, clone the [hyli repository](https://github.com/hyli-org/hyli) and run:
 
 ```sh
 cargo run -- --pg
@@ -67,7 +67,7 @@ docker run -v ./data:/hyle/data \
 You can now [create your first app](../quickstart/example/first-token-contract.md).
 
 !!! tip
-To reset your devnet, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.
+    To reset your devnet, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.
 
 ## Alternative: Build the Docker image locally
 
@@ -87,7 +87,7 @@ You can configure your setup using environment variables or by editing a configu
 
 To load settings from a file, place `config.toml` in your node's working directory. It will be detected automatically at startup.
 
-For documentation, see the defaults at [src/utils/conf_defaults.toml](https://github.com/hyli-org/hyli/blob/main/src/utils/conf_defaults.ron).
+For documentation, see the defaults at [src/utils/conf_defaults.toml](https://github.com/hyli-org/hyli/blob/main/src/utils/conf_defaults.toml).
 
 For Docker users, mount the config file when running the container:
 

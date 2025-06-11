@@ -44,14 +44,14 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
 </div>
 
-[Reach out on Telegram](https://t.me/hyle_org) or [open an issue](https://github.com/hyli-org/devhub-hyle) if you need assistance or wish to provide feedback on the documentation: we're always looking to improve.
+[Reach out on Telegram](https://t.me/hyli_org) or [open an issue](https://github.com/hyli-org/devhub-hyli) if you need assistance or wish to provide feedback on the documentation: we're always looking to improve.
 
 ## Useful links
 
 <div class="grid cards" markdown>
 
 - :fontawesome-solid-circle-nodes: [Rust node](http://github.com/hyli-org/hyli)
-- :material-hexagon-multiple-outline: [Example contracts](http://github.com/hyle-org/examples)
+- :material-hexagon-multiple-outline: [Example contracts](http://github.com/hyli-org/examples)
 - :material-home: [Website](https://hyli.org)
 - :material-rss: [Hyli blog](https://blog.hyli.org)
 

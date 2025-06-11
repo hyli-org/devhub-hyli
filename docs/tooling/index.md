@@ -24,8 +24,8 @@ Here, you'll find our resources about Hyli's tooling.
 
     ---
 
-    Understand and use the Hyli explorer.
+    Use the Hyli explorer.
 
-    [:octicons-arrow-right-24: Read more](./explorer.md)
+    [:octicons-arrow-right-24: Read more](https://explorer.hyli.org)
 
 </div>

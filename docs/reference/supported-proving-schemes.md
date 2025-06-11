@@ -1,6 +1,6 @@
 # Supported proving schemes
 
-Clone a template or write your own program to [get started with sapp writing](../quickstart/your-first-app.md).
+Clone a template or write your own program to [get started with app writing](../quickstart/your-first-app.md).
 
 | Proving scheme | Verifier | Program ID | Template |
 |----------------|----------|---------------------------------------------------|---|

@@ -21,4 +21,4 @@ Hyli has a grant program supporting developers who want to explore programmable 
 
 To read more, see our grant ideas and pas grants, and apply, please go to [our Grants page on the main Hyli repository](https://github.com/hyli-org/hyli/blob/main/GRANTS.md). If you represent an organization, we'd love to discuss co-grants ideas.
 
-For questions that aren't answered on the Grants page, reach out [in our Telegram group](https://t.me/hyle_org).
+For questions that aren't answered on the Grants page, reach out [in our Telegram group](https://t.me/hyli_org).

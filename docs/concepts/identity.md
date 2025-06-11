@@ -58,7 +58,7 @@ When interacting with the allowlisted contract, the transaction will include thr
 
 With this architecture, interacting with a smart contract **does not require any private input** in the zkVM. The signature is verified natively without requiring the generation of a zero-knowledge proof for this blob.
 
-The two other blobs don’t require authentication, as the authentication blob works for the entire transaction thanks to Hyli’s [native proof composition](https://www.notion.so/Proof-composition-concept-page-19f9e5decaad807fadeeea1239893b2b?pvs=21).
+The two other blobs don’t require authentication, as the authentication blob works for the entire transaction thanks to Hyli’s [native proof composition](./proof-composition.md).
 
 This has the added benefit of avoiding timeouts. Since there are no private inputs, anyone can verify every blob in the transaction without worrying too much about privacy, and there is no bottleneck in verification times, as there could be if there were invalid data in a private input. Apps can externalize proving without worrying about security.
 
@@ -181,7 +181,7 @@ function WalletFeatures() {
 
 ### Session key management
 
-Find a full implementation of session keys in [SessionKeys.tsx](https://www.notion.so/front/src/components/wallet/SessionKeys.tsx).
+Find a full implementation of session keys in [SessionKeys.tsx](https://github.com/hyli-org/wallet/blob/main/front/src/components/wallet/SessionKeys.tsx).
 
 ### Creating a session key
 
