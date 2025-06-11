@@ -13,6 +13,11 @@ title: Find us
 
 </div>
 
+## Talk about us
+
+- [Media hub](https://hyli-org.notion.site/media-hub?pvs=74)
+- [Visual assets](https://github.com/hyli-org/hyli-assets/blob/main/README.md)
+
 ## Contact us
 
 Reach out to the team for more information:
