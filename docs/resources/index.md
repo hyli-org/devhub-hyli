@@ -26,6 +26,14 @@
 
     [:octicons-arrow-right-24: Grants](./grants.md)
 
+-   :fontawesome-solid-handshake-simple:{ .lg .middle } __Partnerships__
+
+    ---
+
+    Let's work together.
+
+    [:octicons-arrow-right-24: Partnerships](./partnerships.md)
+
 -   :octicons-people-16:{ .lg .middle } __Glossary__
 
     ---
