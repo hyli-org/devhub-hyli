@@ -2,6 +2,8 @@
 title: Roadmap
 ---
 
+![The Hyli roadmap includes two testnet phases gated by an access code and one stable testnet.](../assets/img/roadmap.jpg)
+
 ## Testnet
 
 Our private testnet is live and can be accessed with invite codes. Invite codes will be shared on social media channels.
