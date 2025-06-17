@@ -9,7 +9,7 @@ Hyli is a fully programmable blockchain designed for efficient data storage. Hyl
 Hyli apps store the following data onchain:
 
 - **Name**: the unique identifier for the contract
-- **Verifier**: the proof system used (e.g., "risc0" or "gnark-groth16-te-BN254")
+- **Verifier**: the proof system used (e.g., "risc0")
 - **Program ID**: the unique identifier for the program within that proof system
 - **State digest**: current state commitment of the contract
 

@@ -32,7 +32,7 @@ DSLs, like Circom, are specific languages that usually compile down to a specifi
 
 zkVMs prove the correct execution of arbitrary code. They allow you to build ZK applications in a certain language without having to build a circuit around it. There are two main types of zkVMs: Cairo and RISC-V. You can benchmark your Rust code and find the best zkVM for your needs with [the any-zkvm template](https://github.com/MatteoMer/any-zkvm).
 
-We will support more types, including Cairo-based zkVMs and DSLs, in the future, and plan to support all major proving schemes eventually. The next proving schemes we're aiming to support are [Cairo](https://www.cairo-lang.org/docs/) via Stwo and [Groth16](https://github.com/arkworks-rs/groth16).
+We will support more types, including Cairo-based zkVMs and DSLs, in the future, and plan to support all major proving schemes eventually.
 
 ## How to generate proofs
 
