@@ -35,12 +35,12 @@ The expected output is `📝 Registering new contract simple_token`.
 Transfer 2 tokens from the Hyli `faucet` to `Bob`:
 
 ```bash
-cargo run -- transfer faucet.simple_token bob.simple_token 2
+cargo run -- transfer faucet@simple_token bob@simple_token 2
 ```
 
 This command:
 
-1. Sends a blob transaction to transfer 2 tokens from `faucet` to `bob`. To better understand what a blob transaction is, [read more about transactions on Hyli](../../concepts/transaction.md).
+1. Sends a blob transaction to transfer 2 tokens from `faucet@simple_token` to `bob@simple_token`. To better understand what a blob transaction is, [read more about transactions on Hyli](../../concepts/transaction.md). 
 2. Generates a ZK proof for the transfer.
 3. Sends the proof to the devnet for verification. (Scroll down to see what that looks like in code.)
 
@@ -70,12 +70,12 @@ INFO hyle::data_availability::node_state: Settle tx TxHash("[..]")
 Verify onchain balances:
 
 ```bash
-cargo run -- balance faucet.simple_token
-cargo run -- balance bob.simple_token
+cargo run -- balance faucet@simple_token
+cargo run -- balance bob@simple_token
 ```
 
 !!! note
-    In this example, we do not verify the identity of the person who initiates the transaction. We use `.simple_token` as a suffix for the "from" and "to" transfer fields, but the correct identity scheme should be used in production.
+    In this example, we do not verify the identity of the person who initiates the transaction. We use `@simple_token` as a suffix for the "from" and "to" transfer fields, but the correct identity scheme should be used in production. To better understand how Hyli manages identity, [read more about identity on Hyli](../../concepts/identity.md).
 
 See your contract's state digest at: `https://explorer.hyli.org/contract/$CONTRACT_NAME`.
 
