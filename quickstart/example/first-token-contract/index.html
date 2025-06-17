@@ -1722,11 +1722,11 @@
 <p>The expected output is <code>📝 Registering new contract simple_token</code>.</p>
 <h3 id="transfer-tokens">Transfer tokens</h3>
 <p>Transfer 2 tokens from the Hyli <code>faucet</code> to <code>Bob</code>:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>transfer<span class="w"> </span>faucet.simple_token<span class="w"> </span>bob.simple_token<span class="w"> </span><span class="m">2</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>transfer<span class="w"> </span>faucet@simple_token<span class="w"> </span>bob@simple_token<span class="w"> </span><span class="m">2</span>
 </span></code></pre></div>
 <p>This command:</p>
 <ol>
-<li>Sends a blob transaction to transfer 2 tokens from <code>faucet</code> to <code>bob</code>. To better understand what a blob transaction is, <a href="../../../concepts/transaction/">read more about transactions on Hyli</a>.</li>
+<li>Sends a blob transaction to transfer 2 tokens from <code>faucet@simple_token</code> to <code>bob@simple_token</code>. To better understand what a blob transaction is, <a href="../../../concepts/transaction/">read more about transactions on Hyli</a>. </li>
 <li>Generates a ZK proof for the transfer.</li>
 <li>Sends the proof to the devnet for verification. (Scroll down to see what that looks like in code.)</li>
 </ol>
@@ -1746,12 +1746,12 @@
 </span></code></pre></div>
 <h4 id="check-onchain-balance">Check onchain balance</h4>
 <p>Verify onchain balances:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>balance<span class="w"> </span>faucet.simple_token
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>balance<span class="w"> </span>bob.simple_token
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>balance<span class="w"> </span>faucet@simple_token
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>balance<span class="w"> </span>bob@simple_token
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In this example, we do not verify the identity of the person who initiates the transaction. We use <code>.simple_token</code> as a suffix for the "from" and "to" transfer fields, but the correct identity scheme should be used in production.</p>
+<p>In this example, we do not verify the identity of the person who initiates the transaction. We use <code>@simple_token</code> as a suffix for the "from" and "to" transfer fields, but the correct identity scheme should be used in production. To better understand how Hyli manages identity, <a href="../../../concepts/identity/">read more about identity on Hyli</a>.</p>
 </div>
 <p>See your contract's state digest at: <code>https://explorer.hyli.org/contract/$CONTRACT_NAME</code>.</p>
 <p>See your transaction on Hyli's explorer: <code>https://explorer.hyli.org/tx/$TX_HASH</code>.</p>
