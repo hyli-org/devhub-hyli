@@ -1,5 +1,8 @@
 # Using a custom identity contract
 
+!!! failure
+   This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
+
 ## When to use identity contracts on Hyli
 
 On Hyli, **any app can be a proof of identity**. This flexibility enables you to register your preferred identity source as an app for account identification. If you don't want to use a custom identity source, Hyli ships [a native `hydentity` contract](https://github.com/hyli-org/hyli/tree/main/crates/contracts/hydentity).
