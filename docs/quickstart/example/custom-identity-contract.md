@@ -1,7 +1,7 @@
 # Using a custom identity contract
 
 !!! failure
-   This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
+    This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
 
 ## When to use identity contracts on Hyli
 

@@ -1,7 +1,7 @@
 # Proof composition with Ticket App
 
 !!! failure
-   This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
+    This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
 
 Hyli enables [proof composition](../../concepts/proof-composition.md), allowing different proving systems to work within a single operation. This removes constraints on provers and significantly improves interoperability and efficiency.
 

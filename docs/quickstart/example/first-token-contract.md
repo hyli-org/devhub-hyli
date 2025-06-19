@@ -1,7 +1,7 @@
 # Your first token contract
 
 !!! failure
-   This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
+    This documentation is not up-to-date. We'll rewrite it soon. In the meantime, we recommend using our [testnet faucet](https://github.com/hyli-org/faucet) or [testnet wallet](https://github.com/hyli-org/wallet) as examples.
 
 This guide will walk you through creating and deploying your first token transfer contract using Hyli's tools and infrastructure. We'll use [our simple-token transfer example](https://github.com/hyli-org/examples/tree/main/simple-token) as the basis for this tutorial.
 
