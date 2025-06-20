@@ -6,6 +6,9 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
 [Hyli](https://hyli.org/) is the new proof-powered L1 to build the next generation of apps onchain.
 
+!!! information
+    Hacking at **ZKHack Berlin**? Our docs are not always up to date, so we made a [ZKHack Berlin Quickstart](./zkhack.md) to make you get started much faster!
+
 ## Navigation
 
 <div class="grid cards" markdown>
