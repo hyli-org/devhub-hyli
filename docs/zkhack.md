@@ -73,6 +73,9 @@ $ RISC0_DEV_MODE=true cargo run -p server
 
     You can use the command `rm -rf data && RISC0_DEV_MODE=true cargo run -p server` to avoid getting stuck
 
+!!! tip
+    Use the test account `hyli` with the password `hylisecure` for an already working account without needing to create one and give it tokens!
+
 ## Making changes to the contracts
 
 You can modify the in `contracts/` and have fun hacking whatever you have in mind.
