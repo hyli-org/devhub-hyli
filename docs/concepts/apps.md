@@ -23,13 +23,7 @@ The contract name must be unique.
 
 Apps on Hyli rely on a pairing of a zero-knowledge proof scheme (verifier) and a program identifier. Together, these components validate contract proofs.
 
-Clone a template or write your own program to [get started with app writing](../quickstart/your-first-app.md).
-
-| Proving scheme | Verifier | Program ID | Template |
-|----------------|----------|---------------------------------------------------|---|
-| [Noir](https://noir-lang.org/docs/)     | noir     | Verification key. | |
-| [Risc0](https://risc0.com/docs/)    | risc0    | Image ID without a prefix. ex. 0x123 becomes 123. | [Template](https://github.com/hyli-org/template-risc0)|
-| [SP1](https://docs.succinct.xyz/docs/introduction)        | sp1   | Verification key.       | [Template](https://github.com/hyli-org/template-sp1)|
+See the verifier scheme for each supported proving scheme in t[his reference page](../reference/supported-proving-schemes.md).
 
 #### State digest
 
@@ -83,7 +77,9 @@ Identity consists of:
 1. The name of the contract that the proof was generated for.
 
 !!! example
-    A contract verifying Ethereum EOAs might have an identity like `0x1234...5678.eth_eoa` where the first part matches a regular Ethereum address and `eth_eoa` is the name of the contract.
+    A contract verifying Ethereum EOAs might have an identity like `0x1234...5678@eth_eoa` where the first part matches a regular Ethereum address and `eth_eoa` is the name of the contract.
+
+For simplicity, we recommend using the pre-built [Hyli wallet](../tooling/wallet.md).
 
 ### Blob index and blobs
 

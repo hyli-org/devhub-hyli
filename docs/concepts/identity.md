@@ -183,7 +183,7 @@ function WalletFeatures() {
 
 Find a full implementation of session keys in [SessionKeys.tsx](https://github.com/hyli-org/wallet/blob/main/front/src/components/wallet/SessionKeys.tsx).
 
-### Creating a session key
+#### Creating a session key
 
 Session keys allow for delegated transaction signing. Here's how to create one:
 
@@ -217,7 +217,7 @@ console.log(sessionKey.privateKey); // The private key to sign transactions
 
 ```
 
-### Signing a transaction with a session key
+#### Signing a transaction with a session key
 
 Once you have a session key, you can use it to send transactions.
 
@@ -243,7 +243,7 @@ console.log("Transaction sent:", txHash);
 
 ```
 
-### Removing a session key
+#### Removing a session key
 
 When a session key is no longer needed, you can remove it:
 
@@ -257,7 +257,7 @@ await removeSessionKey("your_password", "session_key_public_key");
 
 ```
 
-### Signing arbitrary messages with a session key
+#### Signing arbitrary messages with a session key
 
 You can sign any message using the current session key.
 
