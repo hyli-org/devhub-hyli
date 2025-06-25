@@ -16,11 +16,9 @@ Each app developer also defines what the **public and private inputs** of their 
 
 ### Choose how you prove
 
-We support as many proving schemes we can, giving you the flexibility to choose the most suitable protocol for your specific use case.
+We support as many proving schemes we can, giving you the flexibility to choose the most suitable protocol for your specific use case. Read more about [our supported proving schemes](../reference/supported-proving-schemes.md).
 
-We've written templates for some of [our supported programs](../reference/supported-proving-schemes.md). Clone them to [get started](../quickstart/your-first-app.md) with app writing.
-
-We also verify these natively, without the need for a ZK proof.
+We also verify these natively, without the need for a ZK proof:
 
 - sha3_256
 - BLST signatures
@@ -59,8 +57,6 @@ Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or fol
 
 If you choose to work with an external prover or proving market, you can choose from one of our partners in that area and benefit from a better Hyli integration.
 
-We recommend checking out [Electron](https://electron.dev/), [Fermah](https://www.fermah.xyz/), [Kakarot](https://www.kakarot.org/), [Marlin](https://www.marlin.org/), [Nexus](https://nexus.xyz/), [Nodekit](https://www.nodekit.xyz/), [ZEROBASE](http://zerobase.pro/), or [zkCloud](https://zkcloud.com/).
-
 ## Submitting a proof to Hyli
 
 Read more about the transaction lifecycle on our [transactions overview](./transaction.md).
@@ -69,7 +65,7 @@ First, your application sends a blob transaction to Hyli.
 
 Thanks to [pipelined proving](./pipelined-proving.md), once a transaction is submitted, it is sequenced.
 
-You can then start generating your proof using the sequenced virtual base state as the base state for your operation. [Read our quickstart](../quickstart/example/first-token-contract.md#prove-the-transaction) for a concrete example of how to prove a transaction.
+You can then start generating your proof using the sequenced virtual base state as the base state for your operation.
 
 Once sent, the proof goes through Hyli’s native verification, removing the need for verifier contracts.
 
