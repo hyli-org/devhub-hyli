@@ -23,7 +23,7 @@ The contract name must be unique.
 
 Apps on Hyli rely on a pairing of a zero-knowledge proof scheme (verifier) and a program identifier. Together, these components validate contract proofs.
 
-See the verifier scheme for each supported proving scheme in t[his reference page](../reference/supported-proving-schemes.md).
+See the verifier scheme for each supported proving scheme in [this reference page](../reference/supported-proving-schemes.md).
 
 #### State digest
 

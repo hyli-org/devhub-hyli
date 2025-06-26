@@ -2,15 +2,13 @@
 
 ## IMPORTANT: Editing a contract
 
-If you make changes to the contracts, you need to restart the node:
+If you make changes to the contracts, you need to execute this command in the node, the wallet, and the scaffold to restart them:
 
 ```sh
-$ rm -rf ./data # we have to clean the state of the server as well
-$ docker-compose down --volumes --remove-orphan
-$ docker-compose up -d
+rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
 ```
 
-If you do not do this, you will see an error about a program id mismatch in the server. 
+If you do not do this, you will see an error about a program id mismatch in the server.
 
 ## How the scaffold is built
 

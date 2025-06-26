@@ -2,7 +2,6 @@
 
 ## Prerequisites
 
-- [Install Docker](https://docs.docker.com/get-started/)
 - [Install Rust](https://www.rust-lang.org/tools/install) (you'll need `rustup` and Cargo).
 - Install openssl-dev (e.g. `apt install openssl-dev` or `cargo add openssl`).
 - [Bun](https://bun.sh/) (or npm/yarn)
@@ -17,7 +16,8 @@ Run:
 
 ```sh
 rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
-```
+git checkout v0.13.1
+rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
 
 You can now use [the Hyli explorer](https://explorer.hyli.org). Select `localhost` in the upper-right corner.
 
@@ -32,6 +32,7 @@ Wait until the node has successfully launched.
 Run:
 
 ```sh
+git checkout v0.1.2
 rm -rf data 2>/dev/null || true && clear && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run --bin server --release -- -m -a -w
 ```
 
