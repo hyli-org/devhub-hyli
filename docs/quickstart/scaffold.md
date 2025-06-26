@@ -1,4 +1,4 @@
-# Set up your application
+# Build your app
 
 ## IMPORTANT: Editing a contract
 

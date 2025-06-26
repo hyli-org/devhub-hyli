@@ -1,4 +1,4 @@
-# Run your app locally
+# Run the scaffold locally
 
 ## Prerequisites
 

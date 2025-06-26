@@ -8,12 +8,12 @@ It uses several examples to help you start building as soon as possible.
 
 [
     {
-        "title": "[Run your local node](./devnet.md)",
+        "title": "[Run the scaffold locally](./devnet.md)",
         "content": "Where it all begins.",
         "icon": ":material-home:",
     },
     {
-        "title": "[Set up your application](./scaffold.md)",
+        "title": "[Build your app](./scaffold.md)",
         "content": "Using our scaffold repository, set up your application.",
         "icon": ":fontawesome-solid-water-ladder:",
     },
