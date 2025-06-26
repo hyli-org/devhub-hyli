@@ -14,7 +14,7 @@ This section includes general documentation topics. You can also refer to [our G
 
     Most app information stays off-chain.
 
-    [:octicons-arrow-right-24: Read more](./apps)
+    [:octicons-arrow-right-24: Read more](./apps.md)
 
 -   :material-lightbulb:{ .lg .middle } __Transactions__
 

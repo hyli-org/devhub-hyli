@@ -1,8 +1,5 @@
 # Proof composition
 
-!!! note
-    To understand proof composition in practice, check out [our quickstart example](../quickstart/example/proof-composition.md).
-
 ## The problem: clunky interactions
 
 In zero-knowledge systems, coordinating multiple proofs is complex. Cross-contract calls often rely on recursive verification, where Program A verifies a proof of the correct execution of Program B. This is inefficient and creates overhead at the proof generation and verification stages.

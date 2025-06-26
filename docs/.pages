@@ -1,6 +1,5 @@
 nav:
     - index.md
-    - zkhack.md
     - introduction.md
     - quickstart
     - concepts

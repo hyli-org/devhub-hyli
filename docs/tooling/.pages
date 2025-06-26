@@ -1,6 +1,7 @@
 nav:
     - index.md
     - explorer.md
+    - wallet.md
     - sdk.md
     - api.md
     - ...
