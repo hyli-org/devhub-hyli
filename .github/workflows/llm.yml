@@ -1,11 +1,11 @@
 # github action - .github/workflows/llm.yml
 
-      - name: Generate static files
-        run : mkdocs build
+    - name: Generate static files
+    run : mkdocs build
 
-      - name: Make docs LLM ready
-        uses: demodrive-ai/llms-txt-action@v1
+    - name: Make docs LLM ready
+    uses: demodrive-ai/llms-txt-action@v1
 
-      - name: Deploy to Github
-        run : mkdocs gh-deploy --dirty
-        # --dirty helps keep the generated .md and .txt files from getting deleted.
+    - name: Deploy to Github
+    run : mkdocs gh-deploy --dirty
+# --dirty helps keep the generated .md and .txt files from getting deleted.
