@@ -2,7 +2,7 @@
 
 ## Recommended: Run from source
 
-For a single-node devnet (consensus disabled) with an indexer, clone the [hyli repository](https://github.com/hyli-org/hyli) and run:
+For a single local node (consensus disabled) with an indexer, clone the [hyli repository](https://github.com/hyli-org/hyli) and run:
 
 ```sh
 cargo run -- --pg
@@ -27,7 +27,7 @@ cargo run
 
 ## Alternative: Start with Docker
 
-Use Docker to run a local node. Note that the devnet is unstable and may break with future updates.
+Use Docker to run a local node.
 
 ### Pull the Docker image
 
@@ -67,7 +67,7 @@ docker run -v ./data:/hyle/data \
 You can now [create your first app](../quickstart/index.md).
 
 !!! tip
-    To reset your devnet, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.
+    To reset your local node, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.
 
 ## Alternative: Build the Docker image locally
 

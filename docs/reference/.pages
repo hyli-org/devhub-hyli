@@ -1,5 +1,5 @@
 nav:
     - index.md
     - supported-proving-schemes.md
-    - devnet.md
+    - local-node.md
     - node.md
