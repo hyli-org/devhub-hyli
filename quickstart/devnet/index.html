@@ -436,6 +436,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#run-the-wallet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the wallet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#run-the-app-scaffold" class="md-nav__link">
     <span class="md-ellipsis">
       Run the app scaffold
@@ -1304,6 +1313,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#run-the-wallet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the wallet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#run-the-app-scaffold" class="md-nav__link">
     <span class="md-ellipsis">
       Run the app scaffold
@@ -1350,31 +1368,24 @@
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data_node<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.13.1
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data_node<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>You<span class="w"> </span>can<span class="w"> </span>now<span class="w"> </span>use<span class="w"> </span><span class="o">[</span>the<span class="w"> </span>Hyli<span class="w"> </span>explorer<span class="o">](</span>https://explorer.hyli.org<span class="o">)</span>.<span class="w"> </span>Select<span class="w"> </span><span class="sb">`</span>localhost<span class="sb">`</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>upper-right<span class="w"> </span>corner.
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>For<span class="w"> </span>alternative<span class="w"> </span>setups,<span class="w"> </span>optional<span class="w"> </span>features,<span class="w"> </span>and<span class="w"> </span>advanced<span class="w"> </span>configurations,<span class="w"> </span>check<span class="w"> </span>out<span class="w"> </span><span class="o">[</span>the<span class="w"> </span><span class="nb">local</span><span class="w"> </span>node<span class="w"> </span>reference<span class="w"> </span>page<span class="o">](</span>../reference/devnet.md<span class="o">)</span>.
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">## Run the wallet</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Clone<span class="w"> </span><span class="o">[</span>the<span class="w"> </span>Wallet<span class="w"> </span>repository<span class="o">](</span>https://github.com/hyli-org/wallet/<span class="o">)</span>.
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Wait<span class="w"> </span><span class="k">until</span><span class="w"> </span>the<span class="w"> </span>node<span class="w"> </span>has<span class="w"> </span>successfully<span class="w"> </span>launched.
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Run:
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="sb">```</span>sh
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.1.2
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release<span class="w"> </span>--<span class="w"> </span>-m<span class="w"> </span>-a<span class="w"> </span>-w
+</span></code></pre></div>
+<p>You can now use <a href="https://explorer.hyli.org">the Hyli explorer</a>. Select <code>localhost</code> in the upper-right corner.</p>
+<p>For alternative setups, optional features, and advanced configurations, check out <a href="../../reference/devnet/">the local node reference page</a>.</p>
+<h2 id="run-the-wallet">Run the wallet</h2>
+<p>Clone <a href="https://github.com/hyli-org/wallet/">the Wallet repository</a>.</p>
+<p>Wait until the node has successfully launched.</p>
+<p>Run:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.1.2
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release<span class="w"> </span>--<span class="w"> </span>-m<span class="w"> </span>-a<span class="w"> </span>-w
 </span></code></pre></div>
 <h2 id="run-the-app-scaffold">Run the app scaffold</h2>
 <p>Clone <a href="https://github.com/hyli-org/app-scaffold/">the Hyli app scaffold</a>.</p>
 <p>Launch the server:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release
 </span></code></pre></div>
 <p>Start the scaffold's UI:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>front
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bun<span class="w"> </span>install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>bun<span class="w"> </span>run<span class="w"> </span>dev
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>front
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>bun<span class="w"> </span>install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>bun<span class="w"> </span>run<span class="w"> </span>dev
 </span></code></pre></div>
 <p>Everything is now functional. We can now explore the scaffold!</p></div>
 
