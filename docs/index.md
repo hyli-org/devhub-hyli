@@ -1,10 +1,12 @@
 ---
-description: Hyli is the new proof-powered L1 to build the next generation of apps onchain. This is your developer documentation.
+description: Hyli is the new proof-powered L1 to build the next generation of apps. This is your developer documentation.
 ---
 
 # Home
 
-[Hyli](https://hyli.org/) is the new proof-powered L1 to build the next generation of apps onchain.
+[Hyli](https://hyli.org/) is the new proof-powered L1 to build the next generation of apps.
+
+With Hyli, developers can build fast, composable, and verifiable apps without dealing with the usual pains of blockchain. Hyli gives you flexible execution, seamless onboarding, and native support for proofs including RISC Zero, Noir, and SP1.
 
 ## Navigation
 
@@ -14,7 +16,7 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
     ---
 
-    A quick overview of Hyli, the new proof-powered L1 to build the next generation of apps onchain.
+    A quick overview of Hyli, the new proof-powered L1 to build the next generation of apps.
 
     [:octicons-arrow-right-24: Introduction](./introduction.md)
 
