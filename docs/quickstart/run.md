@@ -22,7 +22,7 @@ rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
 
 You can now use [the Hyli explorer](https://explorer.hyli.org). Select `localhost` in the upper-right corner.
 
-For alternative setups, optional features, and advanced configurations, check out [the local node reference page](../reference/run.md).
+For alternative setups, optional features, and advanced configurations, check out [the local node reference page](../reference/local-node.md).
 
 ## Run the wallet
 
