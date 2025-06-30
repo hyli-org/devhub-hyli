@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.hyli.org/reference/devnet/">
+        <link rel="canonical" href="https://docs.hyli.org/reference/local-node/">
       
       
         <link rel="prev" href="../supported-proving-schemes/">
@@ -67,7 +67,7 @@
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="https://docs.hyli.org/assets/images/social/reference/devnet.png" >
+        <meta  property="og:image"  content="https://docs.hyli.org/assets/images/social/reference/local-node.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -75,7 +75,7 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://docs.hyli.org/reference/devnet/" >
+        <meta  property="og:url"  content="https://docs.hyli.org/reference/local-node/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
@@ -83,7 +83,7 @@
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="https://docs.hyli.org/assets/images/social/reference/devnet.png" >
+        <meta  name="twitter:image"  content="https://docs.hyli.org/assets/images/social/reference/local-node.png" >
       
     
     
@@ -368,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/devnet/" class="md-nav__link">
+      <a href="../../quickstart/run/" class="md-nav__link">
         
   
   
@@ -391,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/scaffold/" class="md-nav__link">
+      <a href="../../quickstart/edit/" class="md-nav__link">
         
   
   
@@ -1478,7 +1478,7 @@
 
 <div><h1 id="local-node-configuration">Local node configuration</h1>
 <h2 id="recommended-run-from-source">Recommended: Run from source</h2>
-<p>For a single-node devnet (consensus disabled) with an indexer, clone the <a href="https://github.com/hyli-org/hyli">hyli repository</a> and run:</p>
+<p>For a single local node (consensus disabled) with an indexer, clone the <a href="https://github.com/hyli-org/hyli">hyli repository</a> and run:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
 </span></code></pre></div>
 <p>This command starts a temporary PostgreSQL server and erases its data when you stop the node.</p>
@@ -1491,7 +1491,7 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cargo<span class="w"> </span>run
 </span></code></pre></div>
 <h2 id="alternative-start-with-docker">Alternative: Start with Docker</h2>
-<p>Use Docker to run a local node. Note that the devnet is unstable and may break with future updates.</p>
+<p>Use Docker to run a local node.</p>
 <h3 id="pull-the-docker-image">Pull the Docker image</h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/hyli-org/hyli:v0.12.1
 </span></code></pre></div>
@@ -1515,7 +1515,7 @@
 <p>You can now <a href="../../quickstart/">create your first app</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To reset your devnet, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.</p>
+<p>To reset your local node, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.</p>
 </div>
 <h2 id="alternative-build-the-docker-image-locally">Alternative: Build the Docker image locally</h2>
 <p>If you prefer to build the image from source, run:</p>

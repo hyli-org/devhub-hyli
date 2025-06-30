@@ -330,18 +330,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-choose-hyli" class="md-nav__link">
+  <a href="#how-hyli-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Why choose Hyli
+      How Hyli works
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-hyli-works" class="md-nav__link">
+  <a href="#what-you-get-with-hyli" class="md-nav__link">
     <span class="md-ellipsis">
-      How Hyli works
+      What you get with Hyli
     </span>
   </a>
   
@@ -428,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart/devnet/" class="md-nav__link">
+      <a href="../quickstart/run/" class="md-nav__link">
         
   
   
@@ -451,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart/scaffold/" class="md-nav__link">
+      <a href="../quickstart/edit/" class="md-nav__link">
         
   
   
@@ -985,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/devnet/" class="md-nav__link">
+      <a href="../reference/local-node/" class="md-nav__link">
         
   
   
@@ -1277,18 +1277,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-choose-hyli" class="md-nav__link">
+  <a href="#how-hyli-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Why choose Hyli
+      How Hyli works
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-hyli-works" class="md-nav__link">
+  <a href="#what-you-get-with-hyli" class="md-nav__link">
     <span class="md-ellipsis">
-      How Hyli works
+      What you get with Hyli
     </span>
   </a>
   
@@ -1316,28 +1316,28 @@
 
 <div><h1 id="introduction-to-hyli">Introduction to Hyli</h1>
 <p><a href="https://hyli.org/">Hyli</a> is the new proof-powered L1 to build the next generation of apps onchain.</p>
-<p>An unchained application runs offchain and settles onchain. It benefits from the Web2 user experience and the security of Web3.</p>
-<h2 id="why-choose-hyli">Why choose Hyli</h2>
-<p>Hyli is built for speed, flexibility, and seamless blockchain integration:</p>
-<ul>
-<li>Ultra-fast ZK verification on a sovereign L1.</li>
-<li>No EVMs, no bottlenecks: run complex logic off-chain, submit a proof, and we’ll verify it natively before settling onchain.</li>
-<li>Frictionless onboarding: authenticate with any identity provider, no wallets required.</li>
-<li>High throughput, low latency with <a href="../concepts/pipelined-proving/">pipelined proving</a>.</li>
-<li>Choose your tools: use any proving scheme, any language.</li>
-<li>Seamless interoperability: call other contracts with <a href="../concepts/proof-composition/">proof composition</a>.</li>
-<li>Web2 speed, Web3 security: we use Autobahn consensus for DA &amp; settlement.</li>
-</ul>
+<p>On Hyli, instead of executing transactions onchain, you run your app logic anywhere off-chain, in Rust, Noir, or even multiple languages at once. You only need to send a proof for onchain settlement. With this model, your app benefits from the Web2 user experience and the security of Web3.</p>
 <h2 id="how-hyli-works">How Hyli works</h2>
-<p>Here’s what happens when you use Hyli’s next-generation L1:</p>
-<p><img alt="Sequence diagram explaining the steps as listed below." src="../assets/img/hyle-main-diagram.jpg"></p>
+<p>Here’s what happens when you use Hyli’s next-generation Layer 1:</p>
 <ol>
-<li><strong>Sequencing</strong>: Send a provable blob of information to Hyli: say what information you expect to prove later. We'll sequence the transaction immediately and give you time to prove it. <a href="../concepts/pipelined-proving/">Read more about pipelined proving</a>.</li>
-<li><strong>Proof submission</strong>: when the proofs for your transaction are ready, send them to Hyli.</li>
-<li><strong>Verification</strong>: Hyli validators receive the transaction. They verify the proofs natively, without the limitations of a bulky virtual machine.</li>
-<li><strong>Consensus</strong>: if the proofs are valid, Hyli settles your transaction's state onchain. You're good to go!</li>
+<li><strong>Write your app</strong>: Write a contract and define how state changes should happen. You'll run this logic wherever you want. Write in Rust or Noir and use any proving scheme we support. You can also leverage our native digital signature verifiers.</li>
+<li><strong>Send a blob transaction</strong>: Send a provable blob to Hyli, stating what final state you expect after the transaction. Hyli will sequence the transaction immediately: you get a timestamp and a guaranteed place in the block. <a href="../concepts/pipelined-proving/">Read more about pipelined proving</a>.</li>
+<li><strong>Generate and submit the proof</strong>: Generate proofs wherever you want: client-side or in a browser, with or without a partner proving network. When the proofs for your transaction are ready, send them to Hyli in a proof transaction that references the previous blob transaction.</li>
+<li><strong>Finality</strong>: Hyli validators receive the transaction and verify the proofs natively, without the limitations of a bulky virtual machine. If the proofs are valid, Hyli finalizes the transaction and updates your contract's onchain state root. You're good to go!</li>
 </ol>
-<p>With this system, execution and storage happen <strong>anywhere you like</strong>. You only need a fast and trustworthy verifier: that’s Hyli.</p></div>
+<p><img alt="Sequence diagram explaining the steps going from sequencing to proving to verification and consensus." src="../assets/img/hyle-main-diagram.jpg"></p>
+<h2 id="what-you-get-with-hyli">What you get with Hyli</h2>
+<p>Hyli is built for speed, flexibility, and seamless blockchain integration.</p>
+<p>With our model, you get:</p>
+<ul>
+<li>You skip onchain execution entirely.</li>
+<li>You can use the Hyli wallet for <a href="../concepts/identity/">identity abstraction</a>.</li>
+<li>You choose your proving system (Noir, RISC0, SP1…).</li>
+<li>You generate your proofs wherever you'd like (client-side, in a server, through a proving network…).</li>
+<li>You can <a href="../concepts/proof-composition/">compose proofs</a> across contracts and languages.</li>
+<li>You benefit from the state-of-the-art Autobahn consensus.</li>
+<li>You get Web2-like speed with Web3 security.</li>
+</ul></div>
 
 
 
