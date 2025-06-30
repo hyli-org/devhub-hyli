@@ -14,12 +14,12 @@ Directory Structure:
         │   └── transaction.md
         ├── quickstart
         │   ├── .pages
-        │   ├── devnet.md
+        │   ├── run.md
         │   ├── index.md
-        │   └── scaffold.md
+        │   └── run.md
         ├── reference
         │   ├── .pages
-        │   ├── devnet.md
+        │   ├── run.md
         │   ├── index.md
         │   ├── node.md
         │   └── supported-proving-schemes.md
@@ -553,7 +553,7 @@ Each application can generate its proof in whichever place fits best.
 With autoproving in place, you don’t need to manage custom proving flows. Just write your contract and connect a frontend—the scaffold handles everything else.
 This setup is ideal for projects where you want minimal backend setup and an easier onboarding experience.
 
-Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or follow [the quickstart instructions](../quickstart/scaffold.md).
+Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or follow [the quickstart instructions](../quickstart/run.md).
 
 ### Our proof generation partners
 
@@ -690,13 +690,13 @@ File: /docs/quickstart/.pages
 
 nav:
     - index.md
-    - devnet.md
-    - scaffold.md
+    - run.md
+    - run.md
 
 
 
 ---
-File: /docs/quickstart/devnet.md
+File: /docs/quickstart/run.md
 ---
 
 # Run the scaffold locally
@@ -723,7 +723,7 @@ rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
 
 You can now use [the Hyli explorer](https://explorer.hyli.org). Select `localhost` in the upper-right corner.
 
-For alternative setups, optional features, and advanced configurations, check out [the local node reference page](../reference/devnet.md).
+For alternative setups, optional features, and advanced configurations, check out [the local node reference page](../reference/run.md).
 
 ## Run the wallet
 
@@ -772,12 +772,12 @@ It uses several examples to help you start building as soon as possible.
 
 [
     {
-        "title": "[Run the scaffold locally](./devnet.md)",
+        "title": "[Run the scaffold locally](./run.md)",
         "content": "Where it all begins.",
         "icon": ":material-home:",
     },
     {
-        "title": "[Build your app](./scaffold.md)",
+        "title": "[Build your app](./run.md)",
         "content": "Using our scaffold repository, set up your application.",
         "icon": ":fontawesome-solid-water-ladder:",
     },
@@ -788,7 +788,7 @@ It uses several examples to help you start building as soon as possible.
 
 
 ---
-File: /docs/quickstart/scaffold.md
+File: /docs/quickstart/run.md
 ---
 
 # Build your app
@@ -862,12 +862,12 @@ File: /docs/reference/.pages
 nav:
     - index.md
     - supported-proving-schemes.md
-    - devnet.md
+    - run.md
     - node.md
 
 
 ---
-File: /docs/reference/devnet.md
+File: /docs/reference/run.md
 ---
 
 # Local node configuration
@@ -1488,7 +1488,7 @@ Hyli's API allows you to interact with its core components.
 
 To explore available endpoints and understand the API structure:
 
-1. [Run a local node](../quickstart/devnet.md).
+1. [Run a local node](../quickstart/run.md).
 2. Open <http://localhost:4321/swagger-ui/>.
 
 Or visit <https://indexer.devnet.hyli.org/swagger-ui/> for an indexer-only api documentation.

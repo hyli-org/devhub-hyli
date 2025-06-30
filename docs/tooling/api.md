@@ -6,7 +6,7 @@ Hyli's API allows you to interact with its core components.
 
 To explore available endpoints and understand the API structure:
 
-1. [Run a local node](../quickstart/devnet.md).
+1. [Run a local node](../quickstart/run.md).
 2. Open <http://localhost:4321/swagger-ui/>.
 
 Or visit <https://indexer.devnet.hyli.org/swagger-ui/> for an indexer-only api documentation.

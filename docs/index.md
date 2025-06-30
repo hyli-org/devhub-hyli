@@ -8,6 +8,8 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
 With Hyli, developers can build fast, composable, and verifiable apps without dealing with the usual pains of blockchain. Hyli gives you flexible execution, seamless onboarding, and native support for proofs including RISC Zero, Noir, and SP1.
 
+Read more [about Hyli](./introduction.md) or about [how it compares to legacy blockchains](./concepts/hyli-vs-vintage-blockchains.md).
+
 ## Navigation
 
 <div class="grid cards" markdown>

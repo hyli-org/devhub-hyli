@@ -51,7 +51,7 @@ Each application can generate its proof in whichever place fits best.
 With autoproving in place, you don’t need to manage custom proving flows. Just write your contract and connect a frontend—the scaffold handles everything else.
 This setup is ideal for projects where you want minimal backend setup and an easier onboarding experience.
 
-Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or follow [the quickstart instructions](../quickstart/scaffold.md).
+Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or follow [the quickstart instructions](../quickstart/run.md).
 
 ### Our proof generation partners
 

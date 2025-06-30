@@ -54,7 +54,7 @@ plugins:
   - redirects:
       redirect_maps:
         'docs/reference/devnet.md': 'docs/reference/local-node.md'
-        'docs/quickstart/devnet.md': 'docs/quickstart/run.md'
+        'docs/quickstart/your-first-app.md': 'docs/quickstart/run.md'
         'docs/quickstart/scaffold.md': 'docs/quickstart/edit.md'
 
 copyright: Copyright &copy; 2025 Hyli
