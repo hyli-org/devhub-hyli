@@ -13,7 +13,7 @@ Here’s what happens when you use Hyli’s next-generation Layer 1:
 1. **Generate and submit the proof**: Generate proofs wherever you want: client-side or in a browser, with or without a partner proving network. When the proofs for your transaction are ready, send them to Hyli in a proof transaction that references the previous blob transaction.
 1. **Finality**: Hyli validators receive the transaction and verify the proofs natively, without the limitations of a bulky virtual machine. If the proofs are valid, Hyli finalizes the transaction and updates your contract's onchain state root. You're good to go!
 
-![Sequence diagram explaining the steps going from sequencing to proving to verification and consensus.](./assets/img/hyle-main-diagram.jpg)
+![Sequence diagram explaining the steps going from sequencing to proving to verification and consensus.](./assets/img/hyli-main-diagram.jpg)
 
 ## What you get with Hyli
 
