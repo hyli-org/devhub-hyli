@@ -7,4 +7,5 @@ nav:
     - pipelined-proving.md
     - proof-composition.md
     - hyli-vs-vintage-blockchains.md
+    - consensus.md
     - ...

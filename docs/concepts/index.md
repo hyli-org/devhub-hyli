@@ -76,4 +76,12 @@ This section includes general documentation topics. You can also refer to [our G
 
     [:octicons-arrow-right-24: Read more](./proof-composition.md)
 
+-   :material-lightbulb:{ .lg .middle } __Consensus__
+
+    ---
+
+    Learn about our consensus algorithm, based on Autobahn.
+
+    [:octicons-arrow-right-24: Read more](./proof-composition.md)
+
 </div>
