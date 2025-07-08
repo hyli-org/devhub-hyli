@@ -18,7 +18,7 @@ These issues create a ceiling for scalability, especially under real-world condi
 
 Hyli uses **Autobahn**, an upcoming consensus protocol that combines high throughput, a steady commit pace, and seamless recovery from network disruptions or Byzantine faults.
 
-The price we pay for this stability is a higher latency than in traditional consensus protocols. At Hyli, we solve this through [pipelined proving](./pipelined-proving.md).
+The price we pay for this stability is more message deliveries, and therefore slightly higher latency, than in traditional consensus protocols. [Pipelined proving](./pipelined-proving.md) allows Hyli to keep offering an ultra-fast experience.
 
 Autobahn combines two separate layers:
 
@@ -46,7 +46,7 @@ This is good for three reasons.
 
 **Consensus can settle many blocks at once**: proof of availability certifies an entire chain of previous blocks. Finalizing the end of the lane means you finalize everything before it. This way, consensus can commit hundreds of blocks in a single round.
 
-**Recovery is fast**: if the network is disrupted or a node goes offline, catch-up is easily achieved by pulling the tip of each lane and verifying proof of availability without needing to re-run consensus on the missed blocks. This means that after faults, you have a smooth, near-instant recovery.
+**Recovery is fast**: every node is the leader of its own lane. When consensus stalls because of a faulty consensus leader, data dissemination from all the other nodes continues: catch-up is easily achieved by pulling the tip of each lane and verifying proof of availability without needing to re-run consensus on the missed blocks. This means that after faults, you have a smooth, near-instant recovery.
 
 ### Consensus: fast finality with tip cuts
 
