@@ -15,7 +15,6 @@ Clone [the Hyli node](https://github.com/hyli-org/hyli).
 Run:
 
 ```sh
-rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
 git checkout v0.13.1
 rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
 ```
