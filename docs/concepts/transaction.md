@@ -42,3 +42,66 @@ A **proof transaction** includes:
     - The app output.
 
 For Risc0 and SP1, the proof data's app output follows `HyleOutput` as defined in the [smart contract ABI](./apps.md#smart-contract-abi).
+
+## Example: token transfer
+
+A token transfer involves two blobs in a blob transaction:
+
+- **Identity blob**: Verifies the sender’s identity and authorizes the transfer.
+- **Transfer blob**: Executes the token transfer.
+
+Each blob requires a corresponding proof transaction.
+
+### Blob transaction
+
+```json
+{
+    "identity": "bob@MyIdentityContract",
+    "blobs": [
+        {
+            "contract_name": "MyIdentityContract",
+             // Binary data for the operation of MyIdentityContract
+             // VerifyIdentity { account: "bob@MyIdentityContract", nonce: "2" }
+            "data": "[...]" 
+        },
+        {
+            "contract_name": "MyToken",
+             // Binary data for the operation of MyToken contract
+             // Transfer { recipient: "alice@MyIdentityContract", ammount: "20" }
+            "data": "[...]"
+        }
+    ]
+}
+```
+
+### Proof transactions
+
+#### Identity proof
+
+```json
+{
+    "contract_name": "MyIdentityContract",
+    "proof": "[...]"
+}
+```
+
+The binary proof's output includes:
+
+- Initial state: `bob@MyIdentityContract` nonce = 1.
+- Next state: `bob@MyIdentityContract` nonce = 2.
+- Index: 0 (first blob in the transaction).
+
+and
+
+```json
+{
+    "contract_name": "MyToken",
+    "proof": "[...]"
+}
+```
+
+The binary proof's output includes:
+
+- Initial state: `bob@MyIdentityContract` balance = 100, `alice@MyIdentityContract` balance = 0.
+- Next state: `bob@MyIdentityContract` balance = 80, `alice@MyIdentityContract` balance = 20.
+- Index: 1 (second blob in the transaction).
