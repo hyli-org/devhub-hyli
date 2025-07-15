@@ -14,6 +14,14 @@ The Hyli Wallet acts as a gateway to onchain identity. It lets users:
 
 This creates a unified identity layer for seamless interaction across apps on Hyli.
 
+## Supported identity sources
+
+Currently, the wallet is compatible with the following identity sources:
+
+- Username and password
+
+Want to use another identity source? Use our [identity guide](../concepts/identity.md)!
+
 ## User experience with the Hyli wallet
 
 ### Create a wallet
