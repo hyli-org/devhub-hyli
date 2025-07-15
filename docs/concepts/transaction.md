@@ -38,8 +38,8 @@ A **proof transaction** includes:
 
 - A **contract name** (string).
 - **Proof data** (binary), containing:
-  - A zero-knowledge proof.
-  - The app output.
+    - A zero-knowledge proof.
+    - The app output.
 
 For Risc0 and SP1, the proof data's app output follows `HyleOutput` as defined in the [smart contract ABI](./apps.md#smart-contract-abi).
 
