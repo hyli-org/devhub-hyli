@@ -5,7 +5,7 @@
 
 Identity [in traditional blockchains](./hyli-vs-vintage-blockchains.md) is typically tied to a single wallet address. This approach limits flexibility and compromises privacy.
 
-On Hyli, **any app can be a proof of identity**. This enables you to register your preferred identity source as an app for authentication. The [Hyli wallet](../tooling/wallet.md) is a tool to aggregate all these identities; we recommend using it for simplicity, but it is not mandatory.
+On Hyli, **any app can be a proof of identity**. This enables you to register your preferred identity source as an app for authentication. The [Hyli wallet](../tooling/wallet.md) is a tool to aggregate all these identities; we recommend using it for simplicity.
 
 ## How Hyli processes identity proofs
 
