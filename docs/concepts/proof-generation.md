@@ -71,9 +71,31 @@ Once sent, the proof goes through Hyli’s native verification, removing the nee
 
 Once verified, the proof is settled onchain. Use this settled state to update your app accordingly outside of Hyli.
 
+## Handling state conflicts for proof generation
+
+When a transaction is sequenced on Hyli, it becomes part of the pending state.
+
+If another user submits a transaction without including the most recent pending state, their proof will fail with an `Initial state mismatch` error.
+
+This typically happens when two users generate proofs around the same time. For example:
+
+1. Bob and Alice both prepare a token transfer.
+1. Bob’s transaction is sequenced first.
+1. Alice generates her proof based on the previous state, unaware of Bob's transaction.
+1. If Alice submits a state update ignoring Bob’s transaction, it will be rejected.
+
+To avoid this, your app needs to monitor the sequencer, re-fetch the latest pending state, and re-generate the proof with all prior unsettled transactions included.
+
+The easiest way to handle this is to **use Hyli’s AutoProver module**, included in [the scaffold](../quickstart/edit.md). The AutoProver:
+
+- monitors the sequencer for new transactions.
+- keeps track of pending state updates.
+- automatically retries proof generation when state changes.
+
+By default, AutoProver runs on a backend server. You can go serverless by embedding a lightweight version of AutoProver in your frontend, tailored to handle only the current user's transactions and retries. This will require some custom logic.
+
 ## External resources
 
 - [Zero-knowledge proofs explained at 5 levels of difficulty](https://www.youtube.com/watch?v=fOGdb1CTu5c) (22')
 - [awesome-zk](https://github.com/ventali/awesome-zk?tab=readme-ov-file) link repository on GitHub
-- Hyli's [very simple introduction to zero-knowledge proofs](https://blog.hyli.org/a-simple-introduction-to-zero-knowledge-proofs-zkp/)
 - Lauri Peltonen's [blog series on ZK](https://medium.com/@laurippeltonen)
