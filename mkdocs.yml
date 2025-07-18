@@ -71,5 +71,22 @@ extra:
     - icon: material/robot
       link: /llms.txt
       name: LLMs.txt
+  analytics: 
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+
+
+            Thanks for your feedback! Help us improve this page by
+            <a href="https://github.com/hyli-org/devhub-hyli/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">telling us what went wrong</a>.
 
 repo_url: https://github.com/hyli-org/hyli
