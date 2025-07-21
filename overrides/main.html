@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+<!-- PushFeedback styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushfeedback/dist/pushfeedback/pushfeedback.css">
+
+<!-- PushFeedback script as ES6 module -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/pushfeedback/dist/pushfeedback/pushfeedback.esm.js"></script>
+{% endblock %}
+
 {% block content %}
   {{ super() }}
   {% include "partials/nav-links.html" %}
+
+  <!-- Feedback button -->
+  <feedback-button project="r5nhyjclrx" button-position="bottom-right" modal-position="bottom-right" button-style="dark">Feedback</feedback-button>
 {% endblock %}
