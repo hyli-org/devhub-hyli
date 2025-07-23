@@ -17,5 +17,5 @@ We currently support Rust and JS environments.
 
 | Language | Repository / Package |
 |----------|:--------------------:|
-| JS       | [hyle on npm](https://www.npmjs.com/package/hyle)                  |
+| JS       | [hyli on npm](https://www.npmjs.com/package/hyli)                  |
 | Rust     | [hyle client sdk on docs.rs](https://crates.io/crates/hyle-client-sdk)              |
