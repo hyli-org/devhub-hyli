@@ -14,13 +14,13 @@ On Hyli, instead of executing transactions onchain, you run your app logic anywh
 
 <div class="grid cards" markdown>
 
--   :material-home:{ .lg .middle } __Hyli primer__
+-   :material-home:{ .lg .middle } __Hyli guide__
 
     ---
 
     Your entry point to understanding Hyli, with minimal code.
 
-    [:octicons-arrow-right-24: Primer](./primer/index.md)
+    [:octicons-arrow-right-24: Primer](./guide/index.md)
 
 -   :material-clock-fast:{ .lg .middle } __Quickstart__
 
@@ -54,10 +54,10 @@ On Hyli, instead of executing transactions onchain, you run your app logic anywh
 
 Here’s what happens when you use Hyli’s next-generation Layer 1:
 
-1. **Write your app**: Write a contract and define how state changes should happen. You'll run this logic wherever you want. Write in Rust or Noir and use any proving scheme we support. You can also leverage our native digital signature verifiers.
-1. **Send a blob transaction**: Send a provable blob to Hyli, stating what final state you expect after the transaction. Hyli will sequence the transaction immediately: you get a timestamp and a guaranteed place in the block. [Read more about pipelined proving](./concepts/pipelined-proving.md).
-1. **Generate and submit the proof**: Generate proofs wherever you want: client-side or in a browser, with or without a partner proving network. When the proofs for your transaction are ready, send them to Hyli in a proof transaction that references the previous blob transaction.
-1. **Finality**: Hyli validators receive the transaction and verify the proofs natively, without the limitations of a bulky virtual machine. If the proofs are valid, Hyli finalizes the transaction and updates your contract's onchain state root. You're good to go!
+1. __Write your app__: Write a contract and define how state changes should happen. You'll run this logic wherever you want. Write in Rust or Noir and use any proving scheme we support. You can also leverage our native digital signature verifiers.
+1. __Send a blob transaction__: Send a provable blob to Hyli, stating what final state you expect after the transaction. Hyli will sequence the transaction immediately: you get a timestamp and a guaranteed place in the block. [Read more about pipelined proving](./concepts/pipelined-proving.md).
+1. __Generate and submit the proof__: Generate proofs wherever you want: client-side or in a browser, with or without a partner proving network. When the proofs for your transaction are ready, send them to Hyli in a proof transaction that references the previous blob transaction.
+1. __Finality__: Hyli validators receive the transaction and verify the proofs natively, without the limitations of a bulky virtual machine. If the proofs are valid, Hyli finalizes the transaction and updates your contract's onchain state root. You're good to go!
 
 ![Sequence diagram explaining the steps going from sequencing to proving to verification and consensus.](./assets/img/hyli-main-diagram.jpg)
 
@@ -90,7 +90,7 @@ Read more about [how Hyli compares to legacy blockchains](./concepts/hyli-vs-vin
 
 Vibe coders, use our [LLMs.txt file](./llms.txt)!
 
-## Let's talk!
+## Let's talk
 
 Reach out to the team for more information:
 
