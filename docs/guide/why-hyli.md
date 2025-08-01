@@ -1,5 +1,11 @@
 # Why Hyli?
 
+Blockchains today have issues.
+
+When the Hyli co-founders first thought of the blockchain they wanted to create, zero-knowledge proofs had become very practical to scale execution. This made them wonder: Why does the L1 even handle execution? Why not just sequence the transaction and verify the proofs? And if something other than zero-knowledge proofs appeared, how would that L1 support it?
+
+So the question was **how to create a new Layer 1 with a future-proof architecture that can scale and solve these limitations**. The answer: a Layer 1 that can horizontally scale thanks to validity proofs, handle millions of TPS, and never get burdened with the ever-growing onchain state.
+
 This section explores why we work on Hyli. As you read, you’ll understand why the Hyli architecture is the endgame of blockchain infrastructure.
 
 ## A history of blockchain architecture
@@ -54,17 +60,13 @@ General-purpose high-throughput chains are emerging. However, we haven’t yet s
 
 **No single chain can be the world computer.**
 
-There has been an ongoing quest to build a decentralized world computer, one single layer that can serve the world's demand for trustless, permissionless computation.
+To scale and meet the demand for decentralized, permissionless, and trustless computing, Layer 1s have focused on scaling a single chain vertically.
 
 This quest is misguided. The truth is that the internet itself has scaled horizontally. There is no single server that meets the world's demand for Web2 applications, and the same holds true for blockchains.
 
-You can build a 100k+ TPS chain, but eventually, the world’s demand will grow enough that scaling onchain compute will be a problem again.
+You can build a 100k+ TPS chain, but eventually, the world’s demand will grow enough that scaling onchain compute will be a problem again. You cannot solve blockspace congestion, slowness, and high fees by scaling a single chain.
 
-**The endgame is horizontal scaling.**
-
-To scale and meet the demand for decentralized, permissionless, and trustless computing, we need to be able to scale our infrastructure horizontally. This is the only sustainable way to solve the problem.
-
-Layer 1s have focused on scaling a single chain vertically. However, the ultimate goal is a horizontally scalable, decentralized infrastructure for building applications.
+The ultimate goal is a horizontally scalable, decentralized infrastructure for building applications.
 
 **Proofs open up a new design space.**
 

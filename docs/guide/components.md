@@ -46,15 +46,21 @@ This is where Proof transactions come into play.
 
 Once a transaction has been sequenced on Hyli, a Proof transaction follows, accompanied by a proof and the new application state. Once a proof transaction has been provided and successfully verified for a previous blob transaction, that blob transaction and its corresponding application state can be considered settled.
 
+[Read more about transactions on Hyli](../concepts/transaction.md).
+
 ### Why separate sequencing from proving?
 
-Having separate transactions for sequencing and proving an application enables a Web2-like user experience while maintaining decentralization and security.
+Having separate transactions for sequencing and proving an application enables a Web2-like user experience while maintaining decentralization and security. Proving will never be fully instantaneous, and pipelined proving easily removes this overhead time.
 
 For example, imagine doing a swap on Hyli, rather than waiting for a proof to be generated:
 
 1. The user transaction is immediately sequenced.  
 2. The application immediately executes it and provides the latest application state to the user (which would be confirmation that their swap is done).  
 3. The user can keep using the app. Meanwhile, the new state proving happens asynchronously in the background. The app will roll back if proving fails.
+
+This has the added benefit of avoiding initial state conflicts.
+
+[Read more about pipelined proving on Hyli](../concepts/pipelined-proving.md).
 
 ## Consensus: Autobahn
 
@@ -77,6 +83,8 @@ The approach helps decouple data dissemination from the consensus over this data
 ![A graph showing that all lanes participate in the final consensus.](../assets/img/autobahn/consensus.png)
 
 Autobahn makes Hyli the destination for building high-throughput, low-latency applications, from onchain games to onchain order books.
+
+[Read more about consensus on Hyli](../concepts/consensus.md).
 
 ## Application architecture on Hyli
 
@@ -109,7 +117,7 @@ As more applications come, the system scales horizontally and doesn’t burden o
 
 This is the final stage of executing an application transaction: committing the latest state of the application after a transaction has been executed. This ensures the application's verifiability and also protects users in various scenarios, such as withdrawing funds from the application.
 
-Applications on Hyli maintain their state off-chain and can leverage various storage options, including decentralized storage providers such as Arweave, Filecoin, and Walrus.
+Applications on Hyli maintain their state off-chain and can leverage various storage options, including decentralized storage providers such as Arweave, Filecoin, and Walrus, or centralized ones like Amazon S3 and Cloud Storage.
 
 Applications only commit a small, fixed-sized commitment to their application state and periodically publish new state roots after applying a transaction, along with a validity proof.
 
@@ -127,9 +135,11 @@ Let’s take the example of a transaction of a Dex product on Hyli and examine t
 
 The user sends transactions describing their intended actions, such as deploying liquidity, withdrawing liquidity, or swapping.
 
+At this point, nothing has been proved.
+
 ### Step 2: Dex application consumes the transaction
 
-The Dex application follows the Hyli L1 with the help of an indexer. It consumes every new block, filters out the transactions intended for itself, applies the application logic, and updates the respective state. Since applications built on Hyli provide validity proofs, everything the indexer follows and operates on top is proved and verified on Hyli for integrity.
+The Dex application follows the Hyli L1 with the help of an indexer. It consumes every new block, filters out the transactions intended for itself, applies the application logic, and updates the respective state.
 
 The developer is free to write their application in any language of their choice as long as they can generate a validity proof for it\! This could be Rust, C++, or domain-specific languages like Cairo, Noir, Circom, etc.
 
@@ -137,15 +147,17 @@ The application state typically resides in a decentralized storage layer.
 
 ### Step 3: User gets confirmation on their transaction
 
-Users don’t need to wait for their transaction to be proven to get a confirmation. The application provides immediate confirmation post-execution. This is a softer confirmation than the proof being settled, but since the application generates validity proofs, it cannot lie to the user.
+Users don’t need to wait for their transaction to be proven to get a confirmation. The application provides immediate confirmation post-execution and updates its state temporarily. This is a softer confirmation than the proof being settled, but since the application generates validity proofs, it cannot lie to the user.
 
 This enables the creation of a real-time user experience for our Dex. The user sends the transactions, which are immediately finalized and executed, and then the user is free to take any business action on top of it.
 
 ### Step 4: Transaction is proven and settled
 
-The application asynchronously proves all transactions. Once the proof has been generated, the application finalizes the transaction with a proof transaction, which also includes the app's new state commitment.
+The application asynchronously proves all transactions. This proof can be generated by a prover network like Boundless or Succinct, by the application itself, or event client-side: in the context of our Dex, the app generates the proofs.
 
-Hyli verifies the proof and settles the transaction, updating the application's new state onchain.
+Once the proof has been generated, the application finalizes the transaction with a proof transaction, which also includes the app's new state commitment.
+
+Since applications built on Hyli provide validity proofs, everything the indexer follows and operates on top is proved and verified on Hyli for integrity. Hyli verifies the proof and settles the transaction, updating the application's new state onchain. What was "sequenced" is now "confirmed": the app can update its state for good and the user gets a final confirmation.
 
 Hyli's approach to building applications enables the creation of scalable, secure, verifiable, and censorship-free apps that deliver real-time, Web2-like latencies and user experiences.
 

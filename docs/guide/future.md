@@ -2,7 +2,7 @@
 
 This final section of the guide discusses the future that Hyli aims to bring forward. Discussions span from the end-user experiences that Hyli will make possible to the evolution of infrastructure and new market opportunities the stack can create.
 
-## A world full of Hyli apps
+## A world full of verifiable apps on Hyli
 
 Hyli is the next evolution of user applications: sovereign, verifiable, and censorship-resistant. Applications built on Hyli offer these properties without compromising on user experience and speed.
 
@@ -10,7 +10,7 @@ One of the key features of applications built on top of Hyli is their ability to
 
 ### Interoperable Applications
 
-You could withdraw liquidity from a money market, swap with the asset on a different application, and deposit liquidity for the swapped asset back to the money market, all in a single transaction.
+You could withdraw liquidity from a money market, swap with the asset on a different application, and deposit liquidity for the swapped asset back to the money market, all in a single transaction. And each of these apps is a different rollup: no need for bridges, everything is natively composable.
 
 ![][image10]
 
@@ -18,9 +18,7 @@ Hyli is building the settlement layer of the next wave of internet applications,
 
 ### Private Apps
 
-One of the key components in the Hyli architecture is that applications only post state commitment to Hyli, so the application state itself is off-chain. This enables the development of private applications on Hyli.
-
-Technologies like zero-knowledge proofs and FHEs can be used to support execution for these private applications.
+One of the key components in the Hyli architecture is that applications only post state commitment to Hyli, so the application state itself is off-chain: the proof is what guarantees the integrity of any action, even if the details of the action are not made public. This enables the development of private applications on Hyli.
 
 Take, for example, a private payments app. In such a system, each user's balance is encrypted and private by default. Users generate zero-knowledge proofs that their transactions are valid (e.g., that they own sufficient funds and are transferring them correctly) without ever revealing their balance or transaction history.
 
@@ -45,7 +43,7 @@ Hyli has multiple concurrent proposers, which means users can send their transac
 
 Hyli enables verifiable, censorship-resistant applications and leverages proofs as a core part of building these applications: Hyli applications rely on proving their application logic.
 
-In a world full of Hyli applications, we will see huge demand for proving networks.
+Rather than execute code directly on a blockchain, the provers and proving networks become the execution engine: the code is executed there, proven, and verified on Hyli.
 
 ![][image12]
 
