@@ -20,10 +20,10 @@ Bitcoin tackled the hard problems of that time: creating a sound digital asset t
 
 Bitcoin solved critical problems, but it had issues:
 
-- Not scalable, \~7 TPS  
+- Not scalable, \ ~7 TPS  
 - Not highly programmable. You cannot build complex applications with it.
 
-![][image1]
+![Bitcoin delivers secure, decentralized transactions, but faces key limitations in flexibility and speed.](../assets/img/guide/bitcoin.jpg)
 
 Following the creation of Bitcoin, people started building app-specific chains.
 
