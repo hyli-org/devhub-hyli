@@ -11,11 +11,6 @@ If you want to build on Hyli, you may want to check out the [quickstart](../quic
 
 [
     {
-        "title": "[The beginnings](./beginnings.md)",
-        "content": "How Hyli started and its early story.",
-        "icon": ":material-thought-bubble:",
-    },
-    {
         "title": "[Why Hyli?](./why-hyli.md)",
         "content": "Why Hyli matters.",
         "icon": ":material-chat-question:",
