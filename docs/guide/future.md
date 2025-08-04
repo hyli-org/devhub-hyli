@@ -12,7 +12,7 @@ One of the key features of applications built on top of Hyli is their ability to
 
 You could withdraw liquidity from a money market, swap with the asset on a different application, and deposit liquidity for the swapped asset back to the money market, all in a single transaction. And each of these apps is a different rollup: no need for bridges, everything is natively composable.
 
-![][image10]
+![Users can permissionlessly perform transactions spanning multiple applications in the Hyli ecosystem.](../assets/img/guide/interoperable.jpg) 
 
 Hyli is building the settlement layer of the next wave of internet applications, enabling anyone to perform multiple interactions with these applications in a single transaction. It’s a better way to build applications.
 
@@ -35,6 +35,7 @@ Hyli is building the common source of truth for the new wave of internet applica
 Applications on Hyli must respect transactions sent to Hyli and their order, as this is a core part of their application logic that needs to be verified on Hyli to advance the application state.
 
 Hyli’s innovation lies in its fast data dissemination and finality via Autobahn. Users directly submit their transactions to Hyli, where they are finalized very quickly. Once finalized, transactions are guaranteed for execution by the corresponding applications.  
+
 ![][image11]
 
 Hyli has multiple concurrent proposers, which means users can send their transactions to multiple proposers in parallel, protecting them from being censored by a single proposer. This ensures that both Hyli and its applications are censorship-resistant for their users.
@@ -45,7 +46,7 @@ Hyli enables verifiable, censorship-resistant applications and leverages proofs 
 
 Rather than execute code directly on a blockchain, the provers and proving networks become the execution engine: the code is executed there, proven, and verified on Hyli.
 
-![][image12]
+![Hyli's applications help create the demand for decentralized proving networks.](../assets/img/guide/networks.jpg)
 
 Teams like Boundless, Succinct, Fermah, and zkCloud have been working on decentralized proving networks.
 

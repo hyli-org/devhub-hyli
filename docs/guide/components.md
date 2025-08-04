@@ -14,7 +14,7 @@ This is where Hyli shines.
 
 Hyli only sequences the transactions for applications. The applications are responsible for validating these transactions, executing them, and managing the application state. This allows Hyli to scale horizontally because all applications handle their validation, execution, and state management.
 
-![][image5]
+![Hyli scales horizontally, compute is done off-chain, proved on-chain with succinct validity proofs, enabling a future proof blockchain design.](../assets/img/guide/architecture.jpg)
 
 Hyli scales decentralized applications the way the internet has scaled, which is through horizontal scaling, and hence is pursuing the endgame architecture of building a universal proof layer.
 
@@ -33,16 +33,17 @@ Hyli is the source of truth for the order of transactions for applications.
 
 Blob transactions provide an application transaction to be sequenced (ordered) and finalized on Hyli. This transaction contains a payload, which includes data that an application can use to verify and execute it.
 
-![][image6]
+![Apps send blob transactions, which are sequenced and finalized by Hyli into blocks.](../assets/img/guide/blob-transactions.jpg)
 
 This way, multiple application transactions are sequenced and finalized on Hyli, and their verification and execution are handled directly by the applications.
 
 ## Proof transactions
 
-After your transaction has been sequenced and finalized on Hyli, the application executes it and needs to settle the application state post-execution.
+After your transaction has been sequenced and finalized on Hyli, the application executes it and needs to settle the application state post-execution. 
 
 This is where Proof transactions come into play.  
-![][image7]
+
+![Apps use proof transactions to prove and finalize blob transactions and settle new application state.](../assets/img/guide/proof-transactions.jpg)
 
 Once a transaction has been sequenced on Hyli, a Proof transaction follows, accompanied by a proof and the new application state. Once a proof transaction has been provided and successfully verified for a previous blob transaction, that blob transaction and its corresponding application state can be considered settled.
 
@@ -74,13 +75,13 @@ Autobahn enables Hyli to process more data and finalize transactions faster than
 
 Multiple concurrent proposers also provide censorship resistance: transactions are sent to multiple validators to ensure inclusion, even if one of them is censoring the user.
 
-![][image8]
+![Traditional L1s process batches sequentially, while Hyli’s parallel proposers accelerate ordering and transaction finalization.](../assets/img/guide/parallel-proposing.jpg) 
 
 In Autobahn, every proposer maintains its unique lane, where it proposes new batches and disseminates them to other validators. In parallel, validators finalize various batches into a single block. A block is finalized once it has received a threshold number of signatures.
 
 The approach helps decouple data dissemination from the consensus over this data, unlocking higher throughput and faster finality.
 
-![A graph showing that all lanes participate in the final consensus.](../assets/img/autobahn/consensus.png)
+![Hyli processes transactions in parallel lanes,  periodically cutting to reach global consensus efficiently.](../assets/img/guide/consensus.jpg)
 
 Autobahn makes Hyli the destination for building high-throughput, low-latency applications, from onchain games to onchain order books.
 

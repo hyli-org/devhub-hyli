@@ -41,7 +41,7 @@ However, Ethereum operates at \~15-20 TPS and thus becomes very expensive to use
 
 Ethereum did not solve the scalability problem.
 
-![][image2]
+![Ethereum enables decentralized applications but faces key limits in throughput and scalability.](../assets/img/guide/ethereum.png)
 
 ### Solana: The first high-throughput general-purpose chain
 
@@ -50,7 +50,8 @@ Solana was launched with a new execution model, incorporating parallelization to
 Now, you can build onchain apps and distribute them with low fees.
 
 Solana currently achieves \~1,000 true TPS and plans to grow that number.  
-![][image3]
+
+![Solana delivers high throughput but faces challenges in scalability and reliability.](../assets/img/guide/solana.png)
 
 Solana has inspired multiple other chains that also aim to increase throughput, such as Sui, Aptos, Sei, Monad, etc.
 
@@ -98,7 +99,7 @@ Hyli uses various new primitives to ship the fastest and most cost-effective L1 
 
 It enshrines various proof system verifications, allowing for the building of verifiable apps with superior DX. zkVMs, such as SP1 and RISC-0, and zkDSLs, like Noir, are already live on Hyli, with more in the pipeline.
 
-![][image4]
+![Hyli is future‑proof, delivering scalable, high‑throughput applications by design.](../assets/img/guide/hyli.png)
 
 **Hyli allows you to just build your app**.
 
