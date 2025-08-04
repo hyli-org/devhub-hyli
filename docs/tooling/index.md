@@ -20,19 +20,11 @@ Here, you'll find our resources about Hyli's tooling.
 
     [:octicons-arrow-right-24: Read more](./wallet.md)
 
--   :octicons-tools-16:{ .lg .middle } __SDK__
+-   :octicons-tools-16:{ .lg .middle } __API and SDK__
 
     ---
 
-    Use the helper functions in our contract SDK.
-
-    [:octicons-arrow-right-24: Read more](./sdk.md)
-
--   :octicons-tools-16:{ .lg .middle } __API__
-
-    ---
-
-    Explore our API.
+    Explore our API and use the helper functions in our contract SDK.
 
     [:octicons-arrow-right-24: Read more](./api.md)
 

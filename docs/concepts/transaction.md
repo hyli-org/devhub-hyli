@@ -13,12 +13,24 @@ Once all blobs are proven, the blob transaction is settled, and the referenced c
 
 ## Blob transaction structure
 
+Blobs are not your proof: they're your proof's public wrapper. Their job is to describe what should happen (e.g. a token transfer, a vote cast) and provide enough information for the blockchain to verify the proof.
+
 A **blob transaction** consists of:
 
 - An **identity** string. See [identity](./identity.md).
 - A list of **blobs**, each containing:
-  - A **contract name** (string).
-  - A **data** field (binary), which the contract parses.
+    - A **contract name** (string).
+    - A **data** field (binary), which the contract parses.
+
+A blob should clearly encode the expected onchain effects (e.g. the token amount and destination, in the case of a token transfer). It should not duplicate all proof inputs just to "explain" what the proof does.
+
+Blobs should never include private inputs. If there is secret data, include hashes or commitments to secret data but do not include it raw.
+
+!!! example
+    In a proof that checks whether a password is correct:
+
+    - ✅ Blob: {"username": "bob", "password_hash": "0xabc123"}
+    - ❌ Blob: {"username": "bob", "password": "hunter2"}
 
 ## Proof transaction structure
 
@@ -26,8 +38,8 @@ A **proof transaction** includes:
 
 - A **contract name** (string).
 - **Proof data** (binary), containing:
-  - A zero-knowledge proof.
-  - The app output.
+    - A zero-knowledge proof.
+    - The app output.
 
 For Risc0 and SP1, the proof data's app output follows `HyleOutput` as defined in the [smart contract ABI](./apps.md#smart-contract-abi).
 
@@ -44,18 +56,18 @@ Each blob requires a corresponding proof transaction.
 
 ```json
 {
-    "identity": "bob.hydentity",
+    "identity": "bob@MyIdentityContract",
     "blobs": [
         {
-            "contract_name": "hydentity",
-             // Binary data for the operation of hydentity contract
-             // VerifyIdentity { account: "bob.hydentity", nonce: "2" }
+            "contract_name": "MyIdentityContract",
+             // Binary data for the operation of MyIdentityContract
+             // VerifyIdentity { account: "bob@MyIdentityContract", nonce: "2" }
             "data": "[...]" 
         },
         {
-            "contract_name": "hyllar",
-             // Binary data for the operation of hyllar contract
-             // Transfer { recipient: "alice.hydentity", ammount: "20" }
+            "contract_name": "MyToken",
+             // Binary data for the operation of MyToken contract
+             // Transfer { recipient: "alice@MyIdentityContract", ammount: "20" }
             "data": "[...]"
         }
     ]
@@ -68,28 +80,28 @@ Each blob requires a corresponding proof transaction.
 
 ```json
 {
-    "contract_name": "hydentity",
+    "contract_name": "MyIdentityContract",
     "proof": "[...]"
 }
 ```
 
 The binary proof's output includes:
 
-- Initial state: `bob.hydentity` nonce = 1.
-- Next state: `bob.hydentity` nonce = 2.
+- Initial state: `bob@MyIdentityContract` nonce = 1.
+- Next state: `bob@MyIdentityContract` nonce = 2.
 - Index: 0 (first blob in the transaction).
 
 and
 
 ```json
 {
-    "contract_name": "hyllar",
+    "contract_name": "MyToken",
     "proof": "[...]"
 }
 ```
 
 The binary proof's output includes:
 
-- Initial state: `bob.hydentity` balance = 100, `alice.hydentity` balance = 0.
-- Next state: `bob.hydentity` balance = 80, `alice.hydentity` balance = 20.
+- Initial state: `bob@MyIdentityContract` balance = 100, `alice@MyIdentityContract` balance = 0.
+- Next state: `bob@MyIdentityContract` balance = 80, `alice@MyIdentityContract` balance = 20.
 - Index: 1 (second blob in the transaction).
