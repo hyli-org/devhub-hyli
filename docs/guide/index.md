@@ -1,4 +1,4 @@
-# :globe: Primer
+# 🌍 Primer
 
 Welcome to the Hyli primer.
 
