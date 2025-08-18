@@ -51,6 +51,7 @@ plugins:
         background_color: "#1E2933"
         font_family: Chakra Petch
         color: "#DF6445"
+  - to-pdf
 
 copyright: Copyright &copy; 2025 Hyli
 
