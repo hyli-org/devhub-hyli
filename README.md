@@ -27,7 +27,6 @@ pip install mkdocs-video
 pip install "mkdocs-material[imaging]"
 pip install neoteroi-mkdocs
 pip install mkdocs-redirects
-pip install mkdocs-to-pdf
 ```
 
 ## Dev mode
