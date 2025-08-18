@@ -811,6 +811,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#handling-state-conflicts-for-proof-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling state conflicts for proof generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#external-resources" class="md-nav__link">
     <span class="md-ellipsis">
       External resources
@@ -1568,6 +1577,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#handling-state-conflicts-for-proof-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling state conflicts for proof generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#external-resources" class="md-nav__link">
     <span class="md-ellipsis">
       External resources
@@ -1663,11 +1681,28 @@ This setup is ideal for projects where you want minimal backend setup and an eas
 <p>You can then start generating your proof using the sequenced virtual base state as the base state for your operation.</p>
 <p>Once sent, the proof goes through Hyli’s native verification, removing the need for verifier contracts.</p>
 <p>Once verified, the proof is settled onchain. Use this settled state to update your app accordingly outside of Hyli.</p>
+<h2 id="handling-state-conflicts-for-proof-generation">Handling state conflicts for proof generation</h2>
+<p>When a transaction is sequenced on Hyli, it becomes part of the pending state.</p>
+<p>If another user submits a transaction without including the most recent pending state, their proof will fail with an <code>Initial state mismatch</code> error.</p>
+<p>This typically happens when two users generate proofs around the same time. For example:</p>
+<ol>
+<li>Bob and Alice both prepare a token transfer.</li>
+<li>Bob’s transaction is sequenced first.</li>
+<li>Alice generates her proof based on the previous state, unaware of Bob's transaction.</li>
+<li>If Alice submits a state update ignoring Bob’s transaction, it will be rejected.</li>
+</ol>
+<p>To avoid this, your app needs to monitor the sequencer, re-fetch the latest pending state, and re-generate the proof with all prior unsettled transactions included.</p>
+<p>The easiest way to handle this is to <strong>use Hyli’s AutoProver module</strong>, included in <a href="../../quickstart/edit/">the scaffold</a>. The AutoProver:</p>
+<ul>
+<li>monitors the sequencer for new transactions.</li>
+<li>keeps track of pending state updates.</li>
+<li>automatically retries proof generation when state changes.</li>
+</ul>
+<p>By default, AutoProver runs on a backend server. You can go serverless by embedding a lightweight version of AutoProver in your frontend, tailored to handle only the current user's transactions and retries. This will require some custom logic.</p>
 <h2 id="external-resources">External resources</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=fOGdb1CTu5c">Zero-knowledge proofs explained at 5 levels of difficulty</a> (22')</li>
 <li><a href="https://github.com/ventali/awesome-zk?tab=readme-ov-file">awesome-zk</a> link repository on GitHub</li>
-<li>Hyli's <a href="https://blog.hyli.org/a-simple-introduction-to-zero-knowledge-proofs-zkp/">very simple introduction to zero-knowledge proofs</a></li>
 <li>Lauri Peltonen's <a href="https://medium.com/@laurippeltonen">blog series on ZK</a></li>
 </ul></div>
 
