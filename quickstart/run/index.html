@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -1487,31 +1487,35 @@
 <ul>
 <li><a href="https://www.rust-lang.org/tools/install">Install Rust</a> (you'll need <code>rustup</code> and Cargo).</li>
 <li>Install openssl-dev (e.g. <code>apt install openssl-dev</code> or <code>cargo add openssl</code>).</li>
-<li>
-<p><a href="https://bun.sh/">Bun</a> (or npm/yarn)</p>
-</li>
-<li>
-<p>For the scaffold example, <a href="https://dev.risczero.com/api/zkvm/install">install RISC Zero</a> and <a href="https://noir-lang.org/docs/getting_started/quick_start">Noir</a>. You can also use <a href="https://docs.succinct.xyz/docs/sp1/introduction">SP1</a>.</p>
-</li>
+<li><a href="https://bun.sh/">Bun</a> (or npm/yarn)</li>
+<li>Install necessary provers:</li>
+<li><a href="https://dev.risczero.com/api/zkvm/install">RISC Zero</a> (used for the scaffold example)</li>
+<li><a href="https://docs.succinct.xyz/docs/sp1/introduction">SP1</a></li>
+<li><a href="https://noir-lang.org/docs/getting_started/quick_start">Noir</a></li>
 </ul>
 <h2 id="run-a-node-locally">Run a node locally</h2>
 <p>Clone <a href="https://github.com/hyli-org/hyli">the Hyli node</a>.</p>
 <p>Run:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.13.1
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.13.1<span class="w"> </span><span class="c1"># 0.13.1 is the latest stable version</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data_node<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
 </span></code></pre></div>
-<p>You can now use <a href="https://explorer.hyli.org">the Hyli explorer</a>. Select <code>localhost</code> in the upper-right corner.</p>
-<p>For alternative setups, optional features, and advanced configurations, check out <a href="../../reference/local-node/">the local node reference page</a>.</p>
+<p>Variants:</p>
+<ul>
+<li>Without indexer, for a faster development loop: <code>HYLE_RUN_INDEXER=false cargo run</code></li>
+<li>With SP1 verifier: <code>cargo run -F sp1</code></li>
+</ul>
+<p>Open <a href="https://explorer.hyli.org">the Hyli explorer</a> and select <code>localhost</code> in the upper-right corner.</p>
+<p>For alternative setups and custom configurations, check out <a href="../../reference/local-node/">the local node reference page</a>.</p>
 <h2 id="run-the-wallet">Run the wallet</h2>
 <p>Clone <a href="https://github.com/hyli-org/wallet/">the Wallet repository</a>.</p>
-<p>Wait until the node has successfully launched.</p>
+<p>Before taking any action, wait until the node has successfully launched.</p>
 <p>Run:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.1.2
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.1.2<span class="w"> </span><span class="c1"># 0.1.2 is the latest stable version</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release<span class="w"> </span>--<span class="w"> </span>-m<span class="w"> </span>-a<span class="w"> </span>-w
 </span></code></pre></div>
 <h2 id="run-the-app-scaffold">Run the app scaffold</h2>
 <p>Clone <a href="https://github.com/hyli-org/app-scaffold/">the Hyli app scaffold</a>.</p>
-<p>Launch the server:</p>
+<p>Start the server:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release
 </span></code></pre></div>
 <p>Start the scaffold's UI:</p>
@@ -1628,7 +1632,8 @@
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -1610,70 +1610,77 @@
 
 <div><h1 id="local-node-configuration">Local node configuration</h1>
 <h2 id="recommended-run-from-source">Recommended: Run from source</h2>
-<p>For a single local node (consensus disabled) with an indexer, clone the <a href="https://github.com/hyli-org/hyli">hyli repository</a> and run:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
+<p>For a single local node (consensus disabled), you can run <strong>with</strong> or <strong>without</strong> the indexer:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Without indexer (faster dev loop; ephemeral)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span>cargo<span class="w"> </span>run
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># With indexer (starts a temporary PostgreSQL; data cleared on stop)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># With SP1 verifier</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>cargo<span class="w"> </span>run<span class="w"> </span>-F<span class="w"> </span>sp1
 </span></code></pre></div>
-<p>This command starts a temporary PostgreSQL server and erases its data when you stop the node.</p>
 <h3 id="optional-persistent-storage">Optional: Persistent storage</h3>
-<p>For persistent storage, start a standalone PostgreSQL instance:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Start PostgreSQL with default configuration:</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>pg_hyle<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>postgres<span class="w"> </span>postgres
+<p>For a persistent PostgreSQL:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>pg_hyle<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>postgres<span class="w"> </span>postgres
 </span></code></pre></div>
-<p>Then, navigate to the Hyli root and run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cargo<span class="w"> </span>run
+<p>Then, from the Hyli root:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">HYLE_DATABASE_URL</span><span class="o">=</span>postgres://postgres:postgres@localhost:5432/postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>cargo<span class="w"> </span>run
 </span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To reset your local node, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.</p>
+</div>
 <h2 id="alternative-start-with-docker">Alternative: Start with Docker</h2>
 <p>Use Docker to run a local node.</p>
 <h3 id="pull-the-docker-image">Pull the Docker image</h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>ghcr.io/hyli-org/hyli:v0.12.1
 </span></code></pre></div>
 <h3 id="run-the-docker-container">Run the Docker container</h3>
+<p>Run without indexer:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>./data:/hyle/data<span class="w"> </span>-p<span class="w"> </span><span class="m">4321</span>:4321<span class="w"> </span>ghcr.io/hyli-org/hyli:v0.12.1
 </span></code></pre></div>
 <p>If you run into an error, try adding the <code>--privileged</code> flag:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--privileged<span class="w"> </span>-v<span class="w"> </span>./data:/hyle/data<span class="w"> </span>-p<span class="w"> </span><span class="m">4321</span>:4321<span class="w"> </span>ghcr.io/hyli-org/hyli:v0.12.1
 </span></code></pre></div>
-<p>To run with an indexer, add the parameter <code>-e HYLE_RUN_INDEXER=true</code> and set up a running PostgreSQL server with Docker:</p>
+<p>Run with indexer (requires a PostgreSQL container):</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>pg_hyle<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>postgres<span class="w"> </span>postgres
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>./data:/hyle/data<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">HYLE_DATABASE_URL</span><span class="o">=</span>postgres://postgres:postgres@pg_hyle:5432/postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span>--link<span class="w"> </span>pg_hyle<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">4321</span>:4321<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span>ghcr.io/hyli-org/hyli:v0.7.2
 </span></code></pre></div>
-<p>And the node linked to it:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>./data:/hyle/data<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">HYLE_DATABASE_URL</span><span class="o">=</span>postgres://postgres:postgres@pg_hyle:5432/postgres<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>--link<span class="w"> </span>pg_hyle<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">4321</span>:4321<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span>ghcr.io/hyli-org/hyli:v0.7.2
-</span></code></pre></div>
-<p>You can now <a href="../../quickstart/">create your first app</a>.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To reset your local node, delete the ./data folder and restart from Step 1. Otherwise, you risk re-registering a contract that still exists.</p>
-</div>
+<p>You can now <a href="../../quickstart/run/">create your first app</a>.</p>
 <h2 id="alternative-build-the-docker-image-locally">Alternative: Build the Docker image locally</h2>
 <p>If you prefer to build the image from source, run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>hyli-org/hyli<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-dit<span class="w"> </span>hyli-org/hyli
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>hyli-org/hyli<span class="w"> </span>.<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-dit<span class="w"> </span>hyli-org/hyli
 </span></code></pre></div>
 <h2 id="configuration">Configuration</h2>
 <!--Put on docs.rs when we'll be ready.-->
 
 <p>You can configure your setup using environment variables or by editing a configuration file.</p>
 <h3 id="using-a-configuration-file">Using a configuration file</h3>
-<p>To load settings from a file, place <code>config.toml</code> in your node's working directory. It will be detected automatically at startup.</p>
-<p>For documentation, see the defaults at <a href="https://github.com/hyli-org/hyli/blob/main/src/utils/conf_defaults.toml">src/utils/conf_defaults.toml</a>.</p>
-<p>For Docker users, mount the config file when running the container:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>./data:/hyle/data<span class="w"> </span>-v<span class="w"> </span>./config.run:/hyle/config.toml<span class="w"> </span>-e<span class="w"> </span><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span>-p<span class="w"> </span><span class="m">4321</span>:4321<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span>:1234<span class="w"> </span>ghcr.io/hyli-org/hyli:v0.12.1
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>cp<span class="w"> </span>./src/utils/conf_defaults.toml<span class="w"> </span>config.toml
+<p>Place a <code>config.toml</code> in the node’s working directory to load it automatically at startup.</p>
+<p>See the defaults at <a href="https://github.com/hyli-org/hyli/blob/main/src/utils/conf_defaults.toml">src/utils/conf_defaults.toml</a>.</p>
+<p>Docker users can mount the file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>./data:/hyle/data<span class="w"> </span>-v<span class="w"> </span>./config.run:/hyle/config.toml<span class="w"> </span>-e<span class="w"> </span><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span>-p<span class="w"> </span><span class="m">4321</span>:4321<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span>:1234<span class="w"> </span>ghcr.io/hyli-org/hyli:v0.12.1
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>cp<span class="w"> </span>./src/utils/conf_defaults.toml<span class="w"> </span>config.toml
 </span></code></pre></div>
 <p>For source users, copy the default config template:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cp<span class="w"> </span>./src/utils/conf_defaults.toml<span class="w"> </span>config.toml
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cp<span class="w"> </span>./src/utils/conf_defaults.toml<span class="w"> </span>config.toml
 </span></code></pre></div>
 <h3 id="using-environment-variables">Using environment variables</h3>
 <p>All variables can be customized on your single-node instance.
 The mapping uses 'HYLE_' as a prefix, then '__' where a '.' would be in the config file.</p>
-<p>e.g.</p>
-<p><code>id</code> is set with <code>HYLE_ID="your_id"</code>.
-<code>run_indexer</code> is set with <code>HYLE_RUN_INDEXER="true"</code>.
-<code>p2p.address</code> is set with <code>HYLE_P2P__ADDRESS="127.0.0.1:4321"</code> (note the double __ for the dot).</p></div>
+<p>Examples:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">HYLE_RUN_INDEXER</span><span class="o">=</span><span class="s2">"true"</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nv">HYLE_P2P__ADDRESS</span><span class="o">=</span><span class="s2">"127.0.0.1:4321"</span><span class="w"> </span><span class="c1"># (note the double \_\_ for the dot)</span>
+</span></code></pre></div></div>
 
 
 
@@ -1783,7 +1790,8 @@ The mapping uses 'HYLE_' as a prefix, then '__' where a '.' would be in the conf
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
