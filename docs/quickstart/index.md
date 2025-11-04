@@ -13,7 +13,7 @@ It uses several examples to help you start building as soon as possible.
         "icon": ":material-home:",
     },
     {
-        "title": "[Build your app](./run.md)",
+        "title": "[Build your app](./edit.md)",
         "content": "Using our scaffold repository, set up your application.",
         "icon": ":fontawesome-solid-water-ladder:",
     },

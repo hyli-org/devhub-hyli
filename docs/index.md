@@ -6,9 +6,9 @@ description: Hyli is the new proof-powered L1 to build the next generation of ap
 
 [Hyli](https://hyli.org/) is the new proof-powered L1 to build the next generation of apps.
 
-With Hyli, developers can build fast, composable, and verifiable apps without dealing with the usual pains of blockchain.
+Hyli enables builders and institutions to design private, compliant, and high-performance systems.
 
-On Hyli, instead of executing transactions onchain, you run your app logic anywhere off-chain, in Rust, Noir, or even multiple languages at once. You only need to send a proof for onchain settlement. With this model, your app benefits from the Web2 user experience and the security of Web3.
+By separating execution from verification and leveraging cryptographic proofs, Hyli combines Web2 scalability with Web3 trustworthiness.
 
 ## Navigation
 
@@ -20,7 +20,7 @@ On Hyli, instead of executing transactions onchain, you run your app logic anywh
 
     Your entry point to understanding Hyli, with minimal code.
 
-    [:octicons-arrow-right-24: Primer](./guide/index.md)
+    [:octicons-arrow-right-24: Guide](./guide/index.md)
 
 -   :material-clock-fast:{ .lg .middle } __Quickstart__
 
@@ -54,26 +54,23 @@ On Hyli, instead of executing transactions onchain, you run your app logic anywh
 
 Here’s what happens when you use Hyli’s next-generation Layer 1:
 
-1. __Write your app__: Write a contract and define how state changes should happen. You'll run this logic wherever you want. Write in Rust or Noir and use any proving scheme we support. You can also leverage our native digital signature verifiers.
-1. __Send a blob transaction__: Send a provable blob to Hyli, stating what final state you expect after the transaction. Hyli will sequence the transaction immediately: you get a timestamp and a guaranteed place in the block. [Read more about pipelined proving](./concepts/pipelined-proving.md).
-1. __Generate and submit the proof__: Generate proofs wherever you want: client-side or in a browser, with or without a partner proving network. When the proofs for your transaction are ready, send them to Hyli in a proof transaction that references the previous blob transaction.
-1. __Finality__: Hyli validators receive the transaction and verify the proofs natively, without the limitations of a bulky virtual machine. If the proofs are valid, Hyli finalizes the transaction and updates your contract's onchain state root. You're good to go!
+1. __Write your app__: Define how your contract updates state. Run your logic offchain in Rust, Noir, or any supported language. Choose your proving scheme and leverage Hyli’s native signature verifiers.
+1. __Send a blob transaction__: Submit a provable blob to Hyli that specifies your expected post-transaction state. Hyli sequences it instantly, giving you a timestamp and a guaranteed position in the block. [Read more about pipelined proving](./concepts/pipelined-proving.md).
+1. __Generate and submit the proof__: Produce proofs locally, in a browser, or through a proving network. When ready, submit them in a proof transaction referencing your blob.
+1. __Finality__: Validators verify proofs natively, eliminating VM overhead. If the proof is valid, Hyli finalizes the transaction and settles it onchain.
 
 ![Sequence diagram explaining the steps going from sequencing to proving to verification and consensus.](./assets/img/hyli-main-diagram.jpg)
 
 ## What you get with Hyli
 
-Hyli is built for speed, flexibility, and seamless blockchain integration.
+Hyli delivers speed, flexibility, and seamless blockchain integration.
 
-With our model, you get:
-
-- You skip onchain execution entirely.
-- You can use the Hyli wallet for [identity abstraction](./concepts/identity.md).
-- You choose your proving system (Noir, RISC0, SP1…).
-- You generate your proofs wherever you'd like (client-side, in a server, through a proving network…).
-- You can [compose proofs](./concepts/proof-composition.md) across contracts and languages.
-- You benefit from the state-of-the-art Autobahn consensus.
-- You get Web2-like speed with Web3 security.
+- No onchain execution: only verified results are recorded.
+- Identify abstraction with the [Hyli wallet](./concepts/identity.md).
+- Proof generation anywhere: client-side, server-side, via proving network…
+- [Composable proofs](./concepts/proof-composition.md) across contracts and [languages](./reference/supported-proving-schemes.md).
+- State-of-the-art [Autobahn consensus](./concepts/consensus.md) for fast finality.
+- Web2 performance with Web3 security.
 
 Read more about [how Hyli compares to legacy blockchains](./concepts/hyli-vs-vintage-blockchains.md).
 
@@ -85,10 +82,9 @@ Read more about [how Hyli compares to legacy blockchains](./concepts/hyli-vs-vin
 - :material-hexagon-multiple-outline: [Example contracts](http://github.com/hyli-org/examples)
 - :material-home: [Website](https://hyli.org)
 - :material-rss: [Hyli blog](https://blog.hyli.org)
+- [LLMs.txt file](./llms.txt)
 
 </div>
-
-Vibe coders, use our [LLMs.txt file](./llms.txt)!
 
 ## Let's talk
 

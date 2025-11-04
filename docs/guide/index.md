@@ -1,11 +1,10 @@
-# 🌍 Primer
+# 🌍 Guide
 
-Welcome to the Hyli primer.
+Welcome to the Hyli guide.
 
-It is your entry point into understanding Hyli. The book is divided into four sections and uses minimal code to serve a bigger audience.
+It is your entry point into understanding Hyli. The guide is divided into three sections and uses minimal code to serve a bigger audience.
 
 If you want to build on Hyli, you may want to check out the [quickstart](../quickstart/index.md) or [concept pages](../concepts/index.md).
-
 
 ::timeline:: id="epic-timeline"
 

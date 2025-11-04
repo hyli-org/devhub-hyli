@@ -5,10 +5,11 @@
 - [Install Rust](https://www.rust-lang.org/tools/install) (you'll need `rustup` and Cargo).
 - Install openssl-dev (e.g. `apt install openssl-dev` or `cargo add openssl`).
 - [Bun](https://bun.sh/) (or npm/yarn)
-- Install necessary provers:
+- Install provers as needed:
   - [RISC Zero](https://dev.risczero.com/api/zkvm/install) (used for the scaffold example)
   - [SP1](https://docs.succinct.xyz/docs/sp1/introduction)
   - [Noir](https://noir-lang.org/docs/getting_started/quick_start)
+  - [Cairo M](https://github.com/kkrt-labs/cairo-m)
 
 ## Run a node locally
 
