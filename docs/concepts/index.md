@@ -74,7 +74,7 @@ This section includes general documentation topics. You can also refer to [our G
 
     Learn the main differences between Hyli and traditional blockchains.
 
-    [:octicons-arrow-right-24: Read more](./proof-composition.md)
+    [:octicons-arrow-right-24: Read more](./hyli-vs-vintage-blockchains.md)
 
 -   :material-lightbulb:{ .lg .middle } __Consensus__
 
@@ -82,6 +82,6 @@ This section includes general documentation topics. You can also refer to [our G
 
     Learn about our consensus algorithm, based on Autobahn.
 
-    [:octicons-arrow-right-24: Read more](./proof-composition.md)
+    [:octicons-arrow-right-24: Read more](./consensus.md)
 
 </div>
