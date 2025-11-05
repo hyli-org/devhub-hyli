@@ -1,7 +1,7 @@
 # Hyli LLMs Guide (llms.txt)
 # Purpose: help AI coding assistants and search indexers find and summarize Hyli docs accurately.
 # Canonical site: https://docs.hyli.org
-# Brand line: "Hyli is the new proof-powered L1 to build the next generation of apps."
+# Brand line: "Hyli is a high-performance blockchain with built-in privacy. It enables fast and seamlessly compliant onchain applications."
 
 ---
 File: /docs/index.md
