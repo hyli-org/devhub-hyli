@@ -79,10 +79,8 @@ Read more about [how Hyli compares to legacy blockchains](./concepts/hyli-vs-vin
 <div class="grid cards" markdown>
 
 - :fontawesome-solid-circle-nodes: [Rust node](http://github.com/hyli-org/hyli)
-- :material-hexagon-multiple-outline: [Example contracts](http://github.com/hyli-org/examples)
 - :material-home: [Website](https://hyli.org)
 - :material-rss: [Hyli blog](https://blog.hyli.org)
-- [LLMs.txt file](./llms.txt)
 
 </div>
 
