@@ -6,19 +6,21 @@ This section introduces various primitives and components that Hyli has develope
 
 **Hyli's design is opinionated, focusing only on sequencing, data availability, and verifying zk proofs.** This focus enables it to delegate computation to apps. Since execution is verifiable thanks to cryptographic techniques, the system remains decentralized and trustless.
 
-Traditional Layer 1s suffer from a lack of horizontal scalability as they pursue a single layer with all components integrated: sequencing, validation, execution, and state. They become bottlenecked as the demand for execution and state increases.
+[Traditional Layer 1s](../concepts/hyli-vs-vintage-blockchains.md) suffer from a lack of horizontal scalability as they pursue a single layer with all components integrated: sequencing, validation, execution, and state. They become bottlenecked as the demand for execution and state increases.
 
 An increase in demand for these L1s means managing more application state and more computation on a single layer. To meet the demand, they increase resource requirements for validators: larger and faster disks, higher network bandwidth, more RAM, and more computer cores.
 
 This is where Hyli shines.
 
-Hyli only sequences the transactions for applications. The applications are responsible for validating these transactions, executing them, and managing the application state. This allows Hyli to scale horizontally because all applications handle their validation, execution, and state management.
+Hyli [only sequences the transactions](../concepts/transaction.md) for applications. The [applications](../concepts/apps.md) are responsible for validating these transactions, executing them, and managing the application state. This allows Hyli to scale horizontally because all applications handle their validation, execution, and state management.
 
 ![Hyli scales horizontally, compute is done off-chain, proved on-chain with succinct validity proofs, enabling a future proof blockchain design.](../assets/img/guide/architecture.jpg)
 
 Hyli scales decentralized applications the way the internet has scaled, which is through horizontal scaling, and hence is pursuing the endgame architecture of building a universal proof layer.
 
 ## Transactions on Hyli
+
+[Read more about transactions on Hyli](../concepts/transaction.md).
 
 Hyli provides two transaction types, which are:
 
@@ -39,7 +41,7 @@ This way, multiple application transactions are sequenced and finalized on Hyli,
 
 ## Proof transactions
 
-After your transaction has been sequenced and finalized on Hyli, the application executes it and needs to settle the application state post-execution. 
+After your transaction has been sequenced and finalized on Hyli, the application executes it and needs to settle the application state post-execution.
 
 This is where Proof transactions come into play.  
 
