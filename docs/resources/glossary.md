@@ -6,7 +6,7 @@
 | **blob**                       | A piece of provable information that is sent to Hyli.                                                                           | [Apps](../concepts/apps.md) |
 | **blob transaction**           | A transaction including a provable *blob*, used for sequencing.       | [Pipelined proving](../concepts/proof-composition.md) |
 | **cross-contract composition** | The ability to use and verify a contract's proofs in other contracts.  | [Proof composition](../concepts/proof-composition.md) |
-| **operation**                  | Something that happens on an *unchained app*. An operation includes two *transactions*: a *blob transaction* and a *proof transaction*. | [Transactions](../concepts/transaction.md) |
+| **operation**                  | Something that happens on an *app*. An operation includes two *transactions*: a *blob transaction* and a *proof transaction*. | [Transactions](../concepts/transaction.md) |
 | **proof composition**          | The process of combining multiple zero-knowledge proofs into a single proof, enabling efficient verification and interoperability across different proving systems.  | [Proof composition](../concepts/proof-composition.md) |
 | **proof transaction**          | A *transaction* including a proof of a previously-submitted *blob*, used for verification and settlement.   | [Transactions](../concepts/transaction.md) |
 | **proof verification**         | The act by which Hyli verifies submitted proofs before settling them onchain.                               | [Transactions](../concepts/transaction.md) |
