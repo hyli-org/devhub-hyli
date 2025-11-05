@@ -1,8 +1,11 @@
 # Build your app
 
+_This page has moved. Check out the [one-page quickstart](./index.md)._
+
+
 ## IMPORTANT: Editing a contract
 
-If you make changes to the contracts, you need to execute this command in the node, the wallet, and the scaffold to restart them:
+When you edit a contract, you need to restart the node, the wallet, and the scaffold by executing this command in all three:
 
 ```sh
 rm -rf data_node && RISC0_DEV_MODE=true SP1_PROVER=mock cargo run -- --pg
