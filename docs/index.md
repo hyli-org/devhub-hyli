@@ -1,10 +1,10 @@
 ---
-description: Hyli is the new proof-powered L1 to build the next generation of apps. This is your developer documentation.
+description: Hyli is a high-performance blockchain with built-in privacy. It enables fast and seamlessly compliant onchain applications. This is your developer documentation.
 ---
 
 # Home
 
-[Hyli](https://hyli.org/) is the new proof-powered L1 to build the next generation of apps.
+[Hyli](https://hyli.org/) is a high-performance blockchain with built-in privacy.
 
 Hyli enables builders and institutions to design private, compliant, and high-performance systems.
 

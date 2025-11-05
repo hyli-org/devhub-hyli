@@ -16,7 +16,7 @@ If you want to build on Hyli, you may want to check out the [quickstart](../quic
     },
     {
         "title": "[Core components of Hyli](./components.md)",
-        "content": "How Hyli built the proof-powered blockchain and what makes it special.",
+        "content": "How Hyli was built and what makes it special.",
         "icon": ":material-list-box:",
     },
     {
