@@ -1,43 +1,123 @@
-Directory Structure:
+# Hyli LLMs Guide (llms.txt)
+# Purpose: help AI coding assistants and search indexers find and summarize Hyli docs accurately.
+# Canonical site: https://docs.hyli.org
+# Brand line: "Hyli is the new proof-powered L1 to build the next generation of apps."
 
-└── ./
-    └── docs
-        ├── concepts
-        │   ├── .pages
-        │   ├── apps.md
-        │   ├── hyli-vs-vintage-blockchains.md
-        │   ├── identity.md
-        │   ├── index.md
-        │   ├── pipelined-proving.md
-        │   ├── proof-composition.md
-        │   ├── proof-generation.md
-        │   └── transaction.md
-        ├── quickstart
-        │   ├── .pages
-        │   ├── run.md
-        │   ├── index.md
-        │   └── run.md
-        ├── reference
-        │   ├── .pages
-        │   ├── run.md
-        │   ├── index.md
-        │   ├── node.md
-        │   └── supported-proving-schemes.md
-        ├── resources
-        │   ├── .pages
-        │   ├── find-us.md
-        │   ├── glossary.md
-        │   ├── grants.md
-        │   ├── index.md
-        │   ├── partnerships.md
-        │   ├── release-notes.md
-        │   └── roadmap.md
-        ├── tooling
-        │   ├── .pages
-        │   ├── api.md
-        │   ├── explorer.md
-        │   ├── index.md
-        │   ├── sdk.md
-        │   └── wallet.md
-        ├── index.md
-        └── introduction.md
+---
+File: /docs/index.md
+Summary: Landing page. What Hyli is, why it’s different, nav cards to Guide, Quickstart, Concepts, Tooling, plus a high-level pipeline diagram and “How Hyli works”.
+
+Key claims:
+- Proof-powered L1 separating execution from verification.
+- Web2 performance with Web3 trust.
+- Fast settlement via native proof verification.
+
+Primary CTAs:
+- Guide: ./guide/index.md
+- Quickstart: ./quickstart/index.md
+- Concepts: ./concepts/index.md
+- Tooling: ./tooling/index.md
+
+---
+File: /docs/guide/index.md
+Summary: Non-code overview (“why/what/future”) with a timeline for quick orientation.
+
+Related:
+- Why Hyli?: ./why-hyli.md
+- Core components: ./components.md
+- Future: ./future.md
+
+---
+File: /docs/guide/why-hyli.md
+Summary: Architectural rationale for Hyli’s design (horizontal scaling via proofs; L1 focuses on sequencing, DA, verification). Explains why scaling execution on a single chain hits limits.
+
+---
+File: /docs/guide/components.md
+Summary: Core primitives: offchain execution, blob/proof transactions, Autobahn consensus; app architecture; end-to-end example (e.g., a DEX). Includes diagrams.
+
+---
+File: /docs/guide/future.md
+Summary: Vision for proving networks, censorship resistance (multiple concurrent proposers), and Hyli’s focus on scaling DA and proof verification throughput.
+
+---
+File: /docs/quickstart/index.md
+Summary: Entry to getting started. Single CTA should point to the unified quickstart after merge.
+CTA: ./run-locally.md  (after you rename)
+
+---
+File: /docs/quickstart/run.md
+Summary: Run a local node, wallet, and scaffold; includes version pinning and commands. After merge/rename, this becomes: /docs/quickstart/run-locally.md
+
+Key refs:
+- Node repo: https://github.com/hyli-org/hyli
+- Explorer: https://explorer.hyli.org
+- Wallet repo: https://github.com/hyli-org/wallet/
+- App scaffold: https://github.com/hyli-org/app-scaffold/
+
+---
+File: /docs/quickstart/edit.md
+Summary: Build your app with the scaffold (contracts, server/autoprover, front-end wiring). Consider folding into run-locally.md as “Build your app”.
+
+---
+File: /docs/concepts/index.md
+Summary: Hub for Hyli concepts with cards linking to transactions, proof generation, identity, proof composition, pipelined proving, etc.
+
+---
+File: /docs/concepts/transaction.md
+Summary: Two-step model (blob-transaction for intent/sequencing, proof-transaction for settlement) and structures of each. Explains why this separation improves UX and parallelism.
+
+---
+File: /docs/concepts/pipelined-proving.md
+Summary: Solves base-state conflicts and long proof latencies by splitting sequencing from settlement; timeouts for unprovable blobs; diagrams included.
+
+---
+File: /docs/concepts/proof-generation.md
+Summary: What to prove (public vs private inputs), where to prove (client/app/prover network), and how to choose a proving scheme. Mentions autoprover in the scaffold.
+
+---
+File: /docs/concepts/identity.md
+Summary: Any app can be an identity. One identity blob per blob-transaction; nonces; how verification works; diagrams. Recommends the Hyli wallet for aggregation.
+
+---
+File: /docs/concepts/proof-composition.md
+Summary: Short explainer on composing proofs across contracts and proof systems (recursion, cross-contract composition).
+
+---
+File: /docs/concepts/consensus.md
+Summary: Hyli’s consensus (Autobahn), multiple concurrent proposers, DA certificates, and implications for latency and censorship resistance.
+
+---
+File: /docs/concepts/hyli-vs-vintage-blockchains.md
+Summary: Differences vs EVM-style chains: no onchain execution/VM, minimal onchain state, identity abstraction (no traditional wallets), every app settles proofs, privacy built in.
+
+---
+File: /docs/tooling/index.md
+Summary: Tooling overview with links to Explorer, Wallet, and API/SDK.
+
+---
+File: /docs/tooling/wallet.md
+Summary: How to use the Hyli wallet (as an identity aggregator), local dev flow, basic integration steps.
+
+---
+File: /docs/tooling/api.md
+Summary: API + SDK entry. Local Swagger at http://localhost:4321/swagger-ui/ and indexer docs at https://indexer.testnet.hyli.org/swagger-ui/. Lists JS and Rust SDKs.
+
+SDKs:
+- JS: https://www.npmjs.com/package/hyli
+- Rust: https://crates.io/crates/hyle-client-sdk  [NOTE: confirm package name; update if “hyli-client-sdk” is now the canonical crate]
+
+---
+File: /docs/reference/index.md
+Summary: Index for reference material (supported proving schemes, local node options, params, etc.).
+
+---
+File: /docs/reference/supported-proving-schemes.md
+Summary: Matrix of supported schemes (e.g., RISC Zero, SP1, Noir, Cairo M…); tradeoffs and selection tips.
+
+---
+External links (canonical):
+- Explorer: https://explorer.hyli.org
+- API (Indexer): https://indexer.testnet.hyli.org/swagger-ui/
+- Node repo: https://github.com/hyli-org/hyli
+- Wallet repo: https://github.com/hyli-org/wallet
+- App scaffold: https://github.com/hyli-org/app-scaffold

@@ -14,7 +14,7 @@
         <link rel="prev" href="../guide/future/">
       
       
-        <link rel="next" href="run/">
+        <link rel="next" href="edit/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -500,12 +500,12 @@
   
   
     <li class="md-nav__item">
-      <a href="run/" class="md-nav__link">
+      <a href="edit/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Run the scaffold locally
+    Build your app
     
   </span>
   
@@ -523,12 +523,12 @@
   
   
     <li class="md-nav__item">
-      <a href="edit/" class="md-nav__link">
+      <a href="run/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Build your app
+    Run the scaffold locally
     
   </span>
   
@@ -1342,6 +1342,134 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-a-local-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a local node
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-wallet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the wallet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-app-scaffold" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the app scaffold
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-your-own-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build your own app
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build your own app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restarting-the-infra-when-you-edit-a-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restarting the infra when you edit a contract
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-edit" class="md-nav__link">
+    <span class="md-ellipsis">
+      What to edit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-id-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program ID mismatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-already-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ports already in use
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof timeout
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1361,24 +1489,99 @@
 
 
 <div><h1 id="quickstart"><img alt="🏁" class="twemoji" src="../assets/external/cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3c1.svg" title=":checkered_flag:"> Quickstart</h1>
-<p>Welcome to the <strong>Quickstart</strong> guide for Hyli.</p>
-<p>It uses several examples to help you start building as soon as possible.</p>
-<div class="nt-timeline vertical left" id="epic-timeline">
-<div class="nt-timeline-before"></div>
-<div class="nt-timeline-items">
-<div class="nt-timeline-item">
-<p class="nt-timeline-title"><a href="run/">Run the scaffold locally</a></p>
-<p class="nt-timeline-content">Where it all begins.</p>
-<div class="nt-timeline-dot  bigger"><span class="icon"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg></span></span></div>
-</div>
-<div class="nt-timeline-item">
-<p class="nt-timeline-title"><a href="edit/">Build your app</a></p>
-<p class="nt-timeline-content">Using our scaffold repository, set up your application.</p>
-<div class="nt-timeline-dot  bigger"><span class="icon"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 640 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M374.5 405.7c38.4-29 90.5-29 129 0 16.9 12.7 32.9 21.5 47.8 24.6 13.7 2.8 27.4.9 42.3-10.3 10.6-8 25.6-5.9 33.6 4.7s5.8 25.7-4.8 33.6c-26.4 19.9-54.2 24.4-80.7 19.1-25.3-5.1-48.1-18.9-67.2-33.3-21.3-16.1-49.9-16.1-71.2 0-24.2 18.3-52.3 35.9-83.4 35.9s-59.1-17.7-83.3-35.9c-21.3-16.1-49.9-16.1-71.2 0-23.8 17.9-54.1 35.5-88.1 35.3-20.4-.1-40.7-6.7-59.8-21.1-10.6-8-12.7-23-4.7-33.6s23-12.7 33.6-4.7c11.3 8.5 21.6 11.4 31.2 11.5 17.6.1 37.3-9.4 58.9-25.7 38.4-29 90.6-29 129 0 24 18.1 40.7 26.3 54.5 26.3s30.5-8.2 54.5-26.3zM511.8 32c48.3 0 89 36 95 83.9l1 8.2c2.2 17.5-10.2 33.5-27.8 35.7s-33.5-10.2-35.7-27.8l-1-8.2c-2-15.9-15.5-27.8-31.5-27.8-17.5 0-31.8 14.2-31.8 31.8v211.8c-23.1-5.1-44.9-4.4-64-.4V288H224v48.7c-5.3-.5-10.7-.8-16-.7-16.2.1-32.4 2.7-48 8V127.8c0-52.9 42.9-95.8 95.7-95.8 48.3 0 89 36 95 83.9l1 8.2c2.2 17.5-10.2 33.5-27.8 35.7s-33.5-10.2-35.7-27.8l-1-8.2c-2-15.9-15.5-27.8-31.5-27.8-17.5 0-31.7 14.2-31.7 31.8V224h192v-96.2c0-52.9 42.9-95.8 95.8-95.8"></path></svg></span></span></div>
-</div>
-</div>
-<div class="nt-timeline-after"></div>
-</div></div>
+<p>Welcome to the Hyli <strong>Quickstart</strong> guide.</p>
+<p>In this guide, you’ll set up your local environment, run a node, launch the wallet, start the scaffold app, and begin building.</p>
+<p>🧭 Estimated time: 15-30 minutes<br>
+🧰 Requirements: basic command-line and Rust experience</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Make sure you have the following installed:</p>
+<ul>
+<li><a href="https://www.rust-lang.org/tools/install">Install Rust</a> (you'll need <code>rustup</code> and Cargo).</li>
+<li>Install openssl-dev (e.g. <code>apt install openssl-dev</code> or <code>cargo add openssl</code>).</li>
+<li><a href="https://bun.sh/">Bun</a> (or npm/yarn)</li>
+<li>Install provers as needed (see <a href="../reference/supported-proving-schemes/">supported proving schemes</a>)</li>
+</ul>
+<h2 id="run-a-local-node">Run a local node</h2>
+<p>Clone <a href="https://github.com/hyli-org/hyli">the Hyli node</a>.</p>
+<p>Run:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.13.1<span class="w"> </span><span class="c1"># latest stable version</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data_node<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
+</span></code></pre></div>
+<p>Variants:</p>
+<ul>
+<li>Without indexer (faster development loop): <code>HYLE_RUN_INDEXER=false cargo run</code></li>
+<li>With SP1 verifier: <code>cargo run -F sp1</code></li>
+</ul>
+<p>Once it's running, open <a href="https://explorer.hyli.org">the Hyli explorer</a> and select <code>localhost</code> in the upper-right corner.</p>
+<p>For alternative setups and custom configurations, check out <a href="../reference/local-node/">the local node reference page</a>.</p>
+<h2 id="run-the-wallet">Run the wallet</h2>
+<p>Before taking any action, wait until the node has successfully launched.</p>
+<p>Clone <a href="https://github.com/hyli-org/wallet/">the Wallet repository</a> and run it:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>v0.1.2<span class="w"> </span><span class="c1"># 0.1.2 is the latest stable version</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release<span class="w"> </span>--<span class="w"> </span>-m<span class="w"> </span>-a<span class="w"> </span>-w
+</span></code></pre></div>
+<p>The wallet aggregates identities and allows local authentication and signing during development.</p>
+<p>Learn more: <a href="../tooling/wallet/">Wallet documentation</a></p>
+<h2 id="run-the-app-scaffold">Run the app scaffold</h2>
+<p>Clone <a href="https://github.com/hyli-org/app-scaffold/">the Hyli app scaffold</a> and start both the backend and frontend.</p>
+<p>Start the backend:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>clear<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--bin<span class="w"> </span>server<span class="w"> </span>--release
+</span></code></pre></div>
+<p>Start the frontend:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>front
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>bun<span class="w"> </span>install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>bun<span class="w"> </span>run<span class="w"> </span>dev
+</span></code></pre></div>
+<p>Everything is now live locally!</p>
+<h2 id="build-your-own-app">Build your own app</h2>
+<h3 id="restarting-the-infra-when-you-edit-a-contract">Restarting the infra when you edit a contract</h3>
+<p>When you edit a contract, you need to restart the node, the wallet, and the scaffold by executing this command in all three:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span>data_node<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nv">RISC0_DEV_MODE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="nv">SP1_PROVER</span><span class="o">=</span>mock<span class="w"> </span>cargo<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>--pg
+</span></code></pre></div>
+<p>If you do not do this, you will see an error about a program id mismatch in the server.</p>
+<h3 id="what-to-edit">What to edit</h3>
+<p>The scaffold includes three components:</p>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>front/</code></td>
+<td>Basic frontend with wallet integration</td>
+</tr>
+<tr>
+<td><code>contracts/</code></td>
+<td>Example RISC Zero contracts</td>
+</tr>
+<tr>
+<td><code>server/</code></td>
+<td>Autoprover and transaction submission logic</td>
+</tr>
+</tbody>
+</table>
+<p>To customize their content:</p>
+<ul>
+<li>Edit or add contracts in <code>contracts/</code>, referring to our <a href="../reference/supported-proving-schemes/">supported proving schemes</a></li>
+<li>Update <code>front/</code></li>
+<li>Adapt server routes</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>You now have a complete local setup for your Hyli application. You can now:</p>
+<ul>
+<li>Dive into <a href="../concepts/">concepts</a> as needed</li>
+<li>Explore <a href="../tooling/api/">API and SDK</a> for integrations</li>
+<li>Join the <a href="https://t.me/hyli_org">Hyli community</a> to share what you build</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="program-id-mismatch">Program ID mismatch</h3>
+<p>You likely modified a contract but didn’t restart all components. See <a href="#restarting-the-infra-when-you-edit-a-contract">the restart instructions</a>.</p>
+<h3 id="ports-already-in-use">Ports already in use</h3>
+<p>Stop any previous node/wallet/scaffold processes or change the ports in their configs.</p>
+<h3 id="proof-timeout">Proof timeout</h3>
+<p>Check that your chosen prover is running correctly.</p></div>
 
 
 
@@ -1454,8 +1657,8 @@
         </a>
     
     
-        <a href="run/" class="nav-button next">
-            Run the scaffold locally &rarr;
+        <a href="edit/" class="nav-button next">
+            Build your app &rarr;
         </a>
     
 </div>
