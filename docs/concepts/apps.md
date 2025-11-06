@@ -33,7 +33,7 @@ The state digest can be expressed as a hash or even a serialization of the state
 
 ## Smart contract ABI
 
-All inputs in Hyli apps must be known at proof generation time. This includes elements like the `tx_hash` which are typically available only at execution time on other blockchains.
+All inputs in Hyli apps must be known at [proof generation](./proof-generation.md) time. This includes elements like the `tx_hash` which are typically available only at execution time on other blockchains.
 
 Here is the Rust structure specifying the output of a Hyli app:
 
@@ -83,14 +83,14 @@ For simplicity, we recommend using the pre-built [Hyli wallet](../tooling/wallet
 
 ### Blob index and blobs
 
-Each blob transaction includes multiple blobs:
+Each [blob transaction](../resources/glossary.md#blob-transaction) includes multiple blobs:
 
-- `index` uniquely identifies a blob within a transaction.
+- `index` uniquely identifies a [blob](../resources/glossary.md#blob) within a transaction.
 - `blobs` is a list of all blobs included in the transaction.
 
 ### TX Hash
 
-`tx_hash` is the blob Transaction's hash.
+`tx_hash` is the blob transaction's hash.
 
 The protocol does not validate this field and `tx_hash` may be deprecated in later versions.
 

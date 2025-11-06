@@ -64,6 +64,8 @@ This section includes general documentation topics. You can also refer to [our G
 
 </div>
 
+See also: [Glossary](../resources/glossary.md).
+
 ## More
 
 <div class="grid cards" markdown>
