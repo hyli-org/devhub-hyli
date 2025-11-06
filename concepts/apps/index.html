@@ -440,10 +440,6 @@
           
         
       
-        
-      
-        
-      
     
     
     
@@ -477,11 +473,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
@@ -491,52 +482,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../quickstart/edit/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Build your app
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../quickstart/run/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Run the scaffold locally
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -1755,7 +1700,7 @@
 <p>The state digest represents the contract's current state commitment. It allows Hyli to guarantee its integrity. It can take any form as long as it fulfills this purpose.</p>
 <p>The state digest can be expressed as a hash or even a serialization of the state if it's small enough.</p>
 <h2 id="smart-contract-abi">Smart contract ABI</h2>
-<p>All inputs in Hyli apps must be known at proof generation time. This includes elements like the <code>tx_hash</code> which are typically available only at execution time on other blockchains.</p>
+<p>All inputs in Hyli apps must be known at <a href="../proof-generation/">proof generation</a> time. This includes elements like the <code>tx_hash</code> which are typically available only at execution time on other blockchains.</p>
 <p>Here is the Rust structure specifying the output of a Hyli app:</p>
 <div class="language-rust highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">HyleOutput</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">version</span><span class="p">:</span><span class="w"> </span><span class="kt">u32</span><span class="p">,</span>
@@ -1796,13 +1741,13 @@
 </div>
 <p>For simplicity, we recommend using the pre-built <a href="../../tooling/wallet/">Hyli wallet</a>.</p>
 <h3 id="blob-index-and-blobs">Blob index and blobs</h3>
-<p>Each blob transaction includes multiple blobs:</p>
+<p>Each <a href="../../resources/glossary/#blob-transaction">blob transaction</a> includes multiple blobs:</p>
 <ul>
-<li><code>index</code> uniquely identifies a blob within a transaction.</li>
+<li><code>index</code> uniquely identifies a <a href="../../resources/glossary/#blob">blob</a> within a transaction.</li>
 <li><code>blobs</code> is a list of all blobs included in the transaction.</li>
 </ul>
 <h3 id="tx-hash">TX Hash</h3>
-<p><code>tx_hash</code> is the blob Transaction's hash.</p>
+<p><code>tx_hash</code> is the blob transaction's hash.</p>
 <p>The protocol does not validate this field and <code>tx_hash</code> may be deprecated in later versions.</p>
 <h3 id="success">Success</h3>
 <p>This boolean field indicates whether the proof is for a successful or failed transactions. It can be used to prove that a transaction is invalid.</p>
