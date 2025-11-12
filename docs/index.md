@@ -6,7 +6,7 @@ description: Hyli is a high-performance blockchain with built-in privacy. It ena
 
 [Hyli](https://hyli.org/) is a high-performance blockchain with built-in privacy.
 
-Hyli enables builders and institutions to design private, compliant, and high-performance systems.
+Hyli enables builders and institutions to design private, compliant, and high-performance solutions.
 
 By separating execution from verification and leveraging cryptographic proofs, Hyli combines Web2 scalability with Web3 trustworthiness.
 
