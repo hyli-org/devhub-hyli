@@ -776,15 +776,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#identity-verification-methods" class="md-nav__link">
+  <a href="#custom-identity-contracts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identity verification methods
+        Custom identity contracts
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Identity verification methods">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-verification-methods-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity verification methods examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity verification methods examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -809,30 +820,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#private-openid-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Private OpenID verification
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-identity-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom identity contracts
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1607,15 +1596,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#identity-verification-methods" class="md-nav__link">
+  <a href="#custom-identity-contracts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identity verification methods
+        Custom identity contracts
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Identity verification methods">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity-verification-methods-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity verification methods examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity verification methods examples">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1640,30 +1640,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#private-openid-verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Private OpenID verification
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-identity-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom identity contracts
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1714,7 +1692,14 @@
 </ul>
 <p>The identity provider should sign the entire blob transaction to ensure that all the included blobs have been approved by the user. One approach is to make the user sign the blobs they agree to execute. The identity contract then verifies that all blobs in the transaction are properly signed.</p>
 <p>If you don't need to create a custom identity source for your app, or don't want to do it in early development, use <a href="../../tooling/wallet/">the Hyli wallet</a>. It's integrated by default in <a href="../../quickstart/edit/">our app scaffold</a>.</p>
-<h2 id="identity-verification-methods">Identity verification methods</h2>
+<h2 id="custom-identity-contracts">Custom identity contracts</h2>
+<p>Applications on Hyli can implement custom identity verification rules through apps. A typical identity contract includes two core functions:</p>
+<ul>
+<li><strong>Register</strong>: Users submit an initial proof of identity.</li>
+<li><strong>Verify</strong>: The contract validates the proof against predefined rules.</li>
+</ul>
+<p>Applications can use this structure or define their own identity workflows as needed.</p>
+<h2 id="identity-verification-methods-examples">Identity verification methods examples</h2>
 <p>Hyli supports multiple identity verification methods, each with unique characteristics. Here are some of the most common.</p>
 <h3 id="private-password">Private password</h3>
 <p>A user authenticates using a private password known only to them.</p>
@@ -1730,18 +1715,7 @@
 <li>Signature: public input. No private input is required, since only the owner of the private key can generate a valid signature.</li>
 <li>Proof: anyone can generate a proof based on the public signature.</li>
 </ul>
-<p><img alt="In this graph, the blob transaction has 0xcafe.ecdsa as an identity. The ECDSA contract in blob0 has the action verify signature. The signature is sign(hash([blob1]). There is no private input required, anyone can generate a proof but only the owner of the private key can generate a valid signature.)" src="../../assets/img/identity/identity-public-signature.jpg"></p>
-<h3 id="private-openid-verification">Private OpenID verification</h3>
-<p>This works just like it does with a private password, except it generally can't be done client-side.</p>
-<p>The OpenID provider knows your secret key, so it could be able to generate transactions on  your behalf.</p>
-<p><img alt="A blob transaction where identity is bob@gmail.com.oidc. Blob0 is to verify openID with an OIDC contract; the proof for blob0 has the openID as private input and verify its validity. The other blob is an USDC contract to transfer money. " src="../../assets/img/identity/identity-openid.jpg"></p>
-<h2 id="custom-identity-contracts">Custom identity contracts</h2>
-<p>Applications on Hyli can implement custom identity verification rules through apps. A typical identity contract includes two core functions:</p>
-<ul>
-<li><strong>Register</strong>: Users submit an initial proof of identity.</li>
-<li><strong>Verify</strong>: The contract validates the proof against predefined rules.</li>
-</ul>
-<p>Applications can use this structure or define their own identity workflows as needed.</p></div>
+<p><img alt="In this graph, the blob transaction has 0xcafe.ecdsa as an identity. The ECDSA contract in blob0 has the action verify signature. The signature is sign(hash([blob1]). There is no private input required, anyone can generate a proof but only the owner of the private key can generate a valid signature.)" src="../../assets/img/identity/identity-public-signature.jpg"></p></div>
 
 
 
