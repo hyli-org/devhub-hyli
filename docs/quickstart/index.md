@@ -12,7 +12,7 @@ In this guide, you’ll set up your local environment, run a node, launch the wa
 Make sure you have the following installed:
 
 - [Install Rust](https://www.rust-lang.org/tools/install) (you'll need `rustup` and Cargo).
-- Install openssl-dev (e.g. `apt install openssl-dev` or `cargo add openssl`).
+- Install libssl-dev
 - [Bun](https://bun.sh/) (or npm/yarn)
 - Install provers as needed (see [supported proving schemes](../reference/supported-proving-schemes.md))
 
