@@ -283,22 +283,6 @@ console.log("Signature (Uint8Array):", signature);
 - `signMessageWithSessionKey(message: string)` will throw if there is no session key in the wallet.
 - The raw hash and signature return as `Uint8Array`.
 
-### WebSocket integration
-
-Real-time updates for transactions and wallet events:
-
-```tsx
-function TransactionMonitor() {
-    useWebSocketConnection(wallet?.address, (event) => {
-        if (event.tx.status === "Success") {
-            // Handle successful transaction
-            fetchBalance();
-        }
-    });
-}
-
-```
-
 ### Customizing the user interface
 
 You can customize the connect button by providing a render prop:
@@ -311,15 +295,5 @@ You can customize the connect button by providing a render prop:
         </button>
     )}
 />
-
-```
-
-### Web component
-
-The library also provides a web component for non-React applications:
-
-```html
-<script type="module" src="path/to/hyli-wallet/dist/hyli-wallet.es.js"></script>
-<hyli-wallet providers="password,google"></hyli-wallet>
 
 ```
