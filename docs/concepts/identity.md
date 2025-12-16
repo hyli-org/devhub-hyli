@@ -31,7 +31,16 @@ The identity provider should sign the entire blob transaction to ensure that all
 
 If you don't need to create a custom identity source for your app, or don't want to do it in early development, use [the Hyli wallet](../tooling/wallet.md). It's integrated by default in [our app scaffold](../quickstart/edit.md).
 
-## Identity verification methods
+## Custom identity contracts
+
+Applications on Hyli can implement custom identity verification rules through apps. A typical identity contract includes two core functions:
+
+- **Register**: Users submit an initial proof of identity.
+- **Verify**: The contract validates the proof against predefined rules.
+
+Applications can use this structure or define their own identity workflows as needed.
+
+## Identity verification methods examples
 
 Hyli supports multiple identity verification methods, each with unique characteristics. Here are some of the most common.
 
@@ -53,20 +62,3 @@ A user signs a message with their private key to prove identity.
 - Proof: anyone can generate a proof based on the public signature.
 
 ![In this graph, the blob transaction has 0xcafe.ecdsa as an identity. The ECDSA contract in blob0 has the action verify signature. The signature is `sign(hash([blob1])`. There is no private input required, anyone can generate a proof but only the owner of the private key can generate a valid signature.)](../assets/img/identity/identity-public-signature.jpg)
-
-### Private OpenID verification
-
-This works just like it does with a private password, except it generally can't be done client-side.
-
-The OpenID provider knows your secret key, so it could be able to generate transactions on  your behalf.
-
-![A blob transaction where identity is bob@gmail.com.oidc. Blob0 is to verify openID with an OIDC contract; the proof for blob0 has the openID as private input and verify its validity. The other blob is an USDC contract to transfer money. ](../assets/img/identity/identity-openid.jpg)
-
-## Custom identity contracts
-
-Applications on Hyli can implement custom identity verification rules through apps. A typical identity contract includes two core functions:
-
-- **Register**: Users submit an initial proof of identity.
-- **Verify**: The contract validates the proof against predefined rules.
-
-Applications can use this structure or define their own identity workflows as needed.
