@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -617,7 +617,7 @@
   <span class="md-ellipsis">
     
   
-    Apps on Hyli
+    Financial applications on Hyli
   
 
     
@@ -785,7 +785,7 @@
   <span class="md-ellipsis">
     
   
-    Hyli vs. vintage blockchains
+    Hyli vs. traditional blockchains for financial institutions
   
 
     
@@ -1733,6 +1733,8 @@
 
 
 <div><h1 id="consensus">Consensus</h1>
+<p>Fast finality is critical for financial applications. Hyli's Autobahn consensus enables sub-second confirmation for stablecoin transfers and tokenized asset settlements.</p>
+<p>This performance is essential for delivering positive user experiences, including instant payment confirmation, real-time settlement, and immediate transaction feedback.</p>
 <p>At a glance:</p>
 <ul>
 <li><strong>Goal:</strong> Achieve high throughput and fast recovery for block finality.</li>
@@ -1784,6 +1786,7 @@ In practice, they face:</p>
 <li><strong>Batch finalization:</strong> Consensus can finalize many blocks at once.</li>
 <li><strong>Fast recovery:</strong> Even if a leader fails, other validators continue broadcasting.</li>
 </ul>
+<p>A stablecoin issuer, for example, could run transactions on a lane reserved for compliant payment flows, with predictable performance and isolation from unrelated traffic. This architecture enables financial institutions to achieve consistent latency and throughput for mission-critical payment infrastructure.</p>
 <h3 id="consensus-finality-with-tip-cuts">Consensus: finality with tip cuts</h3>
 <p>A rotating leader collects the latest PoAs and hashes for each lane and proposes a <strong>cut</strong> — a snapshot representing progress across all lanes.</p>
 <p>All validators participate in a two-round BFT vote to finalize the cut.</p>
@@ -1882,7 +1885,7 @@ See <a href="https://blog.sei.io/sei-giga-achieving-5-gigagas-with-autobahn-cons
   <div class="nav-links">
     
         <a href="../hyli-vs-vintage-blockchains/" class="nav-button prev">
-            &larr; Hyli vs. vintage blockchains
+            &larr; Hyli vs. traditional blockchains for financial institutions
         </a>
     
     
@@ -2012,10 +2015,10 @@ See <a href="https://blog.sei.io/sei-giga-achieving-5-gigagas-with-autobahn-cons
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.prune", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.prune", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

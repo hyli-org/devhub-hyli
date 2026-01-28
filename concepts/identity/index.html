@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -617,7 +617,7 @@
   <span class="md-ellipsis">
     
   
-    Apps on Hyli
+    Financial applications on Hyli
   
 
     
@@ -752,6 +752,34 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identity-for-regulated-finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity for regulated finance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity for regulated finance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-abstraction-for-institutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account abstraction for institutions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#how-hyli-processes-identity-proofs" class="md-nav__link">
@@ -904,7 +932,7 @@
   <span class="md-ellipsis">
     
   
-    Hyli vs. vintage blockchains
+    Hyli vs. traditional blockchains for financial institutions
   
 
     
@@ -1574,6 +1602,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#identity-for-regulated-finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity for regulated finance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identity for regulated finance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#account-abstraction-for-institutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account abstraction for institutions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-hyli-processes-identity-proofs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1673,6 +1729,18 @@
 </div>
 <p>Identity <a href="../hyli-vs-vintage-blockchains/">in traditional blockchains</a> is typically tied to a single wallet address. This approach limits flexibility and compromises privacy.</p>
 <p>On Hyli, <strong>any app can be a proof of identity</strong>. This enables you to register your preferred identity source as an app for authentication. The <a href="../../tooling/wallet/">Hyli wallet</a> is a tool to aggregate all these identities; we recommend using it for simplicity.</p>
+<h2 id="identity-for-regulated-finance">Identity for regulated finance</h2>
+<p>Financial institutions building on Hyli can integrate identity management with existing KYC/AML frameworks.</p>
+<p>Licensed stablecoin issuers handle KYC at onboarding (as required by MiCA). Onchain identity provides cryptographic integrity: users prove they control their identity without exposing personal information publicly.</p>
+<ul>
+<li><strong>Privacy</strong>: User identities remain confidential onchain.</li>
+<li><strong>Compliance</strong>: Issuers maintain full KYC/AML records off-chain.</li>
+<li><strong>Cryptographic guarantees</strong>: Identity proofs ensure only authorized users can transact.</li>
+<li><strong>Regulatory transparency</strong>: Selective disclosure enables regulators to verify identity compliance without public exposure.</li>
+</ul>
+<h3 id="account-abstraction-for-institutions">Account abstraction for institutions</h3>
+<p>Hyli supports account abstraction natively, giving institutions full flexibility over wallet design and user experience.</p>
+<p>Financial institutions can design identity experiences that feel familiar to end users while maintaining the cryptographic guarantees of blockchain settlement.</p>
 <h2 id="how-hyli-processes-identity-proofs">How Hyli processes identity proofs</h2>
 <p>A blob transaction on Hyli includes multiple blobs. One of these blobs must contain an identity claim. (If this isn't clear, read more on <a href="../transaction/">our transactions concept page</a>.)</p>
 <ul>
@@ -1914,10 +1982,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.prune", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "navigation.prune", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
