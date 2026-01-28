@@ -43,31 +43,31 @@ A **proof transaction** includes:
 
 For Risc0 and SP1, the proof data's app output follows `HyleOutput` as defined in the [smart contract ABI](./apps.md#smart-contract-abi).
 
-## Example: token transfer
+## Example: private stablecoin payment
 
-A token transfer involves two blobs in a blob transaction:
+A private stablecoin payment involves two blobs in a blob transaction:
 
-- **Identity blob**: Verifies the sender’s identity and authorizes the transfer.
-- **Transfer blob**: Executes the token transfer.
+- **Identity blob**: Verifies the sender's identity and authorizes the payment.
+- **Payment blob**: Executes the confidential stablecoin transfer.
 
-Each blob requires a corresponding proof transaction.
+Each blob requires a corresponding proof transaction. The stablecoin issuer submits a blob transaction containing encrypted payment data, then provides proof transactions with the new state commitments.
 
 ### Blob transaction
 
 ```json
 {
-    "identity": "bob@MyIdentityContract",
+    "identity": "corporate_treasury@EURStablecoin",
     "blobs": [
         {
-            "contract_name": "MyIdentityContract",
-             // Binary data for the operation of MyIdentityContract
-             // VerifyIdentity { account: "bob@MyIdentityContract", nonce: "2" }
-            "data": "[...]" 
+            "contract_name": "HyliIdentityContract",
+             // Binary data for the identity verification
+             // VerifyIdentity { account: "corporate_treasury@EURStablecoin", nonce: "42" }
+            "data": "[...]"
         },
         {
-            "contract_name": "MyToken",
-             // Binary data for the operation of MyToken contract
-             // Transfer { recipient: "alice@MyIdentityContract", ammount: "20" }
+            "contract_name": "EURStablecoin",
+             // Binary data for the confidential payment operation
+             // ConfidentialTransfer { encrypted_recipient: "...", encrypted_amount: "...", commitment: "..." }
             "data": "[...]"
         }
     ]
@@ -80,28 +80,29 @@ Each blob requires a corresponding proof transaction.
 
 ```json
 {
-    "contract_name": "MyIdentityContract",
+    "contract_name": "HyliIdentityContract",
     "proof": "[...]"
 }
 ```
 
 The binary proof's output includes:
 
-- Initial state: `bob@MyIdentityContract` nonce = 1.
-- Next state: `bob@MyIdentityContract` nonce = 2.
+- Initial state: `corporate_treasury@HyliIdentityContract` nonce = 1.
+- Next state: `corporate_treasury@HyliIdentityContract` nonce = 2.
 - Index: 0 (first blob in the transaction).
 
-and
+#### Stablecoin payment proof
 
 ```json
 {
-    "contract_name": "MyToken",
+    "contract_name": "EURStablecoin",
     "proof": "[...]"
 }
 ```
 
 The binary proof's output includes:
 
-- Initial state: `bob@MyIdentityContract` balance = 100, `alice@MyIdentityContract` balance = 0.
-- Next state: `bob@MyIdentityContract` balance = 80, `alice@MyIdentityContract` balance = 20.
+- Initial state: previous state commitment (e.g., merkle root of account balances and reserve proof).
+- Next state: updated state commitment after the confidential transfer.
 - Index: 1 (second blob in the transaction).
+- Proof verifies: payment validity, sufficient balance, and reserve backing without revealing sensitive details.

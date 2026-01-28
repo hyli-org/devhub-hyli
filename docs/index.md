@@ -1,12 +1,12 @@
 ---
-description: Hyli is a high-performance blockchain with built-in privacy. It enables fast and seamlessly compliant onchain applications. This is your developer documentation.
+description: Hyli is private, compliant infrastructure for stablecoins and tokenized assets.
 ---
 
 # Home
 
-[Hyli](https://hyli.org/) is a high-performance blockchain with built-in privacy.
+[Hyli](https://hyli.org/) is the settlement layer for private, compliant stablecoins and tokenized assets.
 
-Hyli enables builders and institutions to design private, compliant, and high-performance solutions.
+Hyli enables financial institutions and enterprises to build private stablecoins and tokenize real-world assets with cryptographic privacy guarantees and regulation-grade compliance through selective disclosure.
 
 By separating execution from verification and leveraging cryptographic proofs, Hyli combines Web2 scalability with Web3 trustworthiness.
 
@@ -63,14 +63,14 @@ Here’s what happens when you use Hyli’s next-generation Layer 1:
 
 ## What you get with Hyli
 
-Hyli delivers speed, flexibility, and seamless blockchain integration.
+Hyli delivers privacy, compliance, and performance for financial applications.
 
-- No onchain execution: only verified results are recorded.
-- Identify abstraction with the [Hyli wallet](./concepts/identity.md).
-- Proof generation anywhere: client-side, server-side, via proving network…
+- Transaction-level confidentiality: sensitive data never touches the public ledger.
+- MiCA-compliant selective disclosure for regulators.
+- No blockchain expertise required: build with familiar tools and languages.
+- Identity abstraction with the [Hyli wallet](./concepts/identity.md).
 - [Composable proofs](./concepts/proof-composition.md) across contracts and [languages](./reference/supported-proving-schemes.md).
 - State-of-the-art [Autobahn consensus](./concepts/consensus.md) for fast finality.
-- Web2 performance with Web3 security.
 
 Read more about [how Hyli compares to legacy blockchains](./concepts/hyli-vs-vintage-blockchains.md).
 

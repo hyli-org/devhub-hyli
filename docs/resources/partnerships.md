@@ -1,10 +1,24 @@
 # Partnerships
 
-We are always open to technical and product discussions with potential partners!
+We are always open to discussions with financial institutions, payment companies, and infrastructure providers building private, compliant solutions.
 
 [Let's get in touch](https://docs.google.com/forms/d/e/1FAIpQLSd0Xl2J5bDC7Pk-9W97klJu_etm8cZ6YbPjYb2X35CAaRojuA/viewform){ .md-button .md-button--primary }
 
-## Prover network / zkVM
+## Stablecoin issuers & payment companies
+
+We provide infrastructure for fintechs, neobanks, and licensed issuers to deploy MiCA-compliant private stablecoins.
+
+## Tokenization platforms
+
+Tokenization platforms can leverage Hyli's proof-first architecture to deliver privacy for issuers and investors while maintaining regulatory compliance through selective disclosure.
+
+## Banking infrastructure providers
+
+If you provide Banking-as-a-Service or embedded finance infrastructure, your clients get the benefits of blockchain settlement without exposing sensitive financial data to the public.
+
+## Compliance & infrastructure
+
+### Prover networks and zkVM providers
 
 We need proving power, you have it.
 
@@ -12,29 +26,31 @@ The usual partnership: we integrate your zkVM or prover stack as a client, provi
 
 Read more: [Proof generation and submission](../concepts/proof-generation.md)
 
-## RaaS (Rollup as a service)
+### ZK hardware
 
-When you integrate us as providers, your clients get:
+Your hardware can accelerate proof generation for Hyli-based financial applications. We are actively exploring hardware partnerships to push latency and efficiency boundaries even further, enabling real-time compliance proof generation.
 
-- Ultra-fast finality via our high-throughput DA layer and shared sequencing
-- Native composability across the entire Hyli ecosystem, regardless of the proof system used
-- The ability to offer your clients seamless deployment of [vApps](https://x.com/SuccinctLabs/status/1915427365779628151) into production
-- Significant reduction in proof-generation latency, allowing for near-instant settlement cycles
+### Compliance tool integrations
 
-## ZK hardware
+Hyli is designed to integrate with existing compliance infrastructure. If you provide KYC, AML, transaction monitoring, or regulatory reporting tools, we're interested in exploring integrations that enable seamless compliance workflows for Hyli-based applications.
 
-Your hardware can accelerate proof generation for Hyli-based rollups and applications. We are actively exploring hardware partnerships to push latency and efficiency boundaries even further.
+## European financial institutions
 
-## Applications
+Banks, custodians, and asset managers exploring private digital assets: we'd like to talk.
 
-With Hyli, adding verifiable computation is straightforward: use Rust, integrate a zkVM, and deploy. We're particularly interested in supporting applications around DeFi, identity, gaming, payments, AI, zkML, and voting.
+Hyli provides the infrastructure layer for:
 
-Thanks to [native signature support](../concepts/identity.md) and [flexible zkVM abstraction](../concepts/proof-composition.md), your app benefits from full onchain verifiability while retaining a familiar developer experience.
+- Private institutional payment networks
+- Confidential custody and settlement solutions
+- Digital asset infrastructure with regulatory transparency
+- Integration with existing banking systems and compliance frameworks
 
-Of course, our entire docs are also here for you!
+Whether you're exploring stablecoin issuance, tokenized asset settlement, or confidential payment networks, Hyli's selective disclosure architecture delivers the privacy and compliance requirements for regulated financial institutions.
 
-## Validator / node operator
+## Validator / Node Operator
 
 See [community validators](../reference/node.md).
 
-[Let's get in touch](https://docs.google.com/forms/d/e/1FAIpQLSd0Xl2J5bDC7Pk-9W97klJu_etm8cZ6YbPjYb2X35CAaRojuA/viewform){ .md-button .md-button--primary }
+---
+
+[Partner with us to build private, MiCA-compliant financial infrastructure](https://docs.google.com/forms/d/e/1FAIpQLSd0Xl2J5bDC7Pk-9W97klJu_etm8cZ6YbPjYb2X35CAaRojuA/viewform){ .md-button .md-button--primary }

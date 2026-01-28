@@ -7,6 +7,23 @@ Identity [in traditional blockchains](./hyli-vs-vintage-blockchains.md) is typic
 
 On Hyli, **any app can be a proof of identity**. This enables you to register your preferred identity source as an app for authentication. The [Hyli wallet](../tooling/wallet.md) is a tool to aggregate all these identities; we recommend using it for simplicity.
 
+## Identity for regulated finance
+
+Financial institutions building on Hyli can integrate identity management with existing KYC/AML frameworks.
+
+Licensed stablecoin issuers handle KYC at onboarding (as required by MiCA). Onchain identity provides cryptographic integrity: users prove they control their identity without exposing personal information publicly.
+
+- **Privacy**: User identities remain confidential onchain.
+- **Compliance**: Issuers maintain full KYC/AML records off-chain.
+- **Cryptographic guarantees**: Identity proofs ensure only authorized users can transact.
+- **Regulatory transparency**: Selective disclosure enables regulators to verify identity compliance without public exposure.
+
+### Account abstraction for institutions
+
+Hyli supports account abstraction natively, giving institutions full flexibility over wallet design and user experience.
+
+Financial institutions can design identity experiences that feel familiar to end users while maintaining the cryptographic guarantees of blockchain settlement.
+
 ## How Hyli processes identity proofs
 
 A blob transaction on Hyli includes multiple blobs. One of these blobs must contain an identity claim. (If this isn't clear, read more on [our transactions concept page](./transaction.md).)

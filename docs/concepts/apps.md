@@ -1,8 +1,14 @@
-# Apps on Hyli
+# Financial applications on Hyli
 
-Hyli is a fully programmable blockchain designed for efficient data storage. Hyli only keeps the essential information needed to validate app proofs, ensuring that apps are lightweight and performant.
+## Building private, compliant financial applications
+
+Hyli provides infrastructure for financial institutions and licensed issuers building private stablecoins and tokenized assets. Unlike traditional blockchains that expose all transaction data, **Hyli applications maintain confidentiality while providing cryptographic guarantees for regulators**.
+
+Hyli only keeps the essential information needed to validate app proofs, ensuring that apps are lightweight and performant.
 
 [Unlike traditional blockchains](./hyli-vs-vintage-blockchains.md), which store all app data onchain, Hyli separates execution data (managed offchain by each application) from onchain data, which can be retrieved via our ABI.
+
+This architecture enables financial applications to keep sensitive transaction data private while still providing cryptographic proofs of correct execution and regulatory compliance.
 
 ## Onchain app data
 
@@ -30,6 +36,9 @@ See the verifier scheme for each supported proving scheme in [this reference pag
 The state digest represents the contract's current state commitment. It allows Hyli to guarantee its integrity. It can take any form as long as it fulfills this purpose.
 
 The state digest can be expressed as a hash or even a serialization of the state if it's small enough.
+
+!!! example "Financial application example"
+    A EUR stablecoin issuer might store the reserve proof merkle root as the state digest, enabling efficient verification of reserve backing without exposing individual reserve assets.
 
 ## Smart contract ABI
 
@@ -117,3 +126,34 @@ Apps can generate additional outputs as proof data. These outputs ensure data av
 ## Events
 
 Hyli does not use traditional events. Instead, it relies on blobs, which serve as containers for offchain data.
+
+## Common financial applications on Hyli
+
+Hyli's architecture is purpose-built for private, compliant financial applications.
+
+### MiCA-compliant EUR/GBP stablecoins
+
+Licensed issuers can deploy private stablecoins with:
+
+- Transaction-level privacy for users
+- Full visibility for the issuer
+- Selective disclosure for regulators
+- Cryptographic proof of reserve backing
+
+### Private tokenized credit instruments
+
+Institutions can tokenize and settle private credit with:
+
+- Confidential loan terms and pricing
+- Private secondary market trading
+- Regulatory transparency on request
+- Cryptographic guarantees of payment obligations
+
+### Confidential institutional payment networks
+
+Financial institutions can build private payment networks featuring:
+
+- B2B payment privacy (amounts, counterparties, timing)
+- Corporate treasury confidentiality
+- Cross-border settlement without public exposure
+- Integration with existing banking infrastructure

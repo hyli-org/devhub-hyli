@@ -4,6 +4,8 @@ On most blockchains, your identity is your wallet address. On Hyli, identity is 
 
 On Hyli, any smart contract can function as a verifiable proof of identity. This enables fine-grained access control and varied authentication mechanisms where each app can rely on the most appropriate form of identity verification: OIDC, password-based, and zkPassport are all valid sources of ID that are relevant in different contexts.
 
+For financial applications, this flexibility enables institutions to integrate with existing identity systems (SSO, corporate directories, hardware security modules) while maintaining cryptographic guarantees for transaction signing.
+
 While extremely flexible, identity management on Hyli can create some complexity for users and developers. So we created the **Hyli wallet** as an identity hub to offer a unified experience with all Hyli apps.
 
 The Hyli Wallet acts as a gateway to onchain identity. It lets users:

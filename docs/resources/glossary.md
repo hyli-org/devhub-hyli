@@ -99,6 +99,31 @@ See also: [Ecosystem](../resources/ecosystem.md)
 Resources for building your first app with Hyli, including SDKs, example repositories, and starter templates.
 See also: [Getting started](../getting-started.md)
 
+## Financial institution
+
+A regulated entity such as a bank, payment service provider, asset manager, or licensed e-money institution that operates under financial regulatory frameworks. Hyli enables financial institutions to build private, compliant stablecoins and tokenized assets.
+See also: [Partnerships](../resources/partnerships.md)
+
+## MiCA compliance
+
+Markets in Crypto-Assets Regulation (MiCA) is the EU regulatory framework for digital assets, including stablecoins. Hyli's architecture enables MiCA compliance through selective disclosure and cryptographic privacy guarantees.
+See also: [Identity for regulated finance](../concepts/identity.md)
+
+## Private stablecoin
+
+A digital currency pegged to a fiat currency (e.g., EUR, GBP) that provides transaction-level privacy while maintaining regulatory compliance through selective disclosure. Hyli enables licensed issuers to deploy private stablecoins with cryptographic guarantees.
+See also: [Financial applications](../concepts/apps.md)
+
+## Selective disclosure
+
+A privacy model where different stakeholders see different levels of information. On Hyli, transaction parties see full details, the public sees only cryptographic proofs, and regulators can access complete information on request without public exposure. This solves the privacy-compliance dilemma.
+See also: [Hyli vs. traditional blockchains](../concepts/hyli-vs-vintage-blockchains.md)
+
+## Tokenized asset
+
+Real-world assets (such as private credit, securities, or real estate) represented as digital tokens on the blockchain. Hyli enables private tokenization with selective disclosure for institutional investors and regulators.
+See also: [Financial applications](../concepts/apps.md)
+
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -110,7 +135,12 @@ See also: [Getting started](../getting-started.md)
 {"@type": "DefinedTerm", "name": "Proof composition", "description": "Combining multiple proofs into one for interoperability and efficiency."},
 {"@type": "DefinedTerm", "name": "Proof verification", "description": "The process of verifying submitted proofs before settlement on Hyli."},
 {"@type": "DefinedTerm", "name": "Pipelined proving", "description": "A model separating proof generation from application logic to boost throughput."},
-{"@type": "DefinedTerm", "name": "Zero-knowledge proof", "description": "A cryptographic method to prove correctness without revealing data."}
+{"@type": "DefinedTerm", "name": "Zero-knowledge proof", "description": "A cryptographic method to prove correctness without revealing data."},
+{"@type": "DefinedTerm", "name": "Financial institution", "description": "A regulated entity such as a bank or payment service provider."},
+{"@type": "DefinedTerm", "name": "MiCA compliance", "description": "EU regulatory framework for digital assets."},
+{"@type": "DefinedTerm", "name": "Private stablecoin", "description": "A fiat-pegged digital currency with transaction-level privacy and regulatory compliance."},
+{"@type": "DefinedTerm", "name": "Selective disclosure", "description": "Privacy model where different stakeholders see different information levels based on their role."},
+{"@type": "DefinedTerm", "name": "Tokenized asset", "description": "Real-world assets represented as digital tokens with privacy and compliance features."}
 ]
 }
 </script>
