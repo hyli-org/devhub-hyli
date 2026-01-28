@@ -2,9 +2,12 @@
 
 Welcome to the Hyli **Quickstart** guide.
 
-In this guide, you’ll set up your local environment, run a node, launch the wallet, start the scaffold app, and begin building.
+In this guide, you'll set up your local environment, run a node, launch the wallet, start the scaffold app, and begin building.
 
-🧭 Estimated time: 15-30 minutes  
+!!! info "Note for financial applications"
+    This quickstart uses a simple example to demonstrate Hyli's core concepts. For production financial applications like private stablecoins or tokenized assets, please reach out to discuss implementation guidance and compliance frameworks.
+
+🧭 Estimated time: 15-30 minutes
 🧰 Requirements: basic command-line and Rust experience
 
 ## Prerequisites

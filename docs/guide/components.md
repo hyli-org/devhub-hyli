@@ -14,7 +14,7 @@ This is where Hyli shines.
 
 Hyli [only sequences the transactions](../concepts/transaction.md) for applications. The [applications](../concepts/apps.md) are responsible for validating these transactions, executing them, and managing the application state. This allows Hyli to scale horizontally because all applications handle their validation, execution, and state management.
 
-![Hyli scales horizontally, compute is done off-chain, proved on-chain with succinct validity proofs, enabling a future proof blockchain design.](../assets/img/guide/architecture.jpg)
+![Hyli scales horizontally, compute is done off-chain, proved onchain with succinct validity proofs, enabling a future proof blockchain design.](../assets/img/guide/architecture.jpg)
 
 Hyli scales decentralized applications the way the internet has scaled, which is through horizontal scaling, and hence is pursuing the endgame architecture of building a universal proof layer.
 

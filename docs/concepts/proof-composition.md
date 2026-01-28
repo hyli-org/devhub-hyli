@@ -1,5 +1,9 @@
 # Proof composition
 
+Financial institutions may need to combine multiple proofs: for example, a payment proof, a compliance check proof, and a reserve proof. Hyli's proof composition enables this while maintaining privacy.
+
+This capability is critical for financial applications where a single transaction may require multiple cryptographic guarantees: proof composition saves time and money, and it also avoids the need for exception handling.
+
 ## The problem: clunky interactions
 
 In zero-knowledge systems, coordinating multiple proofs is complex. Cross-contract calls often rely on recursive verification, where Program A verifies a proof of the correct execution of Program B. This is inefficient and creates overhead at the proof generation and verification stages.

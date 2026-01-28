@@ -1,5 +1,9 @@
 # Consensus
 
+Fast finality is critical for financial applications. Hyli's Autobahn consensus enables sub-second confirmation for stablecoin transfers and tokenized asset settlements.
+
+This performance is essential for delivering positive user experiences, including instant payment confirmation, real-time settlement, and immediate transaction feedback.
+
 At a glance:
 
 * **Goal:** Achieve high throughput and fast recovery for block finality.
@@ -44,6 +48,8 @@ Why this matters:
 * **No waiting for data:** Validators confirm availability upfront.
 * **Batch finalization:** Consensus can finalize many blocks at once.
 * **Fast recovery:** Even if a leader fails, other validators continue broadcasting.
+
+A stablecoin issuer, for example, could run transactions on a lane reserved for compliant payment flows, with predictable performance and isolation from unrelated traffic. This architecture enables financial institutions to achieve consistent latency and throughput for mission-critical payment infrastructure.
 
 ### Consensus: finality with tip cuts
 

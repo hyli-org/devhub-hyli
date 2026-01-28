@@ -1,5 +1,9 @@
 # Pipelined proving
 
+For financial applications, users expect instant confirmation. Pipelined proving enables this: stablecoin transfers are confirmed immediately while compliance proofs generate asynchronously in the background.
+
+This separation of sequencing from settlement delivers Web2-like user experience with Web3 guarantees. This is critical for financial applications where users expect sub-second confirmation times.
+
 ## The problem: base state conflicts
 
 The Hyli Layer 1 ensures both privacy and scalability by verifying only the state transitions of apps, rather than re-executing them. This approach reduces computational overhead but introduces a critical issue for provable applications: base state conflicts.
