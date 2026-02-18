@@ -33,7 +33,7 @@ We heard your feedback on our **frequent breaking changes**. Going forward, we�
 
 📚 Documentation:
 
-- Added explanations to our [proof composition concept page](https://docs.hyli.org/concepts/proof-composability/)
+- Added explanations to our [proof composition concept page](https://docs.hyli.org/concepts/proof-composition/)
 
 ## 2025-02-14 − v0.11.0
 
@@ -163,8 +163,8 @@ Read release notes [for v0.7.1](https://github.com/hyli-org/hyli/releases/tag/v0
 
 📚 Documentation:
 
-- [Transactions on Hyli](https://docs.hyli.org//concepts/transaction/)
-- [Identity management](https://docs.hyli.org//concepts/identity/)
+- [Transactions on Hyli](https://docs.hyli.org/concepts/transaction/)
+- [Identity management](https://docs.hyli.org/concepts/identity/)
 
 Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/tag/v0.7.0) and receive future release notes [in our Telegram group](https://t.me/hyli_org).
 
@@ -185,6 +185,6 @@ Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/ta
 
 📚 Documentation:
 
-- Rewrote [our Quickstart guide](https://docs.hyli.org//quickstart/).
+- Rewrote [our Quickstart guide](https://docs.hyli.org/quickstart/).
 
 Read the [full changelog on GitHub](https://github.com/hyli-org/hyli/releases/tag/v0.6.0) and receive future release notes [in our Telegram group](https://t.me/hyli_org).
