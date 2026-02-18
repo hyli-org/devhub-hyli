@@ -206,7 +206,7 @@ const expiration = Date.now() + (7 * 24 * 60 * 60 * 1000);
 const { sessionKey } = await registerSessionKey(
   'your_password',
   expiration,
-  ['hyllar'] // contracts whitelist
+  ['hyllar'], // contracts whitelist
   (txHash: string, type: string) => {
      if (type === 'blob') {
        console.log('Verifying identity...');
@@ -243,7 +243,7 @@ const blobTx = {
     identity: wallet.address,
     blobs: [blob0, blob1],
 };
-// blob0 is the secp256k1 blob containing the signature done with the wallet's session keu
+// blob0 is the secp256k1 blob containing the signature done with the wallet's session key
 // blob1 is the hyli-wallet contract that verifies that the session key is valid
 
 const txHash = await nodeService.client.sendBlobTx(blobTx);

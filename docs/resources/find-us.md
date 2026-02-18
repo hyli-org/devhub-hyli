@@ -6,8 +6,8 @@ title: Find us
 
 <div class="grid cards" markdown>
 
-- :fontawesome-solid-circle-nodes: [Node](http://github.com/hyli-org/hyli)
-- :material-hexagon-multiple-outline: [Example contracts](http://github.com/hyli-org/examples)
+- :fontawesome-solid-circle-nodes: [Node](https://github.com/hyli-org/hyli)
+- :material-hexagon-multiple-outline: [Example contracts](https://github.com/hyli-org/examples)
 - :material-home: [Website](https://hyli.org)
 - :material-rss: [Hyli blog](https://blog.hyli.org)
 

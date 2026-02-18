@@ -105,7 +105,7 @@ The protocol does not validate this field and `tx_hash` may be deprecated in lat
 
 ### Success
 
-This boolean field indicates whether the proof is for a successful or failed transactions. It can be used to prove that a transaction is invalid.
+This boolean field indicates whether the proof is for a successful or failed transaction. It can be used to prove that a transaction is invalid.
 
 If a proof returns `success = false`, the whole blob transaction will fail. In that case, there is no need to generate proofs for other blobs.
 

@@ -68,10 +68,10 @@ docker run -v ./data:/hyle/data \
     -e HYLE_DATABASE_URL=postgres://postgres:postgres@pg_hyle:5432/postgres \
     --link pg_hyle \
     -p 4321:4321 \
-    ghcr.io/hyli-org/hyli:v0.7.2
+    ghcr.io/hyli-org/hyli:v0.12.1
 ```
 
-You can now [create your first app](../quickstart/run.md).
+You can now [create your first app](../quickstart/index.md).
 
 ## Alternative: Build the Docker image locally
 

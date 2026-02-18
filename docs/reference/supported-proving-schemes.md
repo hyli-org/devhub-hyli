@@ -4,7 +4,7 @@ Clone a template or write your own program to [get started with app writing](../
 
 | Proving scheme | Verifier | Program ID | Example app |
 |----------------|----------|---------------------------------------------------|---|
-| [Noir](https://noir-lang.org/docs/)     | noir     | Verification key. | [check_secret](https://github.com/Hyle-org/examples/tree/main/check-secret-noir) |
+| [Noir](https://noir-lang.org/docs/)     | noir     | Verification key. | [check_secret](https://github.com/hyli-org/examples/tree/main/check-secret-noir) |
 | [Risc0](https://risc0.com/docs/)    | risc0    | Image ID without a prefix. ex. 0x123 becomes 123. | [eZKasino](https://github.com/hyli-org/ezcasino/tree/main/contracts)|
 | [SP1](https://docs.succinct.xyz/docs/introduction)        | sp1   | Verification key.       | [Faucet](https://github.com/hyli-org/faucet/tree/main/contracts)|
 | [Cairo M](https://github.com/kkrt-labs/cairo-m)        |    | Verification key.       | |
