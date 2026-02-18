@@ -46,7 +46,7 @@ When selecting an identity contract, remember:
 
 The identity provider should sign the entire blob transaction to ensure that all the included blobs have been approved by the user. One approach is to make the user sign the blobs they agree to execute. The identity contract then verifies that all blobs in the transaction are properly signed.
 
-If you don't need to create a custom identity source for your app, or don't want to do it in early development, use [the Hyli wallet](../tooling/wallet.md). It's integrated by default in [our app scaffold](../quickstart/edit.md).
+If you don't need to create a custom identity source for your app, or don't want to do it in early development, use [the Hyli wallet](../tooling/wallet.md). It's integrated by default in [our app scaffold](../quickstart/index.md).
 
 ## Custom identity contracts
 

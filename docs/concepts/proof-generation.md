@@ -51,7 +51,7 @@ Each application can generate its proof in whichever place fits best.
 With autoproving in place, you don’t need to manage custom proving flows. Just write your contract and connect a frontend—the scaffold handles everything else.
 This setup is ideal for projects where you want minimal backend setup and an easier onboarding experience.
 
-Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or follow [the quickstart instructions](../quickstart/run.md).
+Visit the [scaffold repository](https://github.com/hyli-org/app-scaffold) or follow [the quickstart instructions](../quickstart/index.md).
 
 ### Our proof generation partners
 
@@ -86,7 +86,7 @@ This typically happens when two users generate proofs around the same time. For 
 
 To avoid this, your app needs to monitor the sequencer, re-fetch the latest pending state, and re-generate the proof with all prior unsettled transactions included.
 
-The easiest way to handle this is to **use Hyli’s AutoProver module**, included in [the scaffold](../quickstart/edit.md). The AutoProver:
+The easiest way to handle this is to **use Hyli’s AutoProver module**, included in [the scaffold](../quickstart/index.md). The AutoProver:
 
 - monitors the sequencer for new transactions.
 - keeps track of pending state updates.

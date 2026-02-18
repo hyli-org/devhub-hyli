@@ -19,7 +19,7 @@ See also: [Apps](../concepts/apps.md)
 ## Blob transaction
 
 A transaction that includes a provable blob and is used for sequencing within Hyli’s pipeline.
-See also: [Pipelined proving](../concepts/proof-composition.md)
+See also: [Pipelined proving](../concepts/pipelined-proving.md)
 
 ## Operation
 
@@ -52,7 +52,7 @@ See also: [Proof composition](../concepts/proof-composition.md)
 ## Timeout
 
 A **timeout** is a defined window of time after which, if no proof transaction has been submitted, an operation fails.
-See also: [Pipelined proving](../concepts/proof-composition.md)
+See also: [Pipelined proving](../concepts/pipelined-proving.md)
 
 ## Transaction
 
@@ -63,13 +63,13 @@ See also: [Transactions](../concepts/transaction.md)
 ## Scalability
 
 Hyli achieves high throughput and low latency through off-chain execution and proof-based settlement, allowing Web2-like performance without sacrificing security.
-See also: [Performance](../concepts/performance.md)
+See also: [Consensus](../concepts/consensus.md)
 
 ## Privacy proofs
 
 Proofs can preserve privacy by verifying correctness without revealing the underlying data.
 This enables compliance-friendly and privacy-aware applications.
-See also: [Proofs overview](../concepts/proofs.md)
+See also: [Proof generation](../concepts/proof-generation.md)
 
 ## Pipelined proving
 
@@ -81,23 +81,23 @@ See also: [Proof composition](../concepts/proof-composition.md)
 
 A cryptographic proof that shows a statement is true without revealing the data behind it.
 Hyli supports multiple proof schemes, including Groth16, RISC Zero, Noir over Barretenberg, and SP1.
-See also: [Proof systems](../concepts/proofs.md)
+See also: [Proof generation](../concepts/proof-generation.md)
 
 ## State settlement
 
 The process of finalizing verified operations onchain.
 This guarantees that off-chain computations are securely reflected on the blockchain.
-See also: [Settlement](../concepts/settlement.md)
+See also: [Transactions](../concepts/transaction.md)
 
 ## Ecosystem
 
 The network of tools, projects, and partners building with or integrating Hyli — from wallet providers to proof systems and SDKs.
-See also: [Ecosystem](../resources/ecosystem.md)
+See also: [Find us](../resources/find-us.md)
 
 ## Developer quickstart
 
 Resources for building your first app with Hyli, including SDKs, example repositories, and starter templates.
-See also: [Getting started](../getting-started.md)
+See also: [Quickstart](../quickstart/index.md)
 
 ## Financial institution
 
