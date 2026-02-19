@@ -94,10 +94,10 @@ See also: [Settlement](../concepts/settlement.md)
 The network of tools, projects, and partners building with or integrating Hyli — from wallet providers to proof systems and SDKs.
 See also: [Ecosystem](../resources/ecosystem.md)
 
-## Developer quickstart
+## Technical documentation
 
-Resources for building your first app with Hyli, including SDKs, example repositories, and starter templates.
-See also: [Getting started](../getting-started.md)
+In-depth documentation covering Hyli's architecture, transaction model, proof systems, and core concepts.
+See also: [Concepts](../concepts/index.md)
 
 ## Financial institution
 

@@ -2,9 +2,7 @@
 
 Welcome to the Hyli guide.
 
-It is your entry point into understanding Hyli. The guide is divided into three sections and uses minimal code to serve a bigger audience.
-
-If you want to build on Hyli, you may want to check out the [quickstart](../quickstart/index.md) or [concept pages](../concepts/index.md).
+This is your entry point to understanding Hyli's architecture, capabilities, and vision. The guide is divided into three sections and focuses on core concepts rather than implementation details.
 
 ::timeline:: id="epic-timeline"
 

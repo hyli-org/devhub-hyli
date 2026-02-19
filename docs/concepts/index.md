@@ -1,8 +1,8 @@
 # :bulb: Concepts
 
-Welcome to the developer documentation for Hyli.
+Welcome to the technical documentation for Hyli.
 
-This section includes general documentation topics. You can also refer to [our Getting Started step-by-step guide](../quickstart/index.md).
+This section covers Hyli's core architecture, cryptographic primitives, and technical concepts in detail.
 
 ## Hyli-specific docs on industry concepts
 

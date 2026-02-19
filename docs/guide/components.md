@@ -85,15 +85,15 @@ The approach helps decouple data dissemination from the consensus over this data
 
 ![Hyli processes transactions in parallel lanes,  periodically cutting to reach global consensus efficiently.](../assets/img/guide/consensus.jpg)
 
-Autobahn makes Hyli the destination for building high-throughput, low-latency applications, from onchain games to onchain order books.
+Autobahn makes Hyli the ideal platform for high-throughput, low-latency applications, from onchain games to financial settlement systems.
 
 [Read more about consensus on Hyli](../concepts/consensus.md).
 
 ## Application architecture on Hyli
 
-Hyli provides a new infrastructure for building the next generation of scalable, secure, cryptographically protected applications. This also means building an application differs from the traditional developer experience of using smart contracts.
+Hyli provides new infrastructure for the next generation of scalable, secure, cryptographically protected applications. The architecture differs from traditional smart contract platforms in fundamental ways.
 
-Let’s dive deep into the various components of building an app on Hyli.
+Let's explore the core components of applications on Hyli.
 
 There are a few important things an application needs:
 

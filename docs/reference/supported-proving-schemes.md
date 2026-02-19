@@ -1,6 +1,6 @@
 # Supported proving schemes
 
-Clone a template or write your own program to [get started with app writing](../quickstart/index.md).
+Hyli supports multiple zero-knowledge proof systems, enabling developers to choose the right proving scheme for their use case.
 
 | Proving scheme | Verifier | Program ID | Example app |
 |----------------|----------|---------------------------------------------------|---|

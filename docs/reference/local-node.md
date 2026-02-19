@@ -71,7 +71,7 @@ docker run -v ./data:/hyle/data \
     ghcr.io/hyli-org/hyli:v0.7.2
 ```
 
-You can now [create your first app](../quickstart/run.md).
+Your local node is now running. For application development, refer to the [scaffold repository](https://github.com/hyli-org/app-scaffold).
 
 ## Alternative: Build the Docker image locally
 

@@ -101,10 +101,10 @@ It enshrines various proof system verifications, allowing for the building of ve
 
 ![Hyli is future‑proof, delivering scalable, high‑throughput applications by design.](../assets/img/guide/hyli.png)
 
-**Hyli allows you to just build your app**.
+**Hyli enables flexible application development**.
 
-Bring your zkVM and use whatever language you want. You get censorship-resistant ordering and verifiability out of the box, allowing you to focus on building and distributing your app.
+Applications can leverage any zkVM and programming language. The platform provides censorship-resistant ordering and verifiability out of the box, enabling teams to focus on business logic and user experience.
 
-The use of a common sequencing and verification layer also enables interoperability between all Hyli-based apps without bridges.
+The common sequencing and verification layer enables seamless interoperability between Hyli-based applications without bridges.
 
 Most importantly, this architecture scales horizontally. As more clients join the network, verifications are horizontally distributed among them and do not reach the bottleneck that the current L1s have been suffering from, thanks to our state-of-the-art consensus protocol based on Autobahn.

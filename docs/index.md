@@ -18,23 +18,15 @@ By separating execution from verification and leveraging cryptographic proofs, H
 
     ---
 
-    Your entry point to understanding Hyli, with minimal code.
+    Your entry point to understanding Hyli.
 
     [:octicons-arrow-right-24: Guide](./guide/index.md)
-
--   :material-clock-fast:{ .lg .middle } __Quickstart__
-
-    ---
-
-    Get started with Hyli in just a few minutes with a step-by-step annotated quickstart.
-
-    [:octicons-arrow-right-24: Quickstart](./quickstart/index.md)
 
 -   :material-lightbulb:{ .lg .middle } __Concepts__
 
     ---
 
-    Hyli-specific concepts and Hyli's spin on industry classics explained in detail.
+    Hyli-specific concepts and technical architecture explained in detail.
 
     [:octicons-arrow-right-24: Concepts](./concepts/index.md)
 
@@ -42,7 +34,7 @@ By separating execution from verification and leveraging cryptographic proofs, H
 
     ---
 
-    Hyli tooling to improve your building experience.
+    Explore Hyli's core infrastructure and tools.
 
     [:octicons-arrow-right-24: Tooling](./tooling/index.md)
 
@@ -52,25 +44,25 @@ By separating execution from verification and leveraging cryptographic proofs, H
 
 ## How Hyli works
 
-Here’s what happens when you use Hyli’s next-generation Layer 1:
+Here's what happens on Hyli's next-generation Layer 1:
 
-1. __Write your app__: Define how your contract updates state. Run your logic offchain in Rust, Noir, or any supported language. Choose your proving scheme and leverage Hyli’s native signature verifiers.
-1. __Send a blob transaction__: Submit a provable blob to Hyli that specifies your expected post-transaction state. Hyli sequences it instantly, giving you a timestamp and a guaranteed position in the block. [Read more about pipelined proving](./concepts/pipelined-proving.md).
-1. __Generate and submit the proof__: Produce proofs locally, in a browser, or through a proving network. When ready, submit them in a proof transaction referencing your blob.
-1. __Finality__: Validators verify proofs natively, eliminating VM overhead. If the proof is valid, Hyli finalizes the transaction and settles it onchain.
+1. __Offchain execution__: Application logic runs offchain in Rust, Noir, or any supported language, with flexible proving scheme selection and native signature verification.
+1. __Blob transaction sequencing__: A provable blob containing the expected post-transaction state is submitted to Hyli and instantly sequenced with a timestamp and guaranteed block position. [Read more about pipelined proving](./concepts/pipelined-proving.md).
+1. __Proof submission__: Cryptographic proofs are generated and submitted in a proof transaction referencing the original blob.
+1. __Native verification and finality__: Validators verify proofs natively without VM overhead. Valid proofs are finalized and settled onchain.
 
 ![Sequence diagram explaining the steps going from sequencing to proving to verification and consensus.](./assets/img/hyli-main-diagram.jpg)
 
 ## What you get with Hyli
 
-Hyli delivers privacy, compliance, and performance for financial applications.
+Hyli delivers privacy, compliance, and performance for financial institutions and enterprises.
 
-- Transaction-level confidentiality: sensitive data never touches the public ledger.
-- MiCA-compliant selective disclosure for regulators.
-- No blockchain expertise required: build with familiar tools and languages.
-- Identity abstraction with the [Hyli wallet](./concepts/identity.md).
-- [Composable proofs](./concepts/proof-composition.md) across contracts and [languages](./reference/supported-proving-schemes.md).
-- State-of-the-art [Autobahn consensus](./concepts/consensus.md) for fast finality.
+- __Transaction-level confidentiality__: Sensitive data never touches the public ledger.
+- __MiCA-compliant selective disclosure__: Built-in regulatory compliance through controlled data access.
+- __Flexible development__: Leverage familiar programming languages and tools without blockchain-specific expertise.
+- __Identity abstraction__: Enterprise-grade identity management with the [Hyli wallet](./concepts/identity.md).
+- __Proof composition__: [Composable proofs](./concepts/proof-composition.md) across contracts and [multiple proving systems](./reference/supported-proving-schemes.md).
+- __Fast finality__: State-of-the-art [Autobahn consensus](./concepts/consensus.md) for institutional-grade performance.
 
 Read more about [how Hyli compares to legacy blockchains](./concepts/hyli-vs-vintage-blockchains.md).
 
