@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -509,10 +509,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uncensorable-applications" class="md-nav__link">
+  <a href="#tamper-resistant-sequencing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uncensorable Applications
+        Tamper-resistant sequencing
       
     </span>
   </a>
@@ -1535,10 +1535,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uncensorable-applications" class="md-nav__link">
+  <a href="#tamper-resistant-sequencing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Uncensorable Applications
+        Tamper-resistant sequencing
       
     </span>
   </a>
@@ -1596,24 +1596,23 @@
 <div><h1 id="a-vision-of-the-future-with-hyli">A vision of the future with Hyli</h1>
 <p>This final section of the guide discusses the future that Hyli aims to bring forward. Discussions span from the end-user experiences that Hyli will make possible to the evolution of infrastructure and new market opportunities the stack can create.</p>
 <h2 id="a-world-full-of-verifiable-apps-on-hyli">A world full of verifiable apps on Hyli</h2>
-<p>Hyli is the next evolution of user applications: sovereign, verifiable, and censorship-resistant. Applications built on Hyli offer these properties without compromising on user experience and speed.</p>
+<p>Hyli enables a new class of verifiable applications: auditable, tamper-resistant, and privacy-preserving by default. Applications built on Hyli offer these properties without compromising on user experience and throughput.</p>
 <p>One of the key features of applications built on top of Hyli is their ability to interoperate with each other easily. Multiple instructions can be sent via a single blob transaction, and through sync and async protocols, a single transaction can span across multiple applications.</p>
 <h3 id="interoperable-applications">Interoperable Applications</h3>
-<p>You could withdraw liquidity from a money market, swap with the asset on a different application, and deposit liquidity for the swapped asset back to the money market, all in a single transaction. And each of these apps is a different rollup: no need for bridges, everything is natively composable.</p>
-<p><img alt="Users can permissionlessly perform transactions spanning multiple applications in the Hyli ecosystem." src="../../assets/img/guide/interoperable.jpg"></p>
-<p>Hyli is building the settlement layer of the next wave of internet applications, enabling anyone to perform multiple interactions with these applications in a single transaction. It’s a better way to build applications.</p>
+<p>A payment instruction can trigger a compliance verification in a separate contract, with the combined result settling atomically — no bridges, no intermediaries, no manual reconciliation.</p>
+<p><img alt="Users can perform transactions spanning multiple applications in the Hyli ecosystem." src="../../assets/img/guide/interoperable.jpg"></p>
+<p>Hyli enables multi-step financial operations to settle as a single atomic transaction, reducing settlement risk and operational complexity for institutional workflows.</p>
 <h3 id="private-apps">Private Apps</h3>
 <p>One of the key components in the Hyli architecture is that applications only post state commitment to Hyli, so the application state itself is off-chain: the proof is what guarantees the integrity of any action, even if the details of the action are not made public. This enables the development of private applications on Hyli.</p>
 <p>Take, for example, a private payments app. In such a system, each user's balance is encrypted and private by default. Users generate zero-knowledge proofs that their transactions are valid (e.g., that they own sufficient funds and are transferring them correctly) without ever revealing their balance or transaction history.</p>
 <p>Because of Hyli’s design, we can achieve both privacy and high TPS, which is not imaginable on the vast majority of privacy-first chains.</p>
 <p>These proofs are submitted onchain, and the protocol verifies them without decrypting the underlying data. This enables full privacy while maintaining the system's integrity.</p>
 <p>Hyli, due to its high data throughput, serves as the backbone for the construction of a new wave of privacy-focused applications, where Hyli handles ordering and censorship resistance. At the same time, apps focus on fast, privacy-protecting execution.</p>
-<h3 id="uncensorable-applications">Uncensorable Applications</h3>
-<p>Hyli is building the common source of truth for the new wave of internet applications. Hyli verifies proofs of what has happened (user transactions) and in what order.</p>
-<p>Applications on Hyli must respect transactions sent to Hyli and their order, as this is a core part of their application logic that needs to be verified on Hyli to advance the application state.</p>
-<p>Hyli’s innovation lies in its fast data dissemination and finality via Autobahn. Users directly submit their transactions to Hyli, where they are finalized very quickly. Once finalized, transactions are guaranteed for execution by the corresponding applications.  </p>
-<p><img alt="Hyli's decentralized validator set, multiple concurrent proposers and zk proof verification provide uncensorable applications for users." src="../../assets/img/guide/uncensorable.jpg"></p>
-<p>Hyli has multiple concurrent proposers, which means users can send their transactions to multiple proposers in parallel, protecting them from being censored by a single proposer. This ensures that both Hyli and its applications are censorship-resistant for their users.</p>
+<h3 id="tamper-resistant-sequencing">Tamper-resistant sequencing</h3>
+<p>Hyli provides a verifiable, tamper-resistant record of what happened and in what order. Applications must respect the sequenced transaction order as part of their settlement logic.</p>
+<p>Hyli’s fast data dissemination and finality via Autobahn means transactions are finalized quickly and guaranteed for execution by the corresponding applications.</p>
+<p><img alt="Hyli’s decentralized validator set, multiple concurrent proposers and zk proof verification provide tamper-resistant sequencing for applications." src="../../assets/img/guide/uncensorable.jpg"></p>
+<p>Multiple concurrent proposers mean that transactions are submitted to several validators in parallel, so no single validator can suppress or reorder a user’s transaction. This provides ordering integrity for both Hyli and the applications built on top.</p>
 <h2 id="proving-networks">Proving Networks</h2>
 <p>Hyli enables verifiable, censorship-resistant applications and leverages proofs as a core part of building these applications: Hyli applications rely on proving their application logic.</p>
 <p>Rather than execute code directly on a blockchain, the provers and proving networks become the execution engine: the code is executed there, proven, and verified on Hyli.</p>

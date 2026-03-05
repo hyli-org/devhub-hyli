@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -575,22 +575,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practical-example-a-dex-on-hyli" class="md-nav__link">
+  <a href="#practical-example-a-eur-stablecoin-payment-on-hyli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practical example: a Dex on Hyli
+        Practical example: a EUR stablecoin payment on Hyli
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Practical example: a Dex on Hyli">
+    <nav class="md-nav" aria-label="Practical example: a EUR stablecoin payment on Hyli">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-user-sends-a-transaction" class="md-nav__link">
+  <a href="#step-1-user-initiates-a-payment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: User sends a transaction
+        Step 1: User initiates a payment
       
     </span>
   </a>
@@ -598,10 +598,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-dex-application-consumes-the-transaction" class="md-nav__link">
+  <a href="#step-2-application-processes-the-transaction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Dex application consumes the transaction
+        Step 2: Application processes the transaction
       
     </span>
   </a>
@@ -609,10 +609,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-user-gets-confirmation-on-their-transaction" class="md-nav__link">
+  <a href="#step-3-user-receives-confirmation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: User gets confirmation on their transaction
+        Step 3: User receives confirmation
       
     </span>
   </a>
@@ -620,10 +620,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-transaction-is-proven-and-settled" class="md-nav__link">
+  <a href="#step-4-proof-is-generated-and-settled" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Transaction is proven and settled
+        Step 4: Proof is generated and settled
       
     </span>
   </a>
@@ -1746,22 +1746,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practical-example-a-dex-on-hyli" class="md-nav__link">
+  <a href="#practical-example-a-eur-stablecoin-payment-on-hyli" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Practical example: a Dex on Hyli
+        Practical example: a EUR stablecoin payment on Hyli
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Practical example: a Dex on Hyli">
+    <nav class="md-nav" aria-label="Practical example: a EUR stablecoin payment on Hyli">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-user-sends-a-transaction" class="md-nav__link">
+  <a href="#step-1-user-initiates-a-payment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: User sends a transaction
+        Step 1: User initiates a payment
       
     </span>
   </a>
@@ -1769,10 +1769,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-dex-application-consumes-the-transaction" class="md-nav__link">
+  <a href="#step-2-application-processes-the-transaction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Dex application consumes the transaction
+        Step 2: Application processes the transaction
       
     </span>
   </a>
@@ -1780,10 +1780,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-user-gets-confirmation-on-their-transaction" class="md-nav__link">
+  <a href="#step-3-user-receives-confirmation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: User gets confirmation on their transaction
+        Step 3: User receives confirmation
       
     </span>
   </a>
@@ -1791,10 +1791,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-transaction-is-proven-and-settled" class="md-nav__link">
+  <a href="#step-4-proof-is-generated-and-settled" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Transaction is proven and settled
+        Step 4: Proof is generated and settled
       
     </span>
   </a>
@@ -1876,7 +1876,7 @@
 <p>In Autobahn, every proposer maintains its unique lane, where it proposes new batches and disseminates them to other validators. In parallel, validators finalize various batches into a single block. A block is finalized once it has received a threshold number of signatures.</p>
 <p>The approach helps decouple data dissemination from the consensus over this data, unlocking higher throughput and faster finality.</p>
 <p><img alt="Hyli processes transactions in parallel lanes,  periodically cutting to reach global consensus efficiently." src="../../assets/img/guide/consensus.jpg"></p>
-<p>Autobahn makes Hyli the ideal platform for high-throughput, low-latency applications, from onchain games to financial settlement systems.</p>
+<p>Autobahn makes Hyli the ideal platform for high-throughput, low-latency applications, including payment networks, stablecoin settlement, and tokenized asset infrastructure.</p>
 <p><a href="../../concepts/consensus/">Read more about consensus on Hyli</a>.</p>
 <h2 id="application-architecture-on-hyli">Application architecture on Hyli</h2>
 <p>Hyli provides new infrastructure for the next generation of scalable, secure, cryptographically protected applications. The architecture differs from traditional smart contract platforms in fundamental ways.</p>
@@ -1903,24 +1903,20 @@ With its Autobahn consensus under the hood, it provides very fast sequencing so 
 On legacy blockchains, as more applications emerge and grow, so does their storage, which every validator in the network must bear.<br>
 Hyli enables provable applications with validity proofs. Applications only submit their latest state commitment; the state remains off-chain, but all updates to the application are verifiable via validity proofs, allowing the state to be easily reconstructed.</p>
 <p>This enables the creation of bulletproof, secure, and scalable apps that are sustainable over time as they grow.</p>
-<h2 id="practical-example-a-dex-on-hyli">Practical example: a Dex on Hyli</h2>
-<p>Let’s take the example of a transaction of a Dex product on Hyli and examine the lifecycle of a user transaction.</p>
-<h3 id="step-1-user-sends-a-transaction">Step 1: User sends a transaction</h3>
-<p>The user sends transactions describing their intended actions, such as deploying liquidity, withdrawing liquidity, or swapping.</p>
-<p>At this point, nothing has been proved.</p>
-<h3 id="step-2-dex-application-consumes-the-transaction">Step 2: Dex application consumes the transaction</h3>
-<p>The Dex application follows the Hyli L1 with the help of an indexer. It consumes every new block, filters out the transactions intended for itself, applies the application logic, and updates the respective state.</p>
-<p>The developer is free to write their application in any language of their choice as long as they can generate a validity proof for it! This could be Rust, C++, or domain-specific languages like Cairo, Noir, Circom, etc.</p>
-<p>The application state typically resides in a decentralized storage layer.</p>
-<h3 id="step-3-user-gets-confirmation-on-their-transaction">Step 3: User gets confirmation on their transaction</h3>
-<p>Users don’t need to wait for their transaction to be proven to get a confirmation. The application provides immediate confirmation post-execution and updates its state temporarily. This is a softer confirmation than the proof being settled, but since the application generates validity proofs, it cannot lie to the user.</p>
-<p>This enables the creation of a real-time user experience for our Dex. The user sends the transactions, which are immediately finalized and executed, and then the user is free to take any business action on top of it.</p>
-<h3 id="step-4-transaction-is-proven-and-settled">Step 4: Transaction is proven and settled</h3>
-<p>The application asynchronously proves all transactions. This proof can be generated by a prover network like Boundless or Succinct, by the application itself, or event client-side: in the context of our Dex, the app generates the proofs.</p>
-<p>Once the proof has been generated, the application finalizes the transaction with a proof transaction, which also includes the app's new state commitment.</p>
-<p>Since applications built on Hyli provide validity proofs, everything the indexer follows and operates on top is proved and verified on Hyli for integrity. Hyli verifies the proof and settles the transaction, updating the application's new state onchain. What was "sequenced" is now "confirmed": the app can update its state for good and the user gets a final confirmation.</p>
-<p>Hyli's approach to building applications enables the creation of scalable, secure, verifiable, and censorship-free apps that deliver real-time, Web2-like latencies and user experiences.</p>
-<p>Hyli is the endgame for building verifiable apps!</p></div>
+<h2 id="practical-example-a-eur-stablecoin-payment-on-hyli">Practical example: a EUR stablecoin payment on Hyli</h2>
+<p>The following example walks through the lifecycle of a confidential EUR stablecoin transfer.</p>
+<h3 id="step-1-user-initiates-a-payment">Step 1: User initiates a payment</h3>
+<p>The user’s application submits a blob transaction to Hyli. The blob contains the encrypted payment details — recipient, amount, and a commitment to the private inputs.</p>
+<p>At this point, nothing has been settled.</p>
+<h3 id="step-2-application-processes-the-transaction">Step 2: Application processes the transaction</h3>
+<p>The stablecoin issuer’s application monitors the Hyli node. It consumes the new blob, applies its confidential transfer logic offchain, and updates its internal state.</p>
+<p>The execution logic can be written in any language that supports a compatible proving scheme — Rust with RISC-0 or SP1, or Noir for circuit-based logic. The private transaction details remain entirely offchain.</p>
+<h3 id="step-3-user-receives-confirmation">Step 3: User receives confirmation</h3>
+<p>The user receives immediate confirmation from the application once execution is complete. The underlying proof has not yet been settled, but since the application generates validity proofs, it cannot misrepresent the outcome.</p>
+<p>This delivers sub-second confirmation for payment operations without waiting for proof generation.</p>
+<h3 id="step-4-proof-is-generated-and-settled">Step 4: Proof is generated and settled</h3>
+<p>The application asynchronously generates a cryptographic proof of the valid state transition and submits a proof transaction to Hyli. The proof confirms that the transfer was executed correctly — including balance validity and reserve backing — without exposing private payment details.</p>
+<p>Hyli verifies the proof and settles the new state onchain. What was sequenced is now confirmed: the issuer updates its state and the user receives final settlement confirmation.</p></div>
 
 
 

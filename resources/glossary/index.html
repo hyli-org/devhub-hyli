@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
@@ -1934,7 +1934,7 @@
 
 
 <div><h1 id="glossary">Glossary</h1>
-<p>This glossary explains key concepts of the <strong>Hyli blockchain</strong>, a high-performance blockchain with built-in privacy.</p>
+<p>This glossary explains key concepts of <strong>Hyli</strong>, a privacy layer for confidential yet verifiable financial settlement.</p>
 <p>It helps developers and curious readers understand the key terms that describe how proofs, transactions, and operations work in Hyli.</p>
 <p>Each definition links to a related concept page for deeper technical details.</p>
 <h2 id="base-state">Base state</h2>
@@ -1945,7 +1945,7 @@ See also: <a href="../../concepts/transaction/">Transactions</a></p>
 See also: <a href="../../concepts/apps/">Apps</a></p>
 <h2 id="blob-transaction">Blob transaction</h2>
 <p>A transaction that includes a provable blob and is used for sequencing within Hyli’s pipeline.
-See also: <a href="../../concepts/proof-composition/">Pipelined proving</a></p>
+See also: <a href="../../concepts/pipelined-proving/">Pipelined proving</a></p>
 <h2 id="operation">Operation</h2>
 <p>An <strong>operation</strong> is an event that happens on an app.
 Each operation consists of two transactions: a blob transaction and a proof transaction.
@@ -1966,33 +1966,33 @@ See also: <a href="../../concepts/transaction/">Transactions</a></p>
 See also: <a href="../../concepts/proof-composition/">Proof composition</a></p>
 <h2 id="timeout">Timeout</h2>
 <p>A <strong>timeout</strong> is a defined window of time after which, if no proof transaction has been submitted, an operation fails.
-See also: <a href="../../concepts/proof-composition/">Pipelined proving</a></p>
+See also: <a href="../../concepts/pipelined-proving/">Pipelined proving</a></p>
 <h2 id="transaction">Transaction</h2>
 <p>A <strong>transaction</strong> is a unit of communication sent to Hyli.
 There are two kinds: blob transactions and proof transactions.
 See also: <a href="../../concepts/transaction/">Transactions</a></p>
 <h2 id="scalability">Scalability</h2>
 <p>Hyli achieves high throughput and low latency through off-chain execution and proof-based settlement, allowing Web2-like performance without sacrificing security.
-See also: <a href="../concepts/performance.md">Performance</a></p>
+See also: <a href="../../concepts/hyli-vs-vintage-blockchains/">Hyli vs. traditional blockchains</a></p>
 <h2 id="privacy-proofs">Privacy proofs</h2>
 <p>Proofs can preserve privacy by verifying correctness without revealing the underlying data.
 This enables compliance-friendly and privacy-aware applications.
-See also: <a href="../concepts/proofs.md">Proofs overview</a></p>
+See also: <a href="../../concepts/proof-generation/">Proof generation and submission</a></p>
 <h2 id="pipelined-proving">Pipelined proving</h2>
 <p>A proving model that separates proof generation from application logic.
 This allows proof creation to run asynchronously while maintaining deterministic outcomes.
-See also: <a href="../../concepts/proof-composition/">Proof composition</a></p>
+See also: <a href="../../concepts/pipelined-proving/">Pipelined proving</a></p>
 <h2 id="zero-knowledge-proof-zkp">Zero-knowledge proof (ZKP)</h2>
 <p>A cryptographic proof that shows a statement is true without revealing the data behind it.
 Hyli supports multiple proof schemes, including Groth16, RISC Zero, Noir over Barretenberg, and SP1.
-See also: <a href="../concepts/proofs.md">Proof systems</a></p>
+See also: <a href="../../reference/supported-proving-schemes/">Supported proving schemes</a></p>
 <h2 id="state-settlement">State settlement</h2>
 <p>The process of finalizing verified operations onchain.
 This guarantees that off-chain computations are securely reflected on the blockchain.
-See also: <a href="../concepts/settlement.md">Settlement</a></p>
+See also: <a href="../../concepts/transaction/">Transactions</a></p>
 <h2 id="ecosystem">Ecosystem</h2>
 <p>The network of tools, projects, and partners building with or integrating Hyli — from wallet providers to proof systems and SDKs.
-See also: <a href="../resources/ecosystem.md">Ecosystem</a></p>
+See also: <a href="../partnerships/">Partnerships</a></p>
 <h2 id="technical-documentation">Technical documentation</h2>
 <p>In-depth documentation covering Hyli's architecture, transaction model, proof systems, and core concepts.
 See also: <a href="../../concepts/">Concepts</a></p>
