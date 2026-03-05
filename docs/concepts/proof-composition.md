@@ -32,7 +32,7 @@ This model:
 
 - removes the need for embedded recursion;
 - improves developer experience;
-- reduces gas costs;
+- reduces on-chain verification costs;
 - enables parallel proving.
 
 ### Mixing proof schemes

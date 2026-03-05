@@ -12,7 +12,7 @@ Here, you'll find our resources about Hyli's tooling.
 
     [:octicons-arrow-right-24: Read more](https://explorer.hyli.org)
 
--   :octicons-tools-16:{ .lg .middle } __Explorer__
+-   :octicons-tools-16:{ .lg .middle } __Wallet__
 
     ---
 

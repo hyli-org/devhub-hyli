@@ -26,9 +26,9 @@ Transactions on Hyli verify and settle transitions without storing full intermed
 
 This architecture reduces storage overhead and promotes scalability while maintaining trustlessness.
 
-## No wallets
+## Flexible identity, no wallet lock-in
 
-Stop asking yourself, "Which wallet do I use? How do I bridge?". You don’t need to worry about that with Hyli: any identity that can produce a valid proof can be integrated in your [Hyli wallet](./identity.md).
+On Hyli, any identity that can produce a valid proof can be used: OIDC, hardware security modules, corporate directories, or password-based accounts. The [Hyli wallet](./identity.md) unifies these into a single interface, but there is no required wallet format or address scheme.
 
 ## Every app is a rollup
 

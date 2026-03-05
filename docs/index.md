@@ -8,7 +8,7 @@ description: Hyli is private, compliant infrastructure for stablecoins and token
 
 Hyli enables financial institutions and enterprises to build private stablecoins and tokenize real-world assets with cryptographic privacy guarantees and regulation-grade compliance through selective disclosure.
 
-By separating execution from verification and leveraging cryptographic proofs, Hyli combines Web2 scalability with Web3 trustworthiness.
+Applications execute offchain and settle outcomes through cryptographic proof verification, delivering the performance and privacy required for regulated financial infrastructure.
 
 ## Navigation
 
@@ -44,7 +44,7 @@ By separating execution from verification and leveraging cryptographic proofs, H
 
 ## How Hyli works
 
-Here's what happens on Hyli's next-generation Layer 1:
+Here's what happens on Hyli:
 
 1. __Offchain execution__: Application logic runs offchain in Rust, Noir, or any supported language, with flexible proving scheme selection and native signature verification.
 1. __Blob transaction sequencing__: A provable blob containing the expected post-transaction state is submitted to Hyli and instantly sequenced with a timestamp and guaranteed block position. [Read more about pipelined proving](./concepts/pipelined-proving.md).
@@ -58,7 +58,7 @@ Here's what happens on Hyli's next-generation Layer 1:
 Hyli delivers privacy, compliance, and performance for financial institutions and enterprises.
 
 - __Transaction-level confidentiality__: Sensitive data never touches the public ledger.
-- __MiCA-compliant selective disclosure__: Built-in regulatory compliance through controlled data access.
+- __Selective disclosure for MiCA requirements__: Regulators and auditors can access transaction details on request without public exposure.
 - __Flexible development__: Leverage familiar programming languages and tools without blockchain-specific expertise.
 - __Identity abstraction__: Enterprise-grade identity management with the [Hyli wallet](./concepts/identity.md).
 - __Proof composition__: [Composable proofs](./concepts/proof-composition.md) across contracts and [multiple proving systems](./reference/supported-proving-schemes.md).
