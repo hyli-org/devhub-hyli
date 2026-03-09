@@ -1,123 +1,136 @@
 # Hyli LLMs Guide (llms.txt)
-# Purpose: help AI coding assistants and search indexers find and summarize Hyli docs accurately.
+# Purpose: Help AI coding assistants and LLM-based search tools accurately understand Hyli's documentation.
 # Canonical site: https://docs.hyli.org
-# Brand line: "Hyli is a high-performance blockchain with built-in privacy. It enables fast and seamlessly compliant onchain applications."
+# Brand line: "Hyli is a privacy layer for confidential yet verifiable financial settlement."
+# Target audience: Financial institutions — stablecoin issuers, custodians, tokenization platforms, payment networks.
 
 ---
 File: /docs/index.md
-Summary: Landing page. What Hyli is, why it’s different, nav cards to Guide, Quickstart, Concepts, Tooling, plus a high-level pipeline diagram and “How Hyli works”.
+Summary: Landing page. Explains what Hyli is (privacy layer for private-by-default, auditable-on-demand financial settlement), what you can build (private stablecoins, tokenized assets, institutional payment networks), and links to the main docs sections.
 
 Key claims:
-- Proof-powered L1 separating execution from verification.
-- Web2 performance with Web3 trust.
-- Fast settlement via native proof verification.
+- Transaction details never touch the public ledger; only cryptographic proofs of correct settlement are recorded onchain.
+- Designed for entities subject to MiCA and AML/CTF requirements.
+- Privacy by default, selective disclosure on demand.
 
 Primary CTAs:
 - Guide: ./guide/index.md
-- Quickstart: ./quickstart/index.md
 - Concepts: ./concepts/index.md
 - Tooling: ./tooling/index.md
+- Resources: ./resources/index.md
 
 ---
 File: /docs/guide/index.md
-Summary: Non-code overview (“why/what/future”) with a timeline for quick orientation.
-
-Related:
-- Why Hyli?: ./why-hyli.md
-- Core components: ./components.md
-- Future: ./future.md
+Summary: Entry point for the non-technical guide. Links to Why Hyli, Core components, and The future.
 
 ---
 File: /docs/guide/why-hyli.md
-Summary: Architectural rationale for Hyli’s design (horizontal scaling via proofs; L1 focuses on sequencing, DA, verification). Explains why scaling execution on a single chain hits limits.
+Summary: Explains the fundamental problem Hyli solves — public blockchains expose transaction data (incompatible with GDPR and fiduciary duties), while permissioned chains remove cryptographic settlement guarantees. Hyli addresses this by executing offchain and settling via ZK proofs: the proof is public, the transaction data is not.
+
+Target users: Licensed stablecoin issuers (MiCA EUR/GBP), tokenization platforms, payment infrastructure providers, banks and custodians.
 
 ---
 File: /docs/guide/components.md
-Summary: Core primitives: offchain execution, blob/proof transactions, Autobahn consensus; app architecture; end-to-end example (e.g., a DEX). Includes diagrams.
+Summary: Core components of Hyli's architecture. Offchain execution (Hyli only sequences, apps execute and prove). Two transaction types: blob transactions (sequencing/intent) and proof transactions (settlement). Autobahn consensus (parallel proposers, fast finality). Application architecture (state offchain, only state commitment onchain). Practical example: EUR stablecoin payment lifecycle.
 
 ---
 File: /docs/guide/future.md
-Summary: Vision for proving networks, censorship resistance (multiple concurrent proposers), and Hyli’s focus on scaling DA and proof verification throughput.
-
----
-File: /docs/quickstart/index.md
-Summary: Entry to getting started. Single CTA should point to the unified quickstart after merge.
-CTA: ./run-locally.md  (after you rename)
-
----
-File: /docs/quickstart/run.md
-Summary: Run a local node, wallet, and scaffold; includes version pinning and commands. After merge/rename, this becomes: /docs/quickstart/run-locally.md
-
-Key refs:
-- Node repo: https://github.com/hyli-org/hyli
-- Explorer: https://explorer.hyli.org
-- Wallet repo: https://github.com/hyli-org/wallet/
-- App scaffold: https://github.com/hyli-org/app-scaffold/
-
----
-File: /docs/quickstart/edit.md
-Summary: Build your app with the scaffold (contracts, server/autoprover, front-end wiring). Consider folding into run-locally.md as “Build your app”.
+Summary: Vision for the future. Interoperable financial applications (atomic cross-contract settlement). Private apps (ZK proofs without revealing transaction data). Tamper-resistant sequencing. Proving networks (Boundless, Succinct, Fermah, zkCloud). Hyli as a fast DA layer.
 
 ---
 File: /docs/concepts/index.md
-Summary: Hub for Hyli concepts with cards linking to transactions, proof generation, identity, proof composition, pipelined proving, etc.
+Summary: Hub for technical concepts. Links to: Apps, Transactions, Proof generation, Identity, Proof composition, Pipelined proving, Hyli vs. vintage blockchains, Consensus.
+
+---
+File: /docs/concepts/apps.md
+Summary: Financial applications on Hyli. Covers what data is stored onchain (name, verifier, program ID, state digest). Smart contract ABI (HyleOutput struct: version, initial_state, next_state, identity, index, blobs, tx_hash, success, tx_ctx, registered_contracts, program_outputs). Common financial applications: MiCA-compliant stablecoins, private tokenized credit, confidential institutional payment networks.
+
+Key: All app inputs must be known at proof generation time. State digest can be a hash or small serialization; keep it small.
 
 ---
 File: /docs/concepts/transaction.md
-Summary: Two-step model (blob-transaction for intent/sequencing, proof-transaction for settlement) and structures of each. Explains why this separation improves UX and parallelism.
+Summary: Two-step transaction model. Blob transactions: intent/sequencing, contains identity string and list of blobs (contract_name + data). Proof transactions: settlement, contains contract_name and proof data. Each blob requires a separate proof unless using recursion. Includes a worked example: private stablecoin payment with identity blob + payment blob.
 
----
-File: /docs/concepts/pipelined-proving.md
-Summary: Solves base-state conflicts and long proof latencies by splitting sequencing from settlement; timeouts for unprovable blobs; diagrams included.
+Important: Blobs must never include private inputs — only hashes or commitments to private data.
 
 ---
 File: /docs/concepts/proof-generation.md
-Summary: What to prove (public vs private inputs), where to prove (client/app/prover network), and how to choose a proving scheme. Mentions autoprover in the scaffold.
+Summary: How to generate and submit proofs. Choose what to prove (public vs private inputs). Choose where to prove: client-side (max privacy), external prover/proving market (no client constraints), or by the app itself. AutoProver scaffold handles proof generation and state-conflict retries automatically. State conflict handling: if initial state mismatches, re-fetch latest pending state and regenerate.
+
+Supported natively without ZK: sha3_256, BLST signatures, Secp256k1 signatures.
+
+Key refs:
+- Scaffold: https://github.com/hyli-org/app-scaffold
+- Supported schemes: ./reference/supported-proving-schemes.md
 
 ---
 File: /docs/concepts/identity.md
-Summary: Any app can be an identity. One identity blob per blob-transaction; nonces; how verification works; diagrams. Recommends the Hyli wallet for aggregation.
+Summary: Any app can be a proof of identity on Hyli. Each blob transaction contains a single identity blob. All blobs in a transaction share the same identity. Identity proofs include a nonce to prevent replay attacks. Supports OIDC, hardware security modules, corporate directories, password-based accounts. Financial institutions can integrate existing KYC/AML frameworks.
+
+Verification methods: private password (private input), public signature (no private input needed).
+
+Recommended: use the Hyli wallet for a unified identity layer.
+
+---
+File: /docs/concepts/pipelined-proving.md
+Summary: Separates sequencing from settlement to deliver sub-second confirmation. Blob transaction reserves a place in execution order; proof is generated asynchronously. Solves base state conflicts (multiple transactions referencing the same state). Timeouts enforce a time limit for proof submission. Failed/unprovable transactions are included in the block as Rejected and ignored for state updates.
+
+Critical for financial apps requiring instant payment confirmation.
 
 ---
 File: /docs/concepts/proof-composition.md
-Summary: Short explainer on composing proofs across contracts and proof systems (recursion, cross-contract composition).
+Summary: Native proof composition allows multiple proofs (across different proving schemes) to be verified in one transaction without recursion. Each proof remains independent. If any proof fails, the entire transaction is rejected. Supports cross-contract calls (MoneyApp + TicketApp pattern), mixing proof schemes, callee delegation (AMM swap pattern), and parallel proving.
 
 ---
 File: /docs/concepts/consensus.md
-Summary: Hyli’s consensus (Autobahn), multiple concurrent proposers, DA certificates, and implications for latency and censorship resistance.
+Summary: Autobahn consensus. Two-layer: parallel data lanes (each validator broadcasts in its own lane with proofs of availability) + BFT cut-based finality. Scales horizontally, recovers instantly from failures, low-latency. Safe with ≥⅔ honest validators. Benchmarks pending; see Sei Labs Autobahn benchmark for early results.
 
 ---
 File: /docs/concepts/hyli-vs-vintage-blockchains.md
-Summary: Differences vs EVM-style chains: no onchain execution/VM, minimal onchain state, identity abstraction (no traditional wallets), every app settles proofs, privacy built in.
+Summary: Key differences from traditional blockchains for financial institutions. No VM, no specific language (Solidity etc). Off-chain execution with ZK proofs → transaction-level privacy. Minimal onchain state (only state commitments). Flexible identity (no wallet lock-in). Every app is its own based ZK-rollup. Selective disclosure matrix: transaction parties see full details, regulators see details on request, public sees only the proof.
 
 ---
 File: /docs/tooling/index.md
-Summary: Tooling overview with links to Explorer, Wallet, and API/SDK.
-
----
-File: /docs/tooling/wallet.md
-Summary: How to use the Hyli wallet (as an identity aggregator), local dev flow, basic integration steps.
+Summary: Tooling section. API/SDK, wallet, and explorer documentation available for partners with access. CTA to get in touch: https://docs.google.com/forms/d/e/1FAIpQLSd0Xl2J5bDC7Pk-9W97klJu_etm8cZ6YbPjYb2X35CAaRojuA/viewform
 
 ---
 File: /docs/tooling/api.md
-Summary: API + SDK entry. Local Swagger at http://localhost:4321/swagger-ui/ and indexer docs at https://indexer.testnet.hyli.org/swagger-ui/. Lists JS and Rust SDKs.
-
-SDKs:
-- JS: https://www.npmjs.com/package/hyli
-- Rust: https://crates.io/crates/hyle-client-sdk  [NOTE: confirm package name; update if “hyli-client-sdk” is now the canonical crate]
+Summary: Hyli API/SDK. OpenAPI docs available to partners on demand. SDKs: JS (https://www.npmjs.com/package/hyli), Rust (https://crates.io/crates/hyli-client-sdk).
 
 ---
-File: /docs/reference/index.md
-Summary: Index for reference material (supported proving schemes, local node options, params, etc.).
+File: /docs/tooling/wallet.md
+Summary: Hyli wallet — identity hub for Hyli apps. Supports multiple auth methods (username/password, Google, GitHub). Register session keys for delegated transaction signing. Session key flow: CheckSecret blob (Noir) + wallet contract blob. Full SDK: npm install hyli-wallet. Provides WalletProvider, HyliWallet component, useWallet hook.
+
+Key repo: https://github.com/hyli-org/wallet
+
+---
+File: /docs/tooling/explorer.md
+Summary: Hyli Explorer. Link: https://explorer.hyli.org
 
 ---
 File: /docs/reference/supported-proving-schemes.md
-Summary: Matrix of supported schemes (e.g., RISC Zero, SP1, Noir, Cairo M…); tradeoffs and selection tips.
+Summary: Supported ZK proving schemes. Noir (verifier: "noir", stateless recommended), Risc0 (verifier: "risc0", Image ID without 0x prefix), SP1 (verifier: "sp1", verification key), Cairo M (verifier TBD). Proof composition allows mixing Noir for privacy-sensitive logic with Risc0/SP1 for stateful contracts.
+
+---
+File: /docs/quickstart/index.md
+Summary: Self-serve development not currently available. Hyli Private Mainnet is limited to institutional partners and enterprises. Direct to partnership inquiry via Telegram or hyli.org.
+
+---
+File: /docs/resources/glossary.md
+Summary: Key terms: blob, blob transaction, proof transaction, operation, pipelined proving, base state, proof composition, proof verification, state settlement, selective disclosure, private stablecoin, tokenized asset, MiCA compliance, financial institution.
+
+---
+File: /docs/resources/find-us.md
+Summary: Social links (GitHub, Twitter, LinkedIn, YouTube, Telegram) and useful links (node repo, examples, website, blog).
 
 ---
 External links (canonical):
+- Website: https://hyli.org
+- Blog: https://blog.hyli.org
 - Explorer: https://explorer.hyli.org
-- API (Indexer): https://indexer.testnet.hyli.org/swagger-ui/
 - Node repo: https://github.com/hyli-org/hyli
-- Wallet repo: https://github.com/hyli-org/wallet
+- Examples: https://github.com/hyli-org/examples
 - App scaffold: https://github.com/hyli-org/app-scaffold
+- Wallet repo: https://github.com/hyli-org/wallet
+- JS SDK: https://www.npmjs.com/package/hyli
+- Rust SDK: https://crates.io/crates/hyli-client-sdk
