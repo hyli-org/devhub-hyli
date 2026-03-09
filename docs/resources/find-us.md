@@ -18,6 +18,10 @@ title: Find us
 - [Media hub](https://hyli-org.notion.site/media-hub?pvs=74)
 - [Visual assets](https://github.com/hyli-org/hyli-assets/blob/main/README.md)
 
+## For AI assistants
+
+An [`llms.txt`](/llms.txt) file is available at [docs.hyli.org/llms.txt](https://docs.hyli.org/llms.txt). It provides a structured summary of all documentation sections for use by LLMs and AI coding assistants.
+
 ## Contact us
 
 Reach out to the team for more information:

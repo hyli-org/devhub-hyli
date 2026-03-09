@@ -1,31 +1,5 @@
 # :toolbox: Tooling
 
-Here, you'll find our resources about Hyli's tooling.
+Please contact our team for up-to-date documentation on the API/SDK, wallet, and explorer.
 
-<div class="grid cards" markdown>
-
--   :octicons-tools-16:{ .lg .middle } __Explorer__
-
-    ---
-
-    Use the Hyli explorer.
-
-    [:octicons-arrow-right-24: Read more](https://explorer.hyli.org)
-
--   :octicons-tools-16:{ .lg .middle } __Wallet__
-
-    ---
-
-    Use the Hyli wallet.
-
-    [:octicons-arrow-right-24: Read more](./wallet.md)
-
--   :octicons-tools-16:{ .lg .middle } __API and SDK__
-
-    ---
-
-    Explore our API and use the helper functions in our contract SDK.
-
-    [:octicons-arrow-right-24: Read more](./api.md)
-
-</div>
+[Get in touch](https://docs.google.com/forms/d/e/1FAIpQLSd0Xl2J5bDC7Pk-9W97klJu_etm8cZ6YbPjYb2X35CAaRojuA/viewform){ .md-button .md-button--primary }
