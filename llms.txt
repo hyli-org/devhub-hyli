@@ -1,12 +1,12 @@
 # Hyli LLMs Guide (llms.txt)
 # Purpose: Help AI coding assistants and LLM-based search tools accurately understand Hyli's documentation.
 # Canonical site: https://docs.hyli.org
-# Brand line: "Hyli is a privacy layer for confidential yet verifiable financial settlement."
+# Brand line: "Hyli is a confidential yet verifiable financial settlement infrastructure for European regulated actors."
 # Target audience: Financial institutions — stablecoin issuers, custodians, tokenization platforms, payment networks.
 
 ---
 File: /docs/index.md
-Summary: Landing page. Explains what Hyli is (privacy layer for private-by-default, auditable-on-demand financial settlement), what you can build (private stablecoins, tokenized assets, institutional payment networks), and links to the main docs sections.
+Summary: Landing page. Explains what Hyli is (confidential yet verifiable financial settlement infrastructure for European regulated actors), what you can build (private stablecoins, tokenized assets, institutional payment networks), and links to the main docs sections.
 
 Key claims:
 - Transaction details never touch the public ledger; only cryptographic proofs of correct settlement are recorded onchain.
