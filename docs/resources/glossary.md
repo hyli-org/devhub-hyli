@@ -1,6 +1,6 @@
 # Glossary
 
-This glossary explains key concepts of **Hyli**, a privacy layer for confidential yet verifiable financial settlement.
+This glossary explains key concepts of **Hyli**, a confidential yet verifiable financial settlement infrastructure for European regulated actors.
 
 It helps developers and curious readers understand the key terms that describe how proofs, transactions, and operations work in Hyli.
 

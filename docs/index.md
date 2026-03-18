@@ -1,12 +1,12 @@
 ---
-description: Hyli is private, compliant infrastructure for stablecoins and tokenized assets.
+description: Hyli is a confidential yet verifiable financial settlement infrastructure for European regulated actors.
 ---
 
 # Home
 
-[Hyli](https://hyli.org/) is a privacy layer for confidential yet verifiable financial settlement.
+[Hyli](https://hyli.org/) is a confidential yet verifiable financial settlement infrastructure for European regulated actors.
 
-Financial institutions and licensed issuers use Hyli to build stablecoins and tokenized assets that are private by default and auditable on demand. Transaction details never touch the public ledger: only cryptographic proofs of correct settlement are recorded onchain.
+It enables regulated institutions to settle, tokenize, and comply without ever exposing sensitive data.
 
 ## What you can build
 
